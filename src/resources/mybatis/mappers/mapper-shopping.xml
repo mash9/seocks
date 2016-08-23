@@ -57,12 +57,6 @@
               ,B.PPRICE PRICE
           FROM DEAL_ORDER A , SHOPPING B
          WHERE A.PNO = B.PNO
-           <if test="startDate != null and startDate != ''">
-           AND A.DEAL_DATE <![CDATA[ >= ]]> TO_DATE(#{startDate} , 'YYYY-MM-DD')
-           </if>
-           <if test="endDate != null and endDate != ''">
-           AND A.DEAL_DATE <![CDATA[ <= ]]> TO_DATE(#{endDate} , 'YYYY-MM-DD')
-           </if>
          ORDER BY A.DEAL_DATE DESC
     </select>
 
