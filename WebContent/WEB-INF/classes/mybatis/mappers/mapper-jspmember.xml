@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.seocks.shopping.mapper.JspmemberMapper">
+    <insert id="createUser" parameterType="com.seocks.shopping.model.Jspmember">
+        INSERT INTO JSPMEMBER
+        (
+            ID
+           ,PASS
+           ,NAME
+           ,EMAIL
+           ,MTEMP
+           ,MADDRESS1
+           ,MADDRESS2
+           ,GENDER
+           ,BIRTHDAY
+           ,INFO
+        )
+        VALUES
+        (
+            #{user.id}
+           ,#{user.pass}
+           ,#{user.name}
+           ,#{user.email}
+           ,#{user.mtemp}
+           ,#{user.maddress1}
+           ,#{user.maddress2}
+           ,#{user.gender}
+           ,#{user.birthday}
+           ,#{user.info}
+        )
+    </insert>
+
+    <select id="getUser" resultType="com.seocks.shopping.model.Jspmember">
+      SELECT ID
+             ,PASS
+             ,NAME
+             ,EMAIL
+             ,MTEMP
+             ,MADDRESS1
+             ,MADDRESS2
+             ,GENDER
+             ,BIRTHDAY
+             ,INFO
+      FROM JSPMEMBER
+     WHERE ID = #{id}
+        AND PASS = #{pass}
+    </select>
+</mapper>

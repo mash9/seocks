@@ -1,0 +1,127 @@
+<style>
+
+ul.slideuptabs{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	text-align: center; 		/* change to "center" or "right" to align differently */
+	border-bottom: 10px solid #ff0000; 	/* bottom border */
+	background: #808080;
+	background: -moz-linear-gradient(top,  #ffffff 0%, #d8d8d8 100%); /* gray gradient background */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#d8d8d8));
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#d8d8d8 100%);
+	background: -o-linear-gradient(top,  #ffffff 0%,#d8d8d8 100%);
+	background: -ms-linear-gradient(top,  #ffffff 0%,#d8d8d8 100%);
+	background: linear-gradient(to bottom,  #ffffff 0%,#d8d8d8 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d8d8d8',GradientType=0 );
+}
+
+
+ul.slideuptabs li{
+ display: inline;
+}
+
+ul.slideuptabs li:first-of-type{
+	margin-left: 10px;
+}
+
+ul.slideuptabs a{
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	color: black; 		 /* 글자색 */
+	text-decoration: none;
+	padding: 8px 20px;
+	font-size: 15px;     /* 글자 크기 */
+	font-weight: bold;
+	vertical-align: bottom;
+	-webkit-transition: color 0.5s; /* transition property and duration */
+	-moz-transition: color 0.5s;
+	transition: color 0.5s;
+}
+
+ul.slideuptabs a span{
+	position: relative;
+	z-index: 10;
+}
+
+ul.slideuptabs a::before{
+	content: '';
+	color: white;
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: green; /* tab background */
+	left: 0;
+	top: 110%; /* extra 10% is to account for shadow dimension */
+	box-shadow: -2px 2px 10px rgba(255,255,255,.5) inset;
+	border-radius: 15px 15px 0 0 / 12px 12px; /* oval shaped border for top-left and top-right corners */
+	-webkit-transition: top 0.5s; /* transition property and duration */
+	-moz-transition: top 0.5s;
+	transition: top 0.5s;
+}
+
+ul.slideuptabs a:hover{
+	color: white; /* hover color */
+}
+
+ul.slideuptabs a:hover::before{
+	top: 0; /* slide tab up */
+}
+
+/****** Responsive Code ******/
+
+@media screen and (max-width: 640px) {
+	
+	ul.slideuptabs li:first-of-type{
+		margin-left: 0;
+	}
+}
+
+/****** Theme Red ******/
+
+ul.slideuptabs.red{
+	border-bottom-color: darkred;
+}
+
+ul.slideuptabs.red a::before{
+	background: darkred;
+}
+
+/****** Theme Orange ******/
+
+ul.slideuptabs.orange{
+	border-bottom-color: #F4BB00;
+}
+
+ul.slideuptabs.orange li a{
+	color: black;
+}
+
+ul.slideuptabs.orange a::before{
+	background: #F4BB00;
+}
+
+/****** Theme Blue ******/
+
+ul.slideuptabs.blue{
+	border-bottom-color: #259AD1;
+}
+
+ul.slideuptabs.blue a::before{
+	background: #259AD1;
+}
+
+</style>
+
+<!--[if lte IE 8]>
+<style type="text/css">
+
+	ul.slideuptabs a:hover{
+		color: black; /* hover color for IE8 where tabs don't slide up */
+	}
+
+</style>   
+<![endif]-->

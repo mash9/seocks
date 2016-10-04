@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:p="http://www.springframework.org/schema/p"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:tx="http://www.springframework.org/schema/tx"
+	   xmlns:mvc="http://www.springframework.org/schema/mvc"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-4.3.xsd
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx.xsd
+http://www.springframework.org/schema/mvc
+http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
+
+
+
+<!-- 서블릿클래스 등록(즉 , 컨트롤러 객체 선언합니다.)  -->
+<!-- 메인 -->
+<bean id="seocksmain" name="/seocksmain.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+
+<!-- 아우터 -->
+<bean id="seocksinfo" name="/shop/seocksinfo.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="outer" name="/shop/outer.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+
+<!-- 티셔츠 -->
+<bean id="tshirt" name="/shop/tshirt.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="tshirtinfo" name="/shop/tshirtinfo.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+
+<!-- 셔츠 -->
+<bean id="shirt" name="/shop/shirt.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="shirtinfo" name="/shop/shirtinfo.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+
+<!-- 맨투맨 -->
+<bean id="mentomen" name="/shop/mentomen.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="mentomeninfo" name="/shop/mentomeninfo.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+
+<!-- 바지 -->
+<bean id="pants" name="/shop/pants.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="pantsinfo" name="/shop/pantsinfo.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+
+<!-- 트레이닝 -->
+<bean id="training" name="/shop/training.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="traininginfo" name="/shop/traininginfo.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+
+<!-- 신발 -->
+<bean id="shoes" name="/shop/shoes.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="shoesinfo" name="/shop/shoesinfo.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+
+<!-- 가방 -->
+<bean id="bag" name="/shop/bag.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="baginfo" name="/shop/baginfo.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+
+<!-- 악세사리 -->
+<bean id="accessory" name="/shop/accessory.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="accessoryinfo" name="/shop/accessoryinfo.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+
+<!-- 로그인,로그아웃 -->
+<bean id="login" name="/shop/login.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="login1" name="/shop/login1.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="loginout" name="/shop/loginout.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+
+<!-- 회원가입 -->
+<bean id="memberjoinform" name="/shop/memberjoinform.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="memberjoin" name="/shop/memberjoin.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="memberlist" name="/shop/memberlist.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="memberinfo" name="/shop/memberinfo.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+
+<!-- 구매하기 -->
+<bean id="itembuy" name="/shop/itembuy.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="itembuyresult" name="/shop/itembuyresult.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="itembuy2" name="/shop/itembuy2.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" /><!-- 개별구입 -->
+<bean id="itembuyresult2" name="/shop/itembuyresult2.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" /><!-- 개별구입 결제 -->
+
+<!-- 장바구니 -->
+<bean id="cartlist" name="/shop/cartlist.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="itemcart" name="/shop/itemcart.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="cartdel" name="/shop/cartdel.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+
+<!-- 주문조회 -->
+<bean id="orderlist" name="/shop/orderlist.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="buylist" name="/shop/buylist.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+
+<!-- 코디매칭 -->
+<bean id="matching" name="/shop/matching.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="shirtsbefore" name="/shop/shirtsbefore.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="shirtsnext" name="/shop/shirtsnext.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="pantsbefore" name="/shop/pantsbefore.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="pantsnext" name="/shop/pantsnext.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="shoesbefore" name="/shop/shoesbefore.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="shoesnext" name="/shop/shoesnext.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+
+
+<!-- 상품등록 -->
+<bean id="itemreserve" name="/shop/itemreserve.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<bean id="itemreserveform" name="/shop/itemreserveform.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+
+<!-- 컨트롤러 클래스 실행후 리턴할 jsp 선언  -->
+<bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+	<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+	<property name="prefix" value="/WEB-INF/jsp/"/>
+	<property name="suffix" value=".jsp"/>
+</bean>
+
+
+
+	<context:component-scan use-default-filters="false" base-package="com">
+		<context:include-filter expression="org.springframework.stereotype.Service" type="annotation"/>
+		<context:include-filter expression="org.springframework.stereotype.Repository" type="annotation"/>
+		<context:include-filter expression="org.springframework.stereotype.Component" type="annotation"/>
+	</context:component-scan>
+
+	<tx:annotation-driven/>
+
+	<mvc:annotation-driven/>
+
+
+
+
+	<!-- 회원가입,수정,삭제,검색 할수 있는 클래스(빈)를 등록 (의존관계설정 DI) -->
+	<bean id="seocksDao" class="com.seocks.old.model.SeocksDAO"  p:dataSource-ref="dataSource"  />
+
+	<!-- 데이터 베이스 설정빈을 등록(오라클용으로 선언)연결  -->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<!-- 각종 오라클 설정소스 -->
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:ORCL"/>
+		<property name="username" value="c##shopdb"/>
+		<property name="password" value="imsi00"/>
+	</bean>
+
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="mapperLocations" value="classpath*:mybatis/mappers/**/*.xml" />
+		<property name="configuration">
+			<bean class="org.apache.ibatis.session.Configuration">
+				<property name="mapUnderscoreToCamelCase" value="true"/>
+				<property name="autoMappingBehavior" value="PARTIAL"/>
+			</bean>
+		</property>
+	</bean>
+
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.seocks.shopping.mapper" />
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
+	</bean>
+
+
+
+</beans>
