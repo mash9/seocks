@@ -19,9 +19,14 @@ public class JspmemberService {
         return jspmemberMapper.createUser(jspmember);
     }
 
-    public Jspmember getUser(String id , String pass)
+    public Jspmember getUser(String id)
     {
-        return jspmemberMapper.getUser(id , pass);
+        return jspmemberMapper.getUser(id);
+    }
+
+    public int updateUser(Jspmember jspmember)
+    {
+        return jspmemberMapper.updateUser(jspmember);
     }
 
 }

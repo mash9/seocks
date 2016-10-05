@@ -16,51 +16,6 @@ http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
 
 
 
-<!-- 서블릿클래스 등록(즉 , 컨트롤러 객체 선언합니다.)  -->
-<!-- 메인 -->
-<bean id="seocksmain" name="/seocksmain.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-
-<!-- 아우터 -->
-<bean id="seocksinfo" name="/shop/seocksinfo.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="outer" name="/shop/outer.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-
-<!-- 티셔츠 -->
-<bean id="tshirt" name="/shop/tshirt.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="tshirtinfo" name="/shop/tshirtinfo.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-
-<!-- 셔츠 -->
-<bean id="shirt" name="/shop/shirt.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="shirtinfo" name="/shop/shirtinfo.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-
-<!-- 맨투맨 -->
-<bean id="mentomen" name="/shop/mentomen.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="mentomeninfo" name="/shop/mentomeninfo.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-
-<!-- 바지 -->
-<bean id="pants" name="/shop/pants.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="pantsinfo" name="/shop/pantsinfo.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-
-<!-- 트레이닝 -->
-<bean id="training" name="/shop/training.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="traininginfo" name="/shop/traininginfo.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-
-<!-- 신발 -->
-<bean id="shoes" name="/shop/shoes.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="shoesinfo" name="/shop/shoesinfo.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-
-<!-- 가방 -->
-<bean id="bag" name="/shop/bag.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="baginfo" name="/shop/baginfo.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-
-<!-- 악세사리 -->
-<bean id="accessory" name="/shop/accessory.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="accessoryinfo" name="/shop/accessoryinfo.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-
-<!-- 로그인,로그아웃 -->
-<bean id="login" name="/shop/login.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="login1" name="/shop/login1.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="loginout" name="/shop/loginout.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-
 <!-- 회원가입 -->
 <bean id="memberjoinform" name="/shop/memberjoinform.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
 <bean id="memberjoin" name="/shop/memberjoin.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />

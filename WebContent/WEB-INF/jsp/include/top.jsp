@@ -41,7 +41,7 @@
 					<font color="blue" size="3">${sessionScope.userName}님 반갑습니다.&nbsp;&nbsp;&nbsp;</font>
 					<a id="buttonLogout" href="/login/logout.do" style="text-decoration: none"><font color="black" size="3"> 로그아웃 </font></a>
 					&nbsp;&nbsp;&nbsp;
-					<a href="/login/join.do" style="text-decoration: none"><font color="black" size="3"> 회원가입 </font></a>
+					<a href="/login/edit.do" style="text-decoration: none"><font color="black" size="3"> 정보수정 </font></a>
 					&nbsp;&nbsp;&nbsp;					
 					<a href="cartlist.do" style="text-decoration: none"><font color="black" size="3"> 장바구니 </font></a>
 					&nbsp;&nbsp;&nbsp;

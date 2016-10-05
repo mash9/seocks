@@ -51,9 +51,14 @@ public class LoginController
     @RequestMapping(path = "/login.do" , method = RequestMethod.POST)
     public @ResponseBody boolean login(@RequestBody Jspmember member , HttpSession session) throws Exception
     {
-        Jspmember user = jspmemberService.getUser(member.getId() , member.getPass());
+        Jspmember user = jspmemberService.getUser(member.getId());
+
+        if(member.getId() == null || "".equals(member.getId())) throw new ShopException("아이디를 입력하세요.");
+        if(member.getPass() == null || "".equals(member.getPass())) throw new ShopException("비밀번호를 입력하세요.");
 
         if(user == null) throw new ShopException("아이디 또는 비밀번호를 확인하세요.");
+        if(!user.getPass().equals(member.getPass())) throw new ShopException("아이디 또는 비밀번호를 확인하세요.");
+
 
         session.setAttribute("user" , user);
         session.setAttribute("userId" , user.getId());
@@ -67,6 +72,29 @@ public class LoginController
         session.removeAttribute("user");
         session.removeAttribute("userId");
         session.removeAttribute("userName");
+        return true;
+    }
+
+    @RequestMapping(path = "/edit.do" , method = RequestMethod.GET)
+    public String edit(Model model)
+    {
+        model.addAttribute("title" , "회원 정보수정");
+        model.addAttribute("page" , "/login/editform");
+        return "/include/layout";
+    }
+
+    @RequestMapping(path = "/edit.do" , method = RequestMethod.POST)
+    public @ResponseBody boolean edit(@RequestBody Jspmember member , HttpSession session) throws Exception
+    {
+        if(member.getPass() == null || "".equals(member.getPass())) throw new ShopException("비밀번호를 입력하세요.");
+
+        member.setId((String)session.getAttribute("userId"));
+        jspmemberService.updateUser(member);
+
+        Jspmember user = jspmemberService.getUser(member.getId());
+        session.setAttribute("user" , user);
+        session.setAttribute("userId" , user.getId());
+        session.setAttribute("userName" , user.getName());
         return true;
     }
 }

@@ -12,5 +12,7 @@ public interface JspmemberMapper {
 
     int createUser(@Param(value = "user") Jspmember jspmember);
 
-    Jspmember getUser(@Param(value = "id") String id, @Param(value = "pass") String pass);
+    Jspmember getUser(@Param(value = "id") String id);
+
+    int updateUser(@Param(value = "user") Jspmember jspmember);
 }
