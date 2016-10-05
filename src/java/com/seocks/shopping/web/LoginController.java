@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
  * Created by com on 2016-10-03.
  */
 @Controller
-@RequestMapping("/login")
+@RequestMapping(path = "/login")
 public class LoginController
 {
     @Autowired
@@ -69,9 +69,7 @@ public class LoginController
     @RequestMapping(path = "/logout.do" , method = RequestMethod.POST)
     public @ResponseBody boolean logout(HttpSession session)
     {
-        session.removeAttribute("user");
-        session.removeAttribute("userId");
-        session.removeAttribute("userName");
+        session.invalidate();
         return true;
     }
 

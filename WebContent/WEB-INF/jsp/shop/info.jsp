@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <script type="text/javascript">
 
@@ -8,27 +9,26 @@
 		var pno = '${product.pno}';
 
 		$("#buttonCart").click(function(){
-			window.location = "/pay/itemcart.do";
+
+			var arg = {
+				pno:pno,
+				psize:$("#psize").val(),
+				qty:$("#qty").val()
+			};
+
+			if(isNaN(parseInt(arg.qty)) || parseInt(arg.qty) == 0)
+			{
+				alert("구매수량을 입력하세요.");
+				return;
+			}
+
+			window.location = "/pay/itemCart.do?" + $.param(arg);
 		});
 
 		$("#buttonBuy").click(function(){
 			window.location = "/pay/itembuy.do";
 		});
 	});
-
-	/*
- function msubmit() {
-  //상품번호와 Size와 수량을 먼저 읽어드림
-  var pno =document.getElementById('pno').value; 
-  var psize =document.getElementById('psize').value; 
-  var qty =document.getElementById('qty').value; 
-  var pname =document.getElementById('pname').value; 
-  var pprice =document.getElementById('pprice').value; 
-  var pmainimg =document.getElementById('pmainimg').value; 
-  
-  location.href='itemcart.do?pno='+pno+'&psize='+psize+'&qty='+qty+'&pname='+pname+'&pprice='+pprice+'&pmainimg='+pmainimg;
- }
- */
 
 </script>
 
@@ -49,18 +49,22 @@
 					<td width="200" align="center">판매가</td>
 					<td width="400">${product.pprice}원</td>
 				</tr>
+
 				<tr>
 					<td width="200" align="center">제품사이즈</td>
-					<td width="400"><select name="psize" id="psize">
+					<td width="400">
+						<select name="psize" id="psize">
 							<option value="Small">Small</option>
 							<option value="Medium">Medium</option>
 							<option value="Large">Large</option>
-					</select></td>
+						</select>
+					</td>
 				</tr>
 				<tr>
 					<td width="200" align="center">구매수량</td>
-					<td width="400"><input type="number" name="qty" id="qty"
-						size="25"></td>
+					<td width="400">
+						<input type="number" name="qty" id="qty" size="25">
+					</td>
 				</tr>
 				<tr>
 					<td width="200" align="center">&nbsp;</td>
@@ -68,15 +72,10 @@
 				</tr>
 				<tr>
 					<td width="200" align="center" colspan="2">
-						 <input type="hidden" name="pno" value="${product.pno}" id="pno">
-			            <input type="hidden" name="pname" value="${product.pname}" id="pname">
-			            <input type="hidden" name="pprice" value="${product.pprice}" id="pprice">
-			            <input type="hidden" name="pmainimg" value="${product.pmainimg}" id="pmainimg">
-			            <input type="hidden" name="pcate" value="${product.pcate}">
-			          
-						
-						<input id="buttonCart" type="button" value="장바구니" style="margin-right: 10px">
-						<input id="buttonBuy"   type="button" value="구매하기">
+						<input id="buttonCart" type="button" value="장바구니 담기" style="margin-right: 10px">
+						<c:if test="${sessionScope.user != null}">
+							<input id="buttonBuy"   type="button" value="구매하기">
+						</c:if>
 					</td>
 				</tr>
 			</table>

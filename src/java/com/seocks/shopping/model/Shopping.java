@@ -11,7 +11,7 @@ public class Shopping {
 
     private String pno;
     private String pname;
-    private String pprice;
+    private int pprice;
     private String pinfo;
     private String pmainimg;
     private String psubimg;
@@ -35,11 +35,11 @@ public class Shopping {
         this.pname = pname;
     }
 
-    public String getPprice() {
+    public int getPprice() {
         return pprice;
     }
 
-    public void setPprice(String pprice) {
+    public void setPprice(int pprice) {
         this.pprice = pprice;
     }
 

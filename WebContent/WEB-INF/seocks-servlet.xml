@@ -28,10 +28,6 @@ http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
 <bean id="itembuy2" name="/shop/itembuy2.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" /><!-- 개별구입 -->
 <bean id="itembuyresult2" name="/shop/itembuyresult2.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" /><!-- 개별구입 결제 -->
 
-<!-- 장바구니 -->
-<bean id="cartlist" name="/shop/cartlist.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="itemcart" name="/shop/itemcart.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="cartdel" name="/shop/cartdel.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
 
 <!-- 주문조회 -->
 <bean id="orderlist" name="/shop/orderlist.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />

@@ -35,6 +35,8 @@
 					&nbsp;&nbsp;&nbsp;
 					<a href="/login/join.do" style="text-decoration: none"><font color="black" size="3"> 회원가입 </font></a>
 					&nbsp;&nbsp;&nbsp;
+					<a href="/pay/itemCart.do" style="text-decoration: none"><font color="black" size="3"> 장바구니 </font></a>
+					&nbsp;&nbsp;&nbsp;
 				</c:if> &nbsp; 
 				
 				<c:if test="${sessionScope.user != null }">
@@ -43,7 +45,7 @@
 					&nbsp;&nbsp;&nbsp;
 					<a href="/login/edit.do" style="text-decoration: none"><font color="black" size="3"> 정보수정 </font></a>
 					&nbsp;&nbsp;&nbsp;					
-					<a href="cartlist.do" style="text-decoration: none"><font color="black" size="3"> 장바구니 </font></a>
+					<a href="/pay/itemCart.do" style="text-decoration: none"><font color="black" size="3"> 장바구니 </font></a>
 					&nbsp;&nbsp;&nbsp;
 					<a href="orderlist.do" style="text-decoration: none"><font color="black" size="3"> 주문조회 </font></a>
 					

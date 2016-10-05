@@ -1,56 +1,91 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<body>
-	<center>
 
-		<h2>
-			<font face="°íµñÃ¼" color="gray"> Àå¹Ù±¸´Ï </font>
-		</h2>
-		<br>
 
-		<table width="1200">
-			<tr height="40">
-				<td width="200" align="center" valign="middle">ÀÌ¹ÌÁö</td>
-				<td width="400" align="center" valign="middle">»óÇ°¸í</td>
-				<td width="200" align="center" valign="middle">¼ö·®</td>
-				<td width="200" align="center" valign="middle">»çÀÌÁî</td>
-				<td width="200" align="center" valign="middle">°¡°İ</td>
-			</tr>
-			<c:set var="totalprice" value="0" />
-			<c:forEach var="bean" items="${cart}">
-				<tr height="100">
-					<td width="200" align="center" valign="middle"><img alt=""
-						src="img/${bean.pmainimg}" width="150" height="90"></td>
-					<td width="400" align="center" valign="middle">${bean.pname }</td>
-					<td width="200" align="center" valign="middle">${bean.qty }</td>
-					<td width="200" align="center" valign="middle">${bean.psize }</td>
-					<td width="200" align="center" valign="middle">${bean.pprice*bean.qty }</td>
-					<td width="200" align="center" valign="middle"><input
-						type="button" value="»èÁ¦"
-						onclick="location.href='cartdel.do?pno=${bean.pno}&gubun=1'">
-					</td>
-					<td width="200" align="center" valign="middle"><input
-						type="button" value="°áÁ¦"
-						onclick="location.href='itembuy2.do?pno=${bean.pno}&qty=${bean.qty }&psize=${bean.psize }'">
-					</td>
-					<c:set var="totalprice" value="${totalprice + bean.totalprice }" />
-				</tr>
-			</c:forEach>
+<script type="text/javascript">
+	$(document).ready(function() {
+
+
+		$(".item-delete").click(function(){
+			if(!confirm("ì‚­ì œ í•˜ì‹œê² ìŠµë‹ˆê¹Œ?")) return;
+
+			var arg = {
+				pno: $(this).attr("pno"),
+				psize: $(this).attr("psize")
+			};
+
+			$.post("/pay/clearCart.do" , arg , function(){
+				alert("ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤.");
+				window.location = "/pay/itemCart.do";
+			});
+		});
+
+		$("#buttonCartDel").click(function(){
+			if(!confirm("ì¥ë°”êµ¬ë‹ˆë¥¼ ë¹„ìš°ì‹œê² ìŠµë‹ˆê¹Œ?")) return;
+
+			$.post("/pay/clearCart.do" , function(){
+				alert("ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤.");
+				window.location = "/pay/itemCart.do";
+			});
+		});
+
+		$("#buttonBuy").click(function(){
+			window.location = "/pay/itembuy.do";
+		});
+
+	});
+</script>
+
+
+<center>
+
+	<h2>
+		<font face="ê³ ë”•ì²´" color="gray"> ì¥ë°”êµ¬ë‹ˆ </font>
+	</h2>
+	<br>
+
+	<table width="1200">
+		<tr height="40">
+			<td width="200" align="center" valign="middle">ì´ë¯¸ì§€</td>
+			<td width="400" align="center" valign="middle">ìƒí’ˆëª…</td>
+			<td width="200" align="center" valign="middle">ìˆ˜ëŸ‰</td>
+			<td width="200" align="center" valign="middle">ì‚¬ì´ì¦ˆ</td>
+			<td width="200" align="center" valign="middle">ê°€ê²©</td>
+			<td width="200" align="center" valign="middle">ì‚­ì œ</td>
+		</tr>
+		<c:set var="totalprice" value="0"/>
+		<c:forEach var="item" items="${cartList}">
 			<tr height="100">
-				<td colspan="5" align="center" valign="middle"><font
-					color="red" size="6">ÃÑ ±İ¾× : ${totalprice}¿ø</font></td>
-			</tr>
-			<tr height="100">
-				<td colspan="5" align="center" valign="middle">
-					<input type="button" value="ÀüÃ¼Ä«Æ®»èÁ¦" onclick="location.href='cartdel.do?gubun=2'"> 
-					<!-- <input type="button" value="ÀüÃ¼°áÁ¦ÇÏ±â" onclick="location.href='itemallbuyresult.do'"> -->
+				<td width="200" align="center" valign="middle">
+					<a href="/shop/info.do?pno=${item.pno}">
+						<img src="/img/${item.pmainimg}" style="width: 150px;height: 90px"/>
+					</a>
+				</td>
+				<td width="400" align="center" valign="middle">
+					<a href="/shop/info.do?pno=${item.pno}">${item.pname}</a>
+				</td>
+				<td width="200" align="center" valign="middle">${item.qty}</td>
+				<td width="200" align="center" valign="middle">${item.psize}</td>
+				<td width="200" align="center" valign="middle">${item.pprice}</td>
+				<td width="200" align="center" valign="middle">
+					<input class="item-delete" type="button" value="ì‚­ì œ" pno="${item.pno}" psize="${item.psize}">
 				</td>
 			</tr>
 
-		</table>
-	</center>
-</body>
-</html>
+			<c:set var="totalprice" value="${totalprice + item.totalprice}"/>
+		</c:forEach>
+		<tr height="100">
+			<td colspan="5" align="center" valign="middle"><font
+				color="red" size="6">ì´ ê¸ˆì•¡ : ${totalprice}ì›</font></td>
+		</tr>
+		<tr height="100">
+			<td colspan="5" align="center" valign="middle">
+				<input id="buttonCartDel" type="button" value="ì „ì²´ì¹´íŠ¸ì‚­ì œ">
+				<c:if test="${sessionScope.user != null}">
+					<input id="buttonBuy"   type="button" value="ì „ì²´ê²°ì œí•˜ê¸°">
+				</c:if>
+			</td>
+		</tr>
+
+	</table>
+</center>

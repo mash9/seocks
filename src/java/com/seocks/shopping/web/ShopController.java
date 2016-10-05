@@ -15,7 +15,7 @@ import java.util.List;
  * Created by com on 2016-10-03.
  */
 @Controller
-@RequestMapping("/shop")
+@RequestMapping(path = "/shop")
 public class ShopController {
 
     @Autowired
