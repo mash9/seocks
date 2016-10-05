@@ -32,17 +32,30 @@
 
     <select id="getUser" resultType="com.seocks.shopping.model.Jspmember">
       SELECT ID
-             ,PASS
-             ,NAME
-             ,EMAIL
-             ,MTEMP
-             ,MADDRESS1
-             ,MADDRESS2
-             ,GENDER
-             ,BIRTHDAY
-             ,INFO
-      FROM JSPMEMBER
-     WHERE ID = #{id}
-        AND PASS = #{pass}
+            ,PASS
+            ,NAME
+            ,EMAIL
+            ,MTEMP
+            ,MADDRESS1
+            ,MADDRESS2
+            ,GENDER
+            ,BIRTHDAY
+            ,INFO
+        FROM JSPMEMBER
+       WHERE ID = #{id}
     </select>
+
+    <update id="updateUser" parameterType="com.seocks.shopping.model.Jspmember">
+        UPDATE JSPMEMBER
+           SET PASS      = #{user.pass}
+              ,NAME      = #{user.name}
+              ,EMAIL     = #{user.email}
+              ,MTEMP     = #{user.mtemp}
+              ,MADDRESS1 = #{user.maddress1}
+              ,MADDRESS2 = #{user.maddress2}
+              ,GENDER    = #{user.gender}
+              ,BIRTHDAY  = #{user.birthday}
+              ,INFO      = #{user.info}
+         WHERE ID        = #{user.id}
+    </update>
 </mapper>
