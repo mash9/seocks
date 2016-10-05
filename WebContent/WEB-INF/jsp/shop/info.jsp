@@ -5,6 +5,8 @@
 
 	$(document).ready(function() {
 
+		var pno = '${product.pno}';
+
 		$("#buttonCart").click(function(){
 			window.location = "/pay/itemcart.do";
 		});
@@ -66,11 +68,11 @@
 				</tr>
 				<tr>
 					<td width="200" align="center" colspan="2">
-						 <input type="hidden" name="pno" value="${product.pno }" id="pno">
-			            <input type="hidden" name="pname" value="${product.pname }" id="pname">
-			            <input type="hidden" name="pprice" value="${product.pprice }" id="pprice">
-			            <input type="hidden" name="pmainimg" value="${product.pmainimg }" id="pmainimg">
-			            <input type="hidden" name="pcate" value="${product.pcate }">
+						 <input type="hidden" name="pno" value="${product.pno}" id="pno">
+			            <input type="hidden" name="pname" value="${product.pname}" id="pname">
+			            <input type="hidden" name="pprice" value="${product.pprice}" id="pprice">
+			            <input type="hidden" name="pmainimg" value="${product.pmainimg}" id="pmainimg">
+			            <input type="hidden" name="pcate" value="${product.pcate}">
 			          
 						
 						<input id="buttonCart" type="button" value="장바구니" style="margin-right: 10px">
