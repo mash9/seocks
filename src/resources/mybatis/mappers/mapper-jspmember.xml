@@ -74,4 +74,8 @@
               ,INFO      = #{user.info}
          WHERE ID        = #{user.id}
     </update>
+
+    <delete id="deleteUser">
+        DELETE JSPMEMBER WHERE ID = #{id}
+    </delete>
 </mapper>

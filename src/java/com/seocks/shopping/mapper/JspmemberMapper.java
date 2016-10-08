@@ -19,4 +19,6 @@ public interface JspmemberMapper {
     List<Jspmember> getUsers();
 
     int updateUser(@Param(value = "user") Jspmember jspmember);
+
+    int deleteUser(@Param(value = "id") String id);
 }

@@ -1,12 +1,12 @@
 package com.seocks.shopping.web;
 
+import com.seocks.shopping.common.ShopException;
+import com.seocks.shopping.model.Jspmember;
 import com.seocks.shopping.service.JspmemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by com on 2016-10-06.
@@ -35,5 +35,31 @@ public class AdminController {
         model.addAttribute("title" , "회원정보");
         model.addAttribute("page" , "/admin/memberInfo");
         return "/include/layout";
+    }
+
+    @RequestMapping(path = "/memberEdit.do" , method = RequestMethod.GET)
+    public String memberEdit(@RequestParam(value = "id") String id,
+                             Model model)
+    {
+        model.addAttribute("member" , jspmemberService.getUser(id));
+        model.addAttribute("title" , "회원 정보수정");
+        model.addAttribute("page" , "/admin/memberEdit");
+        return "/include/layout";
+    }
+
+    @RequestMapping(path = "/memberEdit.do" , method = RequestMethod.POST)
+    public @ResponseBody boolean memberEdit(@RequestBody Jspmember member)
+    {
+        jspmemberService.updateUser(member);
+        return true;
+    }
+
+    @RequestMapping(path = "/memberDelete.do" , method = RequestMethod.POST)
+    public @ResponseBody boolean memberDelete(@RequestParam("id") String id) throws Exception
+    {
+        if("admin".equals(id)) throw new ShopException("관리자는 삭제 할 수 없습니다.");
+
+        jspmemberService.deleteUser(id);
+        return true;
     }
 }

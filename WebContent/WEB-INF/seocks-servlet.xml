@@ -16,11 +16,6 @@ http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
 
 
 
-<!-- 회원가입 -->
-<bean id="memberjoinform" name="/shop/memberjoinform.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="memberjoin" name="/shop/memberjoin.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="memberlist" name="/shop/memberlist.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="memberinfo" name="/shop/memberinfo.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
 
 <!-- 구매하기 -->
 <bean id="itembuy" name="/shop/itembuy.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
@@ -47,14 +42,12 @@ http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
 <bean id="itemreserve" name="/shop/itemreserve.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
 <bean id="itemreserveform" name="/shop/itemreserveform.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
 
-<!-- 컨트롤러 클래스 실행후 리턴할 jsp 선언  -->
-<bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
-	<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
-	<property name="prefix" value="/WEB-INF/jsp/"/>
-	<property name="suffix" value=".jsp"/>
-</bean>
-
-
+	<!-- 컨트롤러 클래스 실행후 리턴할 jsp 선언  -->
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WEB-INF/jsp/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
 
 	<context:component-scan use-default-filters="false" base-package="com">
 		<context:include-filter expression="org.springframework.stereotype.Service" type="annotation"/>

@@ -36,4 +36,7 @@ public class JspmemberService {
         return jspmemberMapper.updateUser(jspmember);
     }
 
+    public int deleteUser(String id) {
+        return jspmemberMapper.deleteUser(id);
+    }
 }

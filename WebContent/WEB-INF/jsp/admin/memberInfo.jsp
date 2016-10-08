@@ -1,5 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
+<script type="text/javascript">
+
+	$(document).ready(function() {
+
+		$("#buttonDelete").click(function(){
+
+			if(!confirm("삭제하시겠습니까?")) return;
+
+			$.post("/admin/memberDelete.do" , {id:'${member.id}'} , function(){
+				alert("삭제되었습니다.");
+				window.location = "/admin/memberList.do";
+			});
+
+		});
+
+	});
+</script>
+
 <center>
 	<h1>회원 정보보기</h1>
 	<table width="400" border="1">
@@ -39,8 +57,15 @@
 		</tr>
 		<tr height="40">
 			<td align="center" colspan="2">
-				<input type="button" value="회원삭제">
-				<input type="button" value="정보수정">
+				<a href="/admin/memberEdit.do?id=${member.id}" style="color: black;text-decoration: none">
+					<input id="buttonEdit" type="button" value="수정">
+				</a>
+				<a href="#" style="color: black;text-decoration: none">
+					<input id="buttonDelete" type="button" value="삭제">
+				</a>
+				<a href="/admin/memberList.do" style="color: black;text-decoration: none">
+					<input type="button" value="목록">
+				</a>
 			</td>
 		</tr>
 	</table>
