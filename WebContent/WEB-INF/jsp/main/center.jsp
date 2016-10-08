@@ -1,19 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta content="width=device-width, initial-scale=1 , maximum-scale=1 , user-scalable=no" name="viewport">
-<!--Bootstarp 3.3.2  -->
-<link href="../../../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<!--Jquery  -->
-<script src="../../../jQuery/jQuery-2.1.3.min.js" type="text/javascript"></script>
-<!--Bootstarp 3.3.2 js  -->
-<script src="../../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-</head>
-<body>
+
+<script src="/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
 	<table width="1200" border="1">
 		<tr height="100">
 			<td rowspan="3">
@@ -96,7 +86,7 @@
 
 		<table width="1200">
 			<c:set var="count" value="0" />
-			<!-- Á¶È¸¼ø ³ôÀº ¼ø¼­´ë·Î µ¥ÀÌÅÍ¸¦ 4°³¾¿ È­¸é¿¡ º¸¿©ÁÜ -->
+			<!-- ì¡°íšŒìˆœ ë†’ì€ ìˆœì„œëŒ€ë¡œ ë°ì´í„°ë¥¼ 4ê°œì”© í™”ë©´ì— ë³´ì—¬ì¤Œ -->
 			<c:forEach var="bean" items="${v }">
 				<c:if test="${count % 4 == 0 }">
 					<tr>
@@ -106,14 +96,12 @@
 					href="/shop/info.do?pno=${bean.pno}" style="text-decoration: none">
 						<img src="/img/${bean.pmainimg}" width="280" height="300"> <br>
 						<br><br><br>
-						<font color="gray">»óÇ° ÀÌ¸§ : ${bean.pname }</font><br>
-						<font color="gray">»óÇ° ¼³¸í : ${bean.pinfo }</font><br>
-						<font color="gray">»óÇ° °¡°İ : ${bean.pprice }¿ø</font><br>
+						<font color="gray">ìƒí’ˆ ì´ë¦„ : ${bean.pname }</font><br>
+						<font color="gray">ìƒí’ˆ ì„¤ëª… : ${bean.pinfo }</font><br>
+						<font color="gray">ìƒí’ˆ ê°€ê²© : ${bean.pprice }ì›</font><br>
 						<br><br><br>
 				</a> <c:set var="count" value="${count + 1 }" /></td>
 			</c:forEach>
 	</table>
 	<br>
 	</center>
-</body>
-</html>

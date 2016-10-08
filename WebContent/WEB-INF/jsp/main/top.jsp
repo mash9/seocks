@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<link rel="stylesheet" type="text/css" href="/css/styles.css">
 <div id="cssmenu">
 	<ul class="slideuptabs red">
 		<li><a href="/shop/list.do?pcate=11"><span>Outer</span></a></li>

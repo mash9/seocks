@@ -2,13 +2,6 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="refresh" content="0;url=/main.do">
 </head>
-
-<body>
-    <form name="redirect" action="/main.do"/>
-</body>
-
-<script type="text/javascript">
-    document.redirect.submit();
-</script>
 </html>

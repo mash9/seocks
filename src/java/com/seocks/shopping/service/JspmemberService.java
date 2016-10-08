@@ -5,6 +5,8 @@ import com.seocks.shopping.model.Jspmember;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by com on 2016-10-03.
  */
@@ -22,6 +24,11 @@ public class JspmemberService {
     public Jspmember getUser(String id)
     {
         return jspmemberMapper.getUser(id);
+    }
+
+    public List<Jspmember> getUsers()
+    {
+        return jspmemberMapper.getUsers();
     }
 
     public int updateUser(Jspmember jspmember)

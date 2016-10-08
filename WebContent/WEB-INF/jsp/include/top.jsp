@@ -22,51 +22,29 @@
 		});
 	</script>
 
+	<div style="width: 100%;margin-top: 10px;text-align: right;font-size: 15px;;">
+		<c:if test="${sessionScope.user == null }">
+			<span style="color: blue;margin-right: 5px">Guest님 반갑습니다.</span>
+			<a href="/login/login.do" style="text-decoration: none;color: black;margin-right: 5px">로그인</a>
+			<a href="/login/join.do" style="text-decoration: none;color: black;margin-right: 5px">회원가입</a>
+			<a href="/pay/itemCart.do" style="text-decoration: none;color: black">장바구니</a>
+		</c:if>
 
+		<c:if test="${sessionScope.user != null }">
+			<span style="color: blue;margin-right: 5px">${sessionScope.userName}님 반갑습니다.</span>
+			<a id="buttonLogout" href="/login/logout.do" style="text-decoration: none;color: black;margin-right: 5px">로그아웃</a>
+			<a href="/login/edit.do" style="text-decoration: none;color: black;margin-right: 5px">정보수정</a>
+			<a href="/pay/itemCart.do" style="text-decoration: none;color: black;margin-right: 5px">장바구니</a>
+			<a href="orderlist.do" style="text-decoration: none;color: black">주문조회</a>
 
-	<table width="1800">
-		<tr height="15">
-			<td width="30%"></td>
-			<td width="40%"></td>
-			<td width="30%" align="left" valign="top">
-				<c:if test="${sessionScope.user == null }">
-					<font color="blue" size="3">Guest님 반갑습니다. &nbsp;&nbsp;&nbsp;</font>
-					<a href="/login/login.do" style="text-decoration: none"><font color="black" size="3"> 로그인 </font></a>
-					&nbsp;&nbsp;&nbsp;
-					<a href="/login/join.do" style="text-decoration: none"><font color="black" size="3"> 회원가입 </font></a>
-					&nbsp;&nbsp;&nbsp;
-					<a href="/pay/itemCart.do" style="text-decoration: none"><font color="black" size="3"> 장바구니 </font></a>
-					&nbsp;&nbsp;&nbsp;
-				</c:if> &nbsp; 
-				
-				<c:if test="${sessionScope.user != null }">
-					<font color="blue" size="3">${sessionScope.userName}님 반갑습니다.&nbsp;&nbsp;&nbsp;</font>
-					<a id="buttonLogout" href="/login/logout.do" style="text-decoration: none"><font color="black" size="3"> 로그아웃 </font></a>
-					&nbsp;&nbsp;&nbsp;
-					<a href="/login/edit.do" style="text-decoration: none"><font color="black" size="3"> 정보수정 </font></a>
-					&nbsp;&nbsp;&nbsp;					
-					<a href="/pay/itemCart.do" style="text-decoration: none"><font color="black" size="3"> 장바구니 </font></a>
-					&nbsp;&nbsp;&nbsp;
-					<a href="orderlist.do" style="text-decoration: none"><font color="black" size="3"> 주문조회 </font></a>
-					
-					<c:if test="${sessionScope.userId == 'admin' }">
-					<br><br>
-						<center>
-							<a href="memberlist.do" style="text-decoration: none"><font color="black" size="3"> 회원관리 </font></a>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<a href="itemreserveform.do" style="text-decoration: none"><font color="black" size="3"> 상품등록 </font></a>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-							<a href="buylist.do" style="text-decoration: none"><font color="black" size="3"> 판매현황 </font></a>
-						</center>
-					</c:if>	
-				</c:if>
-			</td>
-		</tr>
+			<c:if test="${sessionScope.userId == 'admin' }">
+				<span style="color: black;margin-right: 20px;margin-left: 20px;font-weight: bold">|</span>
+				<a href="/admin/memberList.do" style="text-decoration: none;color: black;margin-right: 5px">회원관리</a>
+				<a href="itemreserveform.do" style="text-decoration: none;color: black;margin-right: 5px">상품등록</a>
+				<a href="buylist.do" style="text-decoration: none;color: black">판매현황</a>
+			</c:if>
+		</c:if>
+	</div>
 
-		<tr height="50">
-			<td width="30%"></td>
-			<td width="40%" align="center"><a href="/main.do" style="text-decoration: none">
-				<img src="/img/logo.jpg" width="600" height="100"></a></td>
-			<td width="30%"></td>
-		</tr>
-	</table>
+	<a href="/main.do" style="text-decoration: none"><img src="/img/logo.jpg" width="600" height="100"></a>
+
