@@ -24,7 +24,6 @@
 
 	<div style="width: 100%;margin-top: 10px;text-align: right;font-size: 15px;;">
 		<c:if test="${sessionScope.user == null }">
-			<span style="color: blue;margin-right: 5px">Guest님 반갑습니다.</span>
 			<a href="/login/login.do" style="text-decoration: none;color: black;margin-right: 5px">로그인</a>
 			<a href="/login/join.do" style="text-decoration: none;color: black;margin-right: 5px">회원가입</a>
 			<a href="/pay/itemCart.do" style="text-decoration: none;color: black">장바구니</a>

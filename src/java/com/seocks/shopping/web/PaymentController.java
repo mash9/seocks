@@ -32,6 +32,49 @@ public class PaymentController {
                            HttpSession session,
                            Model model)
     {
+        model.addAttribute("title" , "장바구니");
+        model.addAttribute("cartList" , getCartList(session , pno , psize , qty));
+        model.addAttribute("page" , "/payment/cartlist");
+        return "/include/layout";
+    }
+
+    @RequestMapping(path = "/itembuy.do" , method = RequestMethod.GET)
+    public String itembuy(@RequestParam(value = "pno" , required = false) String pno,
+                          @RequestParam(value = "psize" , required = false) String psize,
+                          @RequestParam(value = "qty" , required = false) Integer qty,
+                          HttpSession session,
+                          Model model)
+    {
+        model.addAttribute("title" , "구매하기");
+        model.addAttribute("user" , session.getAttribute("user"));
+        model.addAttribute("cartList" , getCartList(session , pno , psize , qty));
+        model.addAttribute("page" , "/payment/itembuy");
+        return "/include/layout";
+    }
+
+    @RequestMapping(path = "/clearCart.do" , method = RequestMethod.POST)
+    public @ResponseBody boolean clearCart(@RequestParam(value = "pno" , required = false) String pno,
+                                           @RequestParam(value = "psize" , required = false) String psize,
+                                           HttpSession session)
+    {
+        HashMap<String , ShoppingItem> cartMap = (HashMap<String , ShoppingItem>)session.getAttribute("cartMap");
+
+        if(!StringUtils.isEmpty(pno))
+        {
+            String cartKey = pno + "-" + psize;
+            cartMap.remove(cartKey);
+        }
+        else
+        {
+            session.removeAttribute("cartMap");
+        }
+
+        return true;
+    }
+
+
+    private Collection<ShoppingItem> getCartList(HttpSession session , String pno , String psize , Integer qty)
+    {
         HashMap<String , ShoppingItem> cartMap = (HashMap<String , ShoppingItem>)session.getAttribute("cartMap");
 
         String cartKey = pno + "-" + psize;
@@ -42,7 +85,7 @@ public class PaymentController {
             session.setAttribute("cartMap" , cartMap);
         }
 
-        if(!StringUtils.isEmpty(pno) && !StringUtils.isEmpty(cartKey))
+        if(!StringUtils.isEmpty(pno))
         {
             ShoppingItem newCartItem;
 
@@ -69,37 +112,6 @@ public class PaymentController {
             }
         }
 
-        model.addAttribute("title" , "장바구니");
-        model.addAttribute("cartList" , cartMap.values());
-        model.addAttribute("page" , "/payment/cartlist");
-        return "/include/layout";
-    }
-
-    @RequestMapping(path = "/clearCart.do" , method = RequestMethod.POST)
-    public @ResponseBody boolean clearCart(@RequestParam(value = "pno" , required = false) String pno,
-                                           @RequestParam(value = "psize" , required = false) String psize,
-                                           HttpSession session)
-    {
-        HashMap<String , ShoppingItem> cartMap = (HashMap<String , ShoppingItem>)session.getAttribute("cartMap");
-
-        if(!StringUtils.isEmpty(pno))
-        {
-            String cartKey = pno + "-" + psize;
-            cartMap.remove(cartKey);
-        }
-        else
-        {
-            session.removeAttribute("cartMap");
-        }
-
-        return true;
-    }
-
-    @RequestMapping(path = "/itembuy.do" , method = RequestMethod.GET)
-    public String itembuy(Model model)
-    {
-        model.addAttribute("title" , "구매하기");
-        model.addAttribute("page" , "/payment/itembuy");
-        return "/include/layout";
+        return cartMap.values();
     }
 }
