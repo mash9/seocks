@@ -1,6 +1,35 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script type="text/javascript">
+
+   $(document).ready(function() {
+
+      //우편번호 검색
+      $("#buttonPostCheck").click(function(){
+         new daum.Postcode(
+                 {//다음 주소코드실행후
+                    //선택을 했다면
+                    oncomplete : function(data) {
+
+                       var table = $("#recvTable");
+                       $("input[name=postNumber]" , table).val(data.zonecode);
+                       $("input[name=address1]" , table).val(data.roadAddress);
+                    }
+                 }).open();
+      });
+
+      $("#buttonPay").click(function(){
+         if(!confirm("결제를 진행하시겠습니까?")) return;
+
+
+
+      });
+
+   });
+</script>
+
    <center>
       <h2>
          <font face="고딕체" color="gray"> 제품즉시 구매정보</font>
@@ -65,9 +94,7 @@
             </tr>
             <tr>
                <td>휴대전화</td>
-               <td>
-                  <input type="text">
-               </td>
+               <td></td>
             </tr>
             <tr>
                <td>이메일</td>
@@ -87,23 +114,35 @@
             </tr>
          </tbody>
       </table>
-      <h3>받으시는분</h3>
+      <h3>받으시는 분</h3>
       <br>
-      <table>
+      <table id="recvTable">
          <tbody>
+            <tr>
+               <td>이름</td>
+               <td>
+                  <input type="text" name="name">
+               </td>
+            </tr>
+            <tr>
+               <td>우편번호</td>
+               <td>
+                  <input type="text" name="postNumber">
+                  <input id="buttonPostCheck" type="button" value="검색">
+               </td>
+            </tr>
             <tr>
                <td>주소</td>
                <td>
-                  <input type="text">
+                  <input type="text" name="address1">
                   <br>
-                  <input type="text">
-                  <input type="button">
+                  <input type="text" name="address2">
                </td>
             </tr>
             <tr>
                <td>휴대전화</td>
                <td>
-                  <input type="text">
+                  <input type="text" name="phone">
                </td>
             </tr>
             <tr>
@@ -117,12 +156,12 @@
       <h3>결제수단</h3>
       <br>
       <div>
-         <label><input type="radio" value="무통장 입금">무통장 입금</label>
-         <label><input type="radio" value="카드결제">카드결제</label>
-         <label><input type="radio" value="휴대폰 결제">휴대폰 결제</label>
+         <label><input type="radio" value="DEPOSIT" name="payType" checked>무통장 입금</label>
+         <label><input type="radio" value="CARD" name="payType">카드결제</label>
+         <label><input type="radio" value="PHONE" name="payType">휴대폰 결제</label>
       </div>
       <br>
-      <input type="button" value="결제하기">
+      <input id="buttonPay" type="button" value="결제하기">
 
 
    </center>
