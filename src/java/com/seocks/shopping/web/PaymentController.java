@@ -1,16 +1,15 @@
 package com.seocks.shopping.web;
 
+import com.seocks.shopping.model.PaymentDelivery;
 import com.seocks.shopping.model.Shopping;
 import com.seocks.shopping.model.ShoppingItem;
+import com.seocks.shopping.service.PaymentService;
 import com.seocks.shopping.service.ShoppingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import java.util.*;
@@ -24,6 +23,9 @@ public class PaymentController {
 
     @Autowired
     private ShoppingService shoppingService;
+
+    @Autowired
+    private PaymentService paymentService;
 
     @RequestMapping(path = "/itemCart.do" , method = RequestMethod.GET)
     public String itemcart(@RequestParam(value = "pno" , required = false) String pno,
@@ -69,6 +71,16 @@ public class PaymentController {
             session.removeAttribute("cartMap");
         }
 
+        return true;
+    }
+
+    @RequestMapping(path = "/buy.do" , method = RequestMethod.POST)
+    public @ResponseBody boolean buy(@RequestBody PaymentDelivery payment, HttpSession session)
+    {
+        payment.setUserId((String)session.getAttribute("userId"));
+        paymentService.buy(payment);
+
+        session.removeAttribute("cartMap");
         return true;
     }
 

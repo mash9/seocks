@@ -17,6 +17,7 @@ public class PaymentDelivery {
     private String phone;
     private String payType;
     private String message;
+    private String userId;
     private List<Payment> items;
 
     public String getPayId() {
@@ -81,6 +82,14 @@ public class PaymentDelivery {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public List<Payment> getItems() {

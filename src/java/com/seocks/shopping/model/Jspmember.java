@@ -18,6 +18,7 @@ public class Jspmember {
     private String gender;
     private String birthday;
     private String info;
+    private String phone;
 
     public String getId() {
         return id;
@@ -97,5 +98,13 @@ public class Jspmember {
 
     public void setInfo(String info) {
         this.info = info;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.seocks.shopping.mapper.PaymentMapper">
+
+    <insert id="createPaymentDelivery" parameterType="com.seocks.shopping.model.PaymentDelivery">
+        <selectKey resultType="String" keyProperty="pay.payId" order="BEFORE">
+            SELECT NVL(MAX(PAY_ID) , 0) + 1 PAY_ID FROM PAYMENT_DELIVERY
+        </selectKey>
+        INSERT INTO PAYMENT_DELIVERY
+        (
+            PAY_ID
+           ,NAME
+           ,POST_NUMBER
+           ,ADDRESS1
+           ,ADDRESS2
+           ,PHONE
+           ,PAY_TYPE
+           ,MESSAGE
+           ,USER_ID
+        )
+        VALUES
+        (
+            #{pay.payId}
+           ,#{pay.name}
+           ,#{pay.postNumber}
+           ,#{pay.address1}
+           ,#{pay.address2}
+           ,#{pay.phone}
+           ,#{pay.payType}
+           ,#{pay.message}
+           ,#{pay.userId}
+        )
+    </insert>
+
+    <insert id="createPayment" parameterType="com.seocks.shopping.model.Payment">
+        INSERT INTO PAYMENT
+        (
+            PAY_ID
+           ,PNO
+           ,PSIZE
+           ,QTY
+           ,PRICE
+        )
+        VALUES
+        (
+            #{pay.payId}
+           ,#{pay.pno}
+           ,#{pay.psize}
+           ,#{pay.qty}
+           ,#{pay.price}
+        )
+    </insert>
+
+</mapper>

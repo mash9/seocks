@@ -24,6 +24,41 @@
          if(!confirm("결제를 진행하시겠습니까?")) return;
 
 
+         var arg = {
+            name: $("input[name=name]").val(),
+            postNumber: $("input[name=postNumber]").val(),
+            address1: $("input[name=address1]").val(),
+            address2: $("input[name=address2]").val(),
+            phone: $("input[name=phone]").val(),
+            message: $("#message").text(),
+            payType: $("input[name=payType]:checked").val()
+         };
+
+         var payItems = [];
+
+         $("#payItemTable > tbody > tr").each(function(index , row){
+            payItems.push({
+               pno:$("input[name=pno]" , row).val(),
+               psize:$("input[name=psize]" , row).val(),
+               qty:$("input[name=qty]" , row).val(),
+               price:$("input[name=price]" , row).val()
+            });
+         });
+
+         arg.items = payItems;
+
+         $.ajax({
+            url:"/pay/buy.do",
+            type:"post",
+            data: JSON.stringify(arg),
+            contentType:"application/json; charset=utf-8",
+            dataType:"json",
+            success: function()
+            {
+               alert("결제되었습니다.");
+               window.location = "/";
+            }
+         });
 
       });
 
@@ -37,7 +72,7 @@
 
       <h3>주문 내역</h3>
       <br>
-      <table width="100%">
+      <table id="payItemTable" width="100%">
          <thead>
             <tr height="40">
                <th style="text-align: center">이미지</th>
@@ -52,6 +87,11 @@
          <c:set var="totalprice" value="0"/>
          <c:forEach var="item" items="${cartList}">
             <tr height="100">
+               <input type="hidden" name="pno" value="${item.pno}">
+               <input type="hidden" name="psize" value="${item.psize}">
+               <input type="hidden" name="qty" value="${item.qty}">
+               <input type="hidden" name="price" value="${item.pprice}">
+
                <td width="200" align="center" valign="middle">
                   <a href="/shop/info.do?pno=${item.pno}">
                      <img src="/img/${item.pmainimg}" style="width: 150px;height: 90px"/>
@@ -121,34 +161,34 @@
             <tr>
                <td>이름</td>
                <td>
-                  <input type="text" name="name">
+                  <input type="text" name="name" value="${user.name}">
                </td>
             </tr>
             <tr>
                <td>우편번호</td>
                <td>
-                  <input type="text" name="postNumber">
+                  <input type="text" name="postNumber" value="${user.mtemp}">
                   <input id="buttonPostCheck" type="button" value="검색">
                </td>
             </tr>
             <tr>
                <td>주소</td>
                <td>
-                  <input type="text" name="address1">
+                  <input type="text" name="address1" value="${user.maddress1}">
                   <br>
-                  <input type="text" name="address2">
+                  <input type="text" name="address2" value="${user.maddress2}">
                </td>
             </tr>
             <tr>
                <td>휴대전화</td>
                <td>
-                  <input type="text" name="phone">
+                  <input type="text" name="phone" value="${user.phone}">
                </td>
             </tr>
             <tr>
                <td>배송메세지</td>
                <td>
-                  <textarea></textarea>
+                  <textarea id="message"></textarea>
                </td>
             </tr>
          </tbody>

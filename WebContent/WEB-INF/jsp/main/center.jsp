@@ -92,8 +92,8 @@
 					<tr>
 				</c:if>
 
-				<td width="300" align="center" valign="middle"><a
-					href="/shop/info.do?pno=${bean.pno}" style="text-decoration: none">
+				<td width="300" align="center" valign="middle">
+					<a href="/shop/info.do?pno=${bean.pno}" style="text-decoration: none" onfocus="this.blur();">
 						<img src="/img/${bean.pmainimg}" width="280" height="300"> <br>
 						<br><br><br>
 						<font color="gray">상품 이름 : ${bean.pname }</font><br>
