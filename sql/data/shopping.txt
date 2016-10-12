@@ -1,0 +1,650 @@
+SET DEFINE OFF;
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('D01', '클릭 프린팅 맨투맨', 19800, '착용했을 때 보다 편안한 움직임!', 'D01.jpg',
+    'D01SUB.jpg', 0, 14, 'D');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('D02', '옐로우 맨투맨', 11800, '캐쥬얼하면서도 댄디한 느낌!!', 'D02.jpg',
+    'D02SUB.jpg', 0, 14, 'D');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('D03', '크라이 패치 맨투맨', 22800, '컬러 패치 디테일로 유니크한 데일리 룩!', 'D03.jpg',
+    'D03SUB.jpg', 0, 14, 'D');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('D04', '다프트 프린팅 맨투맨', 22400, '독특한 프린팅과 넉넉하고 편안한 핏!', 'D04.jpg',
+    'D04SUB.jpg', 0, 14, 'D');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('D05', '오즈 패치 맨투맨', 13800, '정사이즈로 제작되어 심플한 착용!!', 'D05.jpg',
+    'D05SUB.jpg', 0, 14, 'D');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('D06', '알리스 프린팅 맨투맨', 12800, '레귤러 어깨라인과 프린팅 디테일로 캐쥬얼한 느낌!', 'D06.jpg',
+    'D06SUB.jpg', 0, 14, 'D');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('D07', '올리언 나염 맨투맨', 19800, '트렌디한 나염 디테일!', 'D07.jpg',
+    'D07SUB.jpg', 0, 14, 'D');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('D08', '랜드 런던 맨투맨', 13500, '부담없는 프린팅 디자인!!', 'D08.jpg',
+    'D08SUB.jpg', 0, 14, 'D');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('D09', '다이스 레이어드 맨투맨', 17000, '베이직한 컬러들의 조합!!', 'D09.jpg',
+    'D09SUB.jpg', 0, 14, 'D');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('D10', '요들 패치 맨투맨', 14800, '깔끔한 핏에 매니악한 느낌!', 'D10.jpg',
+    'D10SUB.jpg', 0, 14, 'D');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('D11', '히브릭 배색 맨투맨', 16800, '한쪽 언발 배색으로 편안함과 유니크함까지!', 'D11.jpg',
+    'D11SUB.jpg', 0, 14, 'D');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('D12', '디프론 심플 맨투맨', 13800, '살짝 루즈한 핏으로 편안한 느낌!', 'D12.jpg',
+    'D12SUB.jpg', 0, 14, 'D');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('E01', '얼론 포켓 카고팬츠', 18800, '카고 포켓 포인트로 편안하고 캐쥬얼하게!', 'E01.jpg',
+    'E01SUB.jpg', 0, 15, 'E');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('E02', '다레 워싱 코튼팬츠', 17800, '사계절 착용 가능한 매력적인 아이템!', 'E02.jpg',
+    'E02SUB.jpg', 0, 15, 'E');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('E03', '웨즈 워싱 데님팬츠', 25800, '슬림핏라인으로 다리가 길어보이는 효과를!', 'E03.jpg',
+    'E03SUB.jpg', 0, 15, 'E');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('E04', '세이시 슬림핏 밴딩 데님팬츠', 18800, '신축성,라인감,멋 3가지!!', 'E04.jpg',
+    'E04SUB.jpg', 0, 15, 'E');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('E05', '홀딘 슬핌 워싱 면팬츠', 14800, '슬림하게 떨어지는 라인감!', 'E05.jpg',
+    'E05SUB.jpg', 0, 15, 'E');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('E06', '피드로 데미지 스판 데님팬츠', 18800, '잔잔한 데미지 디테일로 매력있게!!', 'E06.jpg',
+    'E06SUB.jpg', 0, 15, 'E');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('E07', '위네 밴딩 스판 데님팬츠', 25800, '레귤러핏으로 부담없는 캐주얼룩을!', 'E07.jpg',
+    'E07SUB.jpg', 0, 15, 'E');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('E08', '류트 데미지 데님팬츠', 25800, '데미지 디테일을 가미하여 스타일링!', 'E08.jpg',
+    'E08SUB.jpg', 0, 15, 'E');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('E09', '리로드 베이직 스판 스키니진', 17800, '신축성이 뛰어난 잇아이템!!', 'E09.jpg',
+    'E09SUB.jpg', 0, 15, 'E');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('E10', '벤쿠바 슬림핏 카고팬츠', 23800, '이쁘게 잡힌 스림라인핏으로 비율까지!!', 'E10.jpg',
+    'E10SUB.jpg', 0, 15, 'E');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('E11', '에틴  스트레이트 데님팬츠', 25800, '스트레이트 라인감으로 부담없이 착용을!', 'E11.jpg',
+    'E11SUB.jpg', 0, 15, 'E');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('E12', '워닝 밴딩 스판 데님팬츠', 22800, '베이직하고 심플한 모습의 디자인!', 'E12.jpg',
+    'E12SUB.jpg', 0, 15, 'E');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('I01', '비엘지 볼캡', 11900, '발포 나염으로 또렷한 디테일로 포인트 UP!', 'I01.jpg',
+    'I01SUB.jgp', 0, 19, 'I');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('I02', '펑더웩 볼캡', 13800, '남녀노소 커플 아이템으로 재격!', 'I02.jpg',
+    'I02SUB.jpg', 0, 19, 'I');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('I03', '브이투 자수 볼캡', 14800, '위트있는 자수 디테일로 심플하게 착용 OK!', 'I03.jpg',
+    'I03SUB.jpg', 0, 19, 'I');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('I04', '에셀든 시계', 17800, '깔끔한 디자인으로 심플한 스타일링 OK!', 'I04.jpg',
+    'I04SUB.jpg', 0, 19, 'I');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('I05', '델렌 가죽 시계', 13800, '레더소재로 제작하여 세련된 느낌 UP!!', 'I05.jpg',
+    'I05SUB.jpg', 0, 19, 'I');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('I06', '앤쉬 가죽 시계', 14800, '레더 가죽으로 제작하여 세련된 느낌 UP!', 'I06.jpg',
+    'I06SUB.jpg', 0, 19, 'I');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('I07', '페빌 벨트', 7800, '트렌디하게 포인트 주기 좋은 ITEM!', 'I07.jpg',
+    'I07SUB.jpg', 0, 19, 'I');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('I08', '로디 스트라이프 시계', 12800, '스트라이프 패턴으로 포인트 있게 스타일링을!', 'I08.jpg',
+    'I08SUB.jpg', 0, 19, 'I');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('I09', '말리부 페도라', 15800, '다양한 컬러구성!! 여름 바캉스룩 필수템!!', 'I09.jpg',
+    'I09SUB.jpg', 0, 19, 'I');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('I10', '도라도 배색 시계', 17800, '다양한 색감으로 컬러풀하게!!', 'I10.jpg',
+    'I10SUB.jpg', 0, 19, 'I');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('I11', '밀러티온 시계', 22800, '심플한 전자 디테일로 캐쥬얼한 느낌 물씬!', 'I11.jpg',
+    'I11SUB.jpg', 0, 19, 'I');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('I12', '파라 페이크 삭스', 990, '합리적인 가격의 남녀공용 아이템!', 'I12.jpg',
+    'I12SUB.jpg', 0, 19, 'I');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('G01', '말콤스니커즈', 27800, '심플한 디자인으로 다양한 스타일링!', 'G01.jpg',
+    'G01SUB.jpg', 0, 17, 'G');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('G02', '니쟈스 스니커즈', 28900, '높지않은 밑굽으로 편한 착용감이 GOOD!', 'G02.jpg',
+    'G02SUB.jpg', 0, 17, 'G');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('G03', '어메리칸 스니커즈', 18800, '벨크로 디테일로 손쉬운 관리 OK', 'G03.jpg',
+    'G03SUB.jpg', 0, 17, 'G');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('G04', '게이트 벨트 샌들', 25800, '신고 벗기 편한 여름 필수 스포티샌들!', 'G04.jpg',
+    'G04SUB.jpg', 0, 17, 'G');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('G05', '테리드 심플 슬립온', 30800, '세련되고 심플한 디자인으로 캐쥬얼이나 댄디룩 어디에나!', 'G05.jpg',
+    'G05SUB.jpg', 0, 17, 'G');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('G06', '퀘이커 베이직 스니커즈', 25800, '적당한 두께감으로 4계절 내내 착용가능', 'G06.jpg',
+    'G06SUB.jpg', 0, 17, 'G');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('G07', '트와스 레더 지퍼 스니커즈', 33800, '은은한 광택과 세련된 컬러로 심플하게', 'G07.jpg',
+    'G07SUB.jpg', 0, 17, 'G');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('G08', '파라곤 심플 스니커즈', 25500, '모노컬러의 디자인으로 댄디함 업!', 'G08.jpg',
+    'G08SUB.jpg', 0, 17, 'G');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('G09', '니단 슬립온', 27800, '심플한 디자인으로 댄디하게!!', 'G09.jpg',
+    'G09SUB.jpg', 0, 17, 'G');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('G10', '쿠죠 버클 샌들', 27800, '계절감에 맞는 트렌디 아이템!', 'G10.jpg',
+    'G10SUB.jpg', 0, 17, 'G');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('G11', '다켄 레더 샌들', 23800, '촘촘한 봉제로 내구성 up!', 'G11.jpg',
+    'G11SUB.jpg', 0, 17, 'G');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('G12', '드란슨 버클 샌들', 24800, '가벼운 무게감에 버클티데일로 사이즈조절이 가능한!!', 'G12.jpg',
+    'G12SUB.jpg', 0, 17, 'G');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('H01', '펜시 데님 토트백', 22800, '하나쯤 구비한다면 다양하게 포인트주기 좋은가방!', 'H01.jpg',
+    'H01SUB.jpg', 0, 18, 'H');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('H02', '힐튼 코튼 백팩', 51000, '다양하고 넓은 수납공간으로 실용성 up!!', 'H02.jpg',
+    'H02SUB.jpg', 0, 18, 'H');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('H03', '투데이 에코백', 9000, '넓은 수납공간으로 실용성이 높은 아이템!!', 'H03.jpg',
+    'H03SUB.jpg', 0, 18, 'H');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('H04', '자카 에코백', 17800, '심플한 영문문구로 포인트!', 'H04.jpg',
+    'H04SUB.jpg', 0, 18, 'H');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('H05', '콜링레더 백팩', 27800, '레더소재로 제작하여 고급스러운 느낌 up!!', 'H05.jpg',
+    'H05SUB.jpg', 0, 18, 'H');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('H06', '딜번 토트백', 14800, '전면과 후면부의 색다른 디테일', 'H06.jpg',
+    'H06SUB.jpg', 0, 18, 'H');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('H07', '투온 데님 에코백', 18800, '트렌디한 데님컬러와 지퍼디테일로 효율성up!!', 'H07.jpg',
+    'H07SUB.jpg', 0, 18, 'H');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('H08', '이지론 크로스백', 20800, '베이직한 디자인과 다양한색상!', 'H08.jpg',
+    'H08SUB.jpg', 0, 18, 'H');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('H09', '코롱코튼 백팩', 28800, '캐쥬얼한 디자인에 다양한 수남공간으로 간편한!', 'H09.jpg',
+    'H09SUB.jpg', 0, 18, 'H');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('H10', '메르시 에코백', 22800, '토트와 크로스형식을 동시에! 넓은 수납공간으로 덤!', 'H10.jpg',
+    'H10SUB.jpg', 0, 18, 'H');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('H11', '놀리 포켓 토트백', 38800, '토트형식 또는 크로스 형식으로 다양한 연출가능', 'H11.jpg',
+    'H11SUB.jpg', 0, 18, 'H');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('H12', '가톡 데님 백팩', 29800, '데님소재로 제작하여 캐쥬얼한 스타일링!', 'H12.jpg',
+    'H12SUB.jpg', 0, 18, 'H');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('C01', '던바 파자마 셔츠', 28900, '루즈 라인감과 심플한 디자인', 'C01.jpg',
+    'C01SUB.jpg', 0, 13, 'C');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('C02', '가마 오버핏 차이나 7부셔츠', 22800, '체크 디테일과 차이나 넥라인으로 도시적인 느낌!', 'C02.jpg',
+    'C02SUB.jpg', 0, 13, 'C');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('C03', '워플 하와이안 셔츠', 30800, '적당한 레귤러핏과 소매부분 카브라형식으로 트렌디하게!!', 'C03.jpg',
+    'C03SUB.jpg', 0, 13, 'C');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('C04', '아잔 하와이안 반팔셔츠', 27800, '시원한야자수 패턴으로 여름시즌 트렌드인 반팔셔츠', 'C04.jpg',
+    'C04SUB.jpg', 0, 13, 'C');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('C05', '레이든 오버핏 차이나 체크 셔츠', 20800, '반오픈 차이나넥에 체크패턴으로 심플하고 캐쥬얼한 아이템!', 'C05.jpg',
+    'C05SUB.jpg', 0, 13, 'C');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('C06', '핑크팬더 스트라이프 오버핏 남방', 25800, '캐쥬얼한 데님컬러에 그래픽 디테일과 스트라이프 패턴으로 개성있게', 'C06.jpg',
+    'C06SUB.jpg', 0, 13, 'C');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('C07', '데이즈 스트라이프 7부 셔츠', 25800, '스트라이프 패턴으로 포인트 있게!', 'C07.jpg',
+    'C07SUB.jpg', 0, 13, 'C');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('C08', '세인트 루즈핏 린넨 7부 셔츠', 18800, '다양한 스타일링을 즐기실수 있는 루즈핏 린넨 7부 남방', 'C08.jpg',
+    'C08SUB.jpg', 0, 13, 'C');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('C09', '다이닝 핀스트라이브 셔츠', 17800, '고급스러운 핀 스트라이프 패턴과 베이직한 핏으로 오피스룩 연출 ', 'C09.jpg',
+    'C09SUB.jpg', 0, 13, 'C');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('C10', '캐핀 아노락 청남방 ', 31800, '팔부분 버튼을 부착하여 소매 롤업이 가능', 'C10.jpg',
+    'C10SUB.jpg', 0, 13, 'C');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('C11', '매레슬림 체크 남방', 29800, '봄에 꼭 필요한 베이직한 실루엣의 남방에 트렌디한 컬러로 캐쥬얼하게!', 'C11.jpg',
+    'C11SUB.jpg', 0, 13, 'C');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('C12', '벨라노 배색셔츠 ', 4900, '부분 배색처리포인트로 댄디함!', 'C12.jpg',
+    'C12SUB.jpg', 0, 13, 'C');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('A01', '가란 루즈핏 데님 자켓', 29800, '트렌디한 컬러와 베이직한 디자인으로 데일리룩으로 제격', 'A01.jpg',
+    'A01SUB.jpg', 0, 11, 'A');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('A02', '니턴 레터링 청자켓', 26800, '기본적인 디자인에 영문레터링으로 독특한', 'A02.jpg',
+    'A02SUB.jpg', 0, 11, 'A');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('A03', '제레븐 화이트 데님 자켓', 25500, '매칭력이 뛰어나 코디하기 쉬운 화이트 자켓', 'A03.jpg',
+    'A03SUB.jpg', 0, 11, 'A');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('A04', '게신 데미지 청자켓', 29800, '곳곳에 데미지와 은은한 워싱으로 빈티지한', 'A04.jpg',
+    'A04SUB.jpg', 0, 11, 'A');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('A05', '헤스 레터링 코치 자켓', 39800, '베이직한 디자인과 밑단 스트링과 레터링 디테일로 매력적인 아이템', 'A05.jpg',
+    'A05SUB.jpg', 0, 11, 'A');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('A06', '단테 베이직 블루종', 33800, '네크라인에 버튼 디테일로 차별화된 디자인', 'A06.jpg',
+    'A06SUB.jpg', 0, 11, 'A');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('A07', '카인 루즈핏 싱글 코트', 28800, '넉넉하고 여유로운 사이즈', 'A07.jpg',
+    'A07SUB.jpg', 0, 11, 'A');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('A08', '솔로몬 파스텔 가디건', 25800, '심플하고 베이직한 디자인이 매력적인 가디건', 'A08.jpg',
+    'A08SUB.jpg', 0, 11, 'A');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('A09', '브뤼셀 데님 코트', 36000, '은은한 워싱처리의 데님 특유의 컬러감', 'A09.jpg',
+    'A09SUB.jpg', 0, 11, 'A');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('A10', '호루스 집업 맨투맨', 25800, '맨투맨 형태에 집업을 부착한 아우터 느낌의 아이템', 'A10.jpg',
+    'A10SUB.jpg', 0, 11, 'A');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('A11', '덤프티 플립 야상 자켓', 25800, '유니크한 디자인이 눈에 띄는 아이템', 'A11.jpg',
+    'A11SUB.jpg', 0, 11, 'A');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('A12', '라이엔 셔링 블루종', 32800, '봄시즌에 걸맞는 캐쥬얼하고 시크한 블루종', 'A12.jpg',
+    'A12SUB.jpg', 0, 11, 'A');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('B01', '조니 오버핏 레이어드 반팔티', 9800, '밑단과 소매부분 레이어드 디테일로 트렌디한 멋', 'B01.jpg',
+    'B01SUB.jpg', 0, 12, 'B');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('B02', '로디스 레이어드 맨투맨', 10800, '편안한 착장감과 다양한 컬러 구성', 'B02.jpg',
+    'B02SUB.jpg', 0, 12, 'B');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('B03', '루요 단가라 레이어드 반팔티', 11800, '시원한 두께와 7부 소매로 S/S시즌 활용도 높은 아이템', 'B03.jpg',
+    'B03SUB.jpg', 0, 12, 'B');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('B04', '프레디 와플 트임 7부티', 9800, '댄디하고 모던한 느낌의 데일리 아이템', 'B04.jpg',
+    'B04SUB.jpg', 0, 12, 'B');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('B05', '다이드 7부 레이어드 티셔츠', 9800, '스트라이프 레이어드 디테일로 캐쥬얼하게', 'B05.jpg',
+    'B05SUB.jpg', 0, 12, 'B');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('B06', '레톤 스트라이프 반팔티', 12800, '심플한 스트라이프 패턴으로 다양한 데일리룩', 'B06.jpg',
+    'B06SUB.jpg', 0, 12, 'B');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('B07', '폴즈 오버핏 롤업 반팔티', 12800, '롤업 디테일과 나염 문구 포인트로 캐쥬얼하게', 'B07.jpg',
+    'B07SUB.jpg', 0, 12, 'B');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('B08', '모리츠 오버핏 레이어드 반팔티', 10800, '드롭형태의 어깨라인으로 편안한 착장감', 'B08.jpg',
+    'B08SUB.jpg', 0, 12, 'B');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('B09', '핸티 배색 포켓 반팔티', 9800, '베이직한 라인감으로 깔끔한 핏연출을', 'B09.jpg',
+    'B09SUB.jpg', 0, 12, 'B');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('B10', '트온 헨리넥 단가라 반팔티', 8800, '헨리넥 포인트와 스트라이프 패턴으로 매력적인 아이템', 'B10.jpg',
+    'B10SUB.jpg', 0, 12, 'B');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('B11', '러베 자수 반팔티', 6800, '깔끔한 컬러 자수 디테일로 포인트있게 코디가능한 잇아이템', 'B11.jpg',
+    'B11SUB.jpg', 0, 12, 'B');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('B12', '제인 포켓 반팔티', 18800, '캐쥬얼한 라인감으로 트렌디하게', 'B12.jpg',
+    'B12SUB.jpg', 0, 12, 'B');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('F01', '리폰 트레이닝 5부 팬츠', 9000, '고급 코튼소재로 제작되어 부드러운 촉감', 'F01.jpg',
+    'F01SUB.jpg', 0, 16, 'F');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('F02', '엔스 패치 트레이닝 하프팬츠', 16800, '심플하면서 빈티지한 분위기의 트레이닝 팬츠', 'F02.jpg',
+    'F02SUB.jpg', 0, 16, 'F');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('F03', '베리스 하프 트레이닝 세트', 17800, '커플룩으로 딱인 부드러운 소재의 트렌디한 여름 트레이닝 세트', 'F03.jpg',
+    'F03SUB.jpg', 0, 16, 'F');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('F04', '냉장고바지 쿨링팬츠 ', 3800, '다양한 패턴의 시원하고 편한 냉장고팬츠 27종', 'F04.jpg',
+    'F04SUB.jpg', 0, 16, 'F');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('F05', '쟈크 냉장고 반바지', 3800, '시원한 촉감으로 착용해 보실수 있는 아이템', 'F05.jpg',
+    'F05SUB.jpg', 0, 16, 'F');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('F06', '냉장고 배기 바지', 4800, '시원한 촉감으로 착용해 보실수 있는 아이템', 'F06.jpg',
+    'F06SUB.jpg', 0, 16, 'F');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('F07', '쟈크 냉장고 일자 바지', 4800, '시원한 촉감으로 착용해 보실 수 있는 아이템', 'F07.jpg',
+    'F07SUB.jpg', 0, 16, 'F');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('F08', '키누 트레이닝 팬츠', 15800, '봄 여름 가을 시즌 스포츠 웨어로 가볍게 착용하기 좋은', 'F08.jpg',
+    'F08SUB.jpg', 0, 16, 'F');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('F09', '쉐온드 트레이닝 팬츠', 11800, '봄맞이 다양한 컬러로 산뜻함이 UP', 'F09.jpg',
+    'F09SUB.jpg', 0, 16, 'F');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('F10', '샌디 양기모 트레이닝 팬츠', 18800, '부드러운 촉감과 따뜻한 보온성이 탁월한', 'F10.jpg',
+    'F10SUB.jpg', 0, 16, 'F');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('F11', '듀크 트레이닝 팬츠', 23800, '자연스러운 핏감으로 편안함 착용감이 뛰어난 팬츠', 'F11.jpg',
+    'F11SUB.jpg', 0, 16, 'F');
+Insert into C##SHOPDB.SHOPPING
+   (PNO, PNAME, PPRICE, PINFO, PMAINIMG,
+    PSUBIMG, POCUNT, PCATE, PTEMP)
+ Values
+   ('F12', '스텔트 조거 트레이닝 팬츠', 17900, '무릎부분 절개형식으로 기존 트레이닝보다 포인트 잇는 트레이닝 팬츠 ', 'F12.jpg',
+    'F12SUB.jpg', 0, 16, 'F');
+COMMIT;
