@@ -34,7 +34,7 @@
 			<a id="buttonLogout" href="/login/logout.do" style="text-decoration: none;color: black;margin-right: 5px">로그아웃</a>
 			<a href="/login/edit.do" style="text-decoration: none;color: black;margin-right: 5px">정보수정</a>
 			<a href="/pay/itemCart.do" style="text-decoration: none;color: black;margin-right: 5px">장바구니</a>
-			<a href="orderlist.do" style="text-decoration: none;color: black">주문조회</a>
+			<a href="/pay/boughtList.do" style="text-decoration: none;color: black">결제내역</a>
 
 			<c:if test="${sessionScope.userId == 'admin' }">
 				<span style="color: black;margin-right: 20px;margin-left: 20px;font-weight: bold">|</span>

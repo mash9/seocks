@@ -1,5 +1,6 @@
 package com.seocks.shopping.mapper;
 
+import com.seocks.shopping.model.Bought;
 import com.seocks.shopping.model.Shopping;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;

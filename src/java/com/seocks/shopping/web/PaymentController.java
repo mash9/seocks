@@ -84,7 +84,6 @@ public class PaymentController {
         return true;
     }
 
-
     private Collection<ShoppingItem> getCartList(HttpSession session , String pno , String psize , Integer qty)
     {
         HashMap<String , ShoppingItem> cartMap = (HashMap<String , ShoppingItem>)session.getAttribute("cartMap");
@@ -125,5 +124,17 @@ public class PaymentController {
         }
 
         return cartMap.values();
+    }
+
+    @RequestMapping(path = "/boughtList.do" , method = RequestMethod.GET)
+    public String boughtList(HttpSession session, Model model)
+    {
+        String userId = (String)session.getAttribute("userId");
+
+        model.addAttribute("title" , "거래내역");
+        model.addAttribute("groups" , paymentService.boughtGroup(userId));
+        model.addAttribute("items" , paymentService.boughtList(userId));
+        model.addAttribute("page" , "/payment/boughtList");
+        return "/include/layout";
     }
 }

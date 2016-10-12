@@ -17,6 +17,7 @@
            ,PAY_TYPE
            ,MESSAGE
            ,USER_ID
+           ,BUY_DATE
         )
         VALUES
         (
@@ -29,6 +30,7 @@
            ,#{pay.payType}
            ,#{pay.message}
            ,#{pay.userId}
+           ,SYSDATE
         )
     </insert>
 
@@ -50,5 +52,44 @@
            ,#{pay.price}
         )
     </insert>
+
+    <select id="selectBoughtGroup" resultType="com.seocks.shopping.model.Bought">
+        SELECT A.PNO
+              ,A.PNAME
+              ,A.PINFO
+              ,A.PMAINIMG
+              ,A.PSUBIMG
+              ,B.PSIZE
+              ,B.QTY
+              ,B.PRICE
+          FROM SHOPPING A
+              ,( SELECT PNO
+                       ,PSIZE
+                       ,SUM(QTY) QTY
+                       ,SUM(QTY) * MAX(PRICE) PRICE
+                   FROM PAYMENT
+                  WHERE PAY_ID IN ( SELECT PAY_ID FROM PAYMENT_DELIVERY WHERE USER_ID = #{userId} )
+                  GROUP BY PNO , PSIZE ) B
+         WHERE A.PNO = B.PNO
+    </select>
+
+    <select id="selectBought" resultType="com.seocks.shopping.model.Bought">
+        SELECT A.PNO
+              ,A.PSIZE
+              ,A.QTY
+              ,A.PRICE
+              ,C.PNAME
+              ,C.PINFO
+              ,C.PMAINIMG
+              ,C.PSUBIMG
+              ,B.BUY_DATE
+          FROM PAYMENT A
+              ,PAYMENT_DELIVERY B
+              ,SHOPPING C
+         WHERE A.PAY_ID = B.PAY_ID
+           AND B.USER_ID = #{userId}
+           AND A.PNO = C.PNO
+         ORDER BY BUY_DATE
+    </select>
 
 </mapper>

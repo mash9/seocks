@@ -16,18 +16,6 @@ http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
 
 
 
-
-<!-- 구매하기 -->
-<bean id="itembuy" name="/shop/itembuy.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="itembuyresult" name="/shop/itembuyresult.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="itembuy2" name="/shop/itembuy2.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" /><!-- 개별구입 -->
-<bean id="itembuyresult2" name="/shop/itembuyresult2.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" /><!-- 개별구입 결제 -->
-
-
-<!-- 주문조회 -->
-<bean id="orderlist" name="/shop/orderlist.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="buylist" name="/shop/buylist.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-
 <!-- 코디매칭 -->
 <bean id="matching" name="/shop/matching.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
 <bean id="shirtsbefore" name="/shop/shirtsbefore.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />

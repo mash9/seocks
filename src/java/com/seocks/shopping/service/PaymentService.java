@@ -1,11 +1,14 @@
 package com.seocks.shopping.service;
 
 import com.seocks.shopping.mapper.PaymentMapper;
+import com.seocks.shopping.model.Bought;
 import com.seocks.shopping.model.Payment;
 import com.seocks.shopping.model.PaymentDelivery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 /**
  * Created by com on 2016-10-13.
@@ -26,5 +29,15 @@ public class PaymentService {
             payment.setPayId(paymentDelivery.getPayId());
             mapper.createPayment(payment);
         }
+    }
+
+    public List<Bought> boughtList(String userId)
+    {
+        return mapper.selectBought(userId);
+    }
+
+    public List<Bought> boughtGroup(String userId)
+    {
+        return mapper.selectBoughtGroup(userId);
     }
 }
