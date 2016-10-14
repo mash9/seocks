@@ -17,6 +17,7 @@ public class Bought {
     private String psize;
     private String qty;
     private String price;
+    private String userId;
     private Date buyDate;
 
     public String getPno() {
@@ -81,6 +82,14 @@ public class Bought {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public Date getBuyDate() {

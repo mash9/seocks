@@ -38,9 +38,10 @@
 
 			<c:if test="${sessionScope.userId == 'admin' }">
 				<span style="color: black;margin-right: 20px;margin-left: 20px;font-weight: bold">|</span>
-				<a href="/admin/memberList.do" style="text-decoration: none;color: black;margin-right: 5px">회원관리</a>
-				<a href="itemreserveform.do" style="text-decoration: none;color: black;margin-right: 5px">상품등록</a>
-				<a href="buylist.do" style="text-decoration: none;color: black">판매현황</a>
+				<a href="/admin/memberList.do" style="text-decoration: none;color: #46b8da;margin-right: 5px">회원관리</a>
+				<a href="itemreserveform.do" style="text-decoration: none;color: #46b8da;margin-right: 5px">상품등록</a>
+				<a href="/admin/saleList.do" style="text-decoration: none;color: #46b8da;margin-right: 5px">판매현황</a>
+				<a href="buylist.do" style="text-decoration: none;color: #46b8da">거래처</a>
 			</c:if>
 		</c:if>
 	</div>

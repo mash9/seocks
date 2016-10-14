@@ -63,14 +63,20 @@
               ,B.QTY
               ,B.PRICE
           FROM SHOPPING A
-              ,( SELECT PNO
-                       ,PSIZE
-                       ,SUM(QTY) QTY
-                       ,SUM(QTY) * MAX(PRICE) PRICE
-                   FROM PAYMENT
-                  WHERE PAY_ID IN ( SELECT PAY_ID FROM PAYMENT_DELIVERY WHERE USER_ID = #{userId} )
-                  GROUP BY PNO , PSIZE ) B
+              ,(SELECT PNO
+                      ,PSIZE
+                      ,SUM(QTY) QTY
+                      ,SUM(QTY) * MAX(PRICE) PRICE
+                  FROM PAYMENT
+                 WHERE PAY_ID IN ( SELECT PAY_ID
+                                     FROM PAYMENT_DELIVERY
+                                    WHERE 1 = 1
+                                    <if test="userId != null and userId != ''">
+                                      AND USER_ID = #{userId}
+                                    </if> )
+                 GROUP BY PNO , PSIZE) B
          WHERE A.PNO = B.PNO
+         ORDER BY A.PNAME , B.PSIZE
     </select>
 
     <select id="selectBought" resultType="com.seocks.shopping.model.Bought">
@@ -83,13 +89,16 @@
               ,C.PMAINIMG
               ,C.PSUBIMG
               ,B.BUY_DATE
+              ,B.USER_ID
           FROM PAYMENT A
               ,PAYMENT_DELIVERY B
               ,SHOPPING C
          WHERE A.PAY_ID = B.PAY_ID
-           AND B.USER_ID = #{userId}
            AND A.PNO = C.PNO
-         ORDER BY BUY_DATE
+           <if test="userId != null and userId != ''">
+              AND B.USER_ID = #{userId}
+           </if>
+         ORDER BY BUY_DATE , USER_ID , PNAME , PSIZE
     </select>
 
 </mapper>

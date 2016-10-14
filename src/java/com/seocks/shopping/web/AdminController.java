@@ -3,10 +3,13 @@ package com.seocks.shopping.web;
 import com.seocks.shopping.common.ShopException;
 import com.seocks.shopping.model.Jspmember;
 import com.seocks.shopping.service.JspmemberService;
+import com.seocks.shopping.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpSession;
 
 /**
  * Created by com on 2016-10-06.
@@ -17,6 +20,9 @@ public class AdminController {
 
     @Autowired
     private JspmemberService jspmemberService;
+
+    @Autowired
+    private PaymentService paymentService;
 
     @RequestMapping(path = "/memberList.do" , method = RequestMethod.GET)
     public String memberList(Model model)
@@ -61,5 +67,15 @@ public class AdminController {
 
         jspmemberService.deleteUser(id);
         return true;
+    }
+
+    @RequestMapping(path = "/saleList.do" , method = RequestMethod.GET)
+    public String saleList(Model model)
+    {
+        model.addAttribute("title" , "판매현황");
+        model.addAttribute("groups" , paymentService.boughtGroup(""));
+        model.addAttribute("items" , paymentService.boughtList(""));
+        model.addAttribute("page" , "/admin/saleList");
+        return "/include/layout";
     }
 }
