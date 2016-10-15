@@ -14,12 +14,6 @@ http://www.springframework.org/schema/tx/spring-tx.xsd
 http://www.springframework.org/schema/mvc
 http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
 
-
-
-<!-- 상품등록 -->
-<!--<bean id="itemreserve" name="/shop/itemreserve.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />-->
-<!--<bean id="itemreserveform" name="/shop/itemreserveform.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />-->
-
 	<!-- 컨트롤러 클래스 실행후 리턴할 jsp 선언  -->
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
 		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
@@ -27,7 +21,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
 		<property name="suffix" value=".jsp"/>
 	</bean>
 
-	<context:component-scan use-default-filters="false" base-package="com">
+	<context:component-scan use-default-filters="false" base-package="com.seocks.shopping">
 		<context:include-filter expression="org.springframework.stereotype.Service" type="annotation"/>
 		<context:include-filter expression="org.springframework.stereotype.Repository" type="annotation"/>
 		<context:include-filter expression="org.springframework.stereotype.Component" type="annotation"/>

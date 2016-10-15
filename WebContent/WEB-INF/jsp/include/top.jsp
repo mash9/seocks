@@ -14,6 +14,7 @@
 					contentType:"application/json; charset=utf-8",
 					dataType:"json",
 					success: function(result){
+						alert("로그아웃 되었습니다.")
 						window.location = '/';
 					}
 				});
@@ -31,7 +32,7 @@
 
 		<c:if test="${sessionScope.user != null }">
 			<span style="color: blue;margin-right: 5px">${sessionScope.userName}님 반갑습니다.</span>
-			<a id="buttonLogout" href="/login/logout.do" style="text-decoration: none;color: black;margin-right: 5px">로그아웃</a>
+			<a id="buttonLogout" href="#" style="text-decoration: none;color: black;margin-right: 5px">로그아웃</a>
 			<a href="/login/edit.do" style="text-decoration: none;color: black;margin-right: 5px">정보수정</a>
 			<a href="/pay/itemCart.do" style="text-decoration: none;color: black;margin-right: 5px">장바구니</a>
 			<a href="/pay/boughtList.do" style="text-decoration: none;color: black">결제내역</a>
@@ -41,10 +42,10 @@
 				<a href="/admin/memberList.do" style="text-decoration: none;color: #46b8da;margin-right: 5px">회원관리</a>
 				<a href="itemreserveform.do" style="text-decoration: none;color: #46b8da;margin-right: 5px">상품등록</a>
 				<a href="/admin/saleList.do" style="text-decoration: none;color: #46b8da;margin-right: 5px">판매현황</a>
-				<a href="buylist.do" style="text-decoration: none;color: #46b8da">거래처</a>
+				<a href="/admin/order.do" style="text-decoration: none;color: #46b8da">거래처</a>
 			</c:if>
 		</c:if>
 	</div>
 
-	<a href="/main.do" style="text-decoration: none"><img src="/img/logo.jpg" width="600" height="100"></a>
+	<a href="/" style="text-decoration: none"><img src="/img/logo.jpg" width="600" height="100"></a>
 

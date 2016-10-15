@@ -30,10 +30,10 @@ ul.slideuptabs a{
 	position: relative;
 	display: inline-block;
 	overflow: hidden;
-	color: black; 		 /* ±ÛÀÚ»ö */
+	color: black; 		 /* ï¿½ï¿½ï¿½Ú»ï¿½ */
 	text-decoration: none;
 	padding: 8px 20px;
-	font-size: 15px;     /* ±ÛÀÚ Å©±â */
+	font-size: 15px;     /* ï¿½ï¿½ï¿½ï¿½ Å©ï¿½ï¿½ */
 	font-weight: bold;
 	vertical-align: bottom;
 	-webkit-transition: color 0.5s; /* transition property and duration */
@@ -123,5 +123,5 @@ ul.slideuptabs.blue a::before{
 		color: black; /* hover color for IE8 where tabs don't slide up */
 	}
 
-</style>   
+</style>
 <![endif]-->

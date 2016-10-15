@@ -1,15 +1,19 @@
 package com.seocks.shopping.web;
 
 import com.seocks.shopping.common.ShopException;
+import com.seocks.shopping.model.Code;
 import com.seocks.shopping.model.Jspmember;
+import com.seocks.shopping.service.CodeService;
 import com.seocks.shopping.service.JspmemberService;
 import com.seocks.shopping.service.PaymentService;
+import com.seocks.shopping.service.ShoppingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 /**
  * Created by com on 2016-10-06.
@@ -19,10 +23,16 @@ import javax.servlet.http.HttpSession;
 public class AdminController {
 
     @Autowired
+    private CodeService codeService;
+
+    @Autowired
     private JspmemberService jspmemberService;
 
     @Autowired
     private PaymentService paymentService;
+
+    @Autowired
+    private ShoppingService shoppingService;
 
     @RequestMapping(path = "/memberList.do" , method = RequestMethod.GET)
     public String memberList(Model model)
@@ -78,4 +88,16 @@ public class AdminController {
         model.addAttribute("page" , "/admin/saleList");
         return "/include/layout";
     }
+
+    @RequestMapping(path = "/order.do" , method = RequestMethod.GET)
+    public String order(Model model)
+    {
+        List<Code> codes = codeService.getProductCodes();
+        model.addAttribute("title" , "거래처");
+        model.addAttribute("codes" , codes);
+        model.addAttribute("products" , shoppingService.list(codes.get(0).getCode()));
+        model.addAttribute("page" , "/admin/order");
+        return "/include/layout";
+    }
+
 }

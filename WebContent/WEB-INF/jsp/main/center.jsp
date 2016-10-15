@@ -22,31 +22,31 @@
 					<!-- slide  -->
 					<div class="carousel-inner" role="listbox" width="1000">
 						<div class="item active">
-							<img alt="" src="../../../img/main1.jpg" width="1000" height="300">
+							<img alt="" src="/img/main1.jpg" width="1000" height="300">
 							<div class="carousel-caption"></div>
 						</div>
 						<div class="item">
-							<img alt="" src="../../../img/main2.jpg" width="1000" height="300">
+							<img alt="" src="/img/main2.jpg" width="1000" height="300">
 							<div class="carousel-caption"></div>
 						</div>
 						<div class="item">
-							<img alt="" src="../../../img/main3.jpg" width="1000" height="300">
+							<img alt="" src="/img/main3.jpg" width="1000" height="300">
 							<div class="carousel-caption"></div>
 						</div>
 						<div class="item">
-							<img alt="" src="../../../img/main4.jpg" width="1000" height="300">
+							<img alt="" src="/img/main4.jpg" width="1000" height="300">
 							<div class="carousel-caption"></div>
 						</div>
 						<div class="item">
-							<img alt="" src="../../../img/main5.jpg" width="1000" height="300">
+							<img alt="" src="/img/main5.jpg" width="1000" height="300">
 							<div class="carousel-caption"></div>
 						</div>
 						<div class="item">
-							<img alt="" src="../../../img/main6.jpg" width="1000" height="300">
+							<img alt="" src="/img/main6.jpg" width="1000" height="300">
 							<div class="carousel-caption"></div>
 						</div>
 						<div class="item">
-							<img alt="" src="../../../img/main7.jpg" width="1000" height="300">
+							<img alt="" src="/img/main7.jpg" width="1000" height="300">
 							<div class="carousel-caption"></div>
 						</div>
 
@@ -64,25 +64,25 @@
 			
 			<td>
 				<a href="https://www.facebook.com/Seoks-163892830708764/" target="_blink">
-				<img src="../../../img/facebook.JPG" width="200" height="100"></a>
+				<img src="/img/facebook.JPG" width="200" height="100"></a>
 			</td>
 		</tr>
 		<tr height="100">
 			<td>
 				<a href="https://twitter.com/" target="_blink">
-				<img src="../../../img/twitter.JPG" width="200" height="100"></a>
+				<img src="/img/twitter.JPG" width="200" height="100"></a>
 			</td>
 		</tr>
 		<tr height="100">
 			<td>
 				<a href="https://www.instagram.com/" target="_blink">
-				<img src="../../../img/instagram.JPG" width="200" height="100"></a>
+				<img src="/img/instagram.JPG" width="200" height="100"></a>
 			</td>
 		</tr>
 	</table>
 
 	<br><hr color="gray" size="100%">
-	<center><img alt="" src="../../../img/CenterLogo.JPG"><br><br><br>
+	<center><img alt="" src="/img/CenterLogo.JPG"><br><br><br>
 
 		<table width="1200">
 			<c:set var="count" value="0" />
