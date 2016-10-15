@@ -16,19 +16,9 @@ http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
 
 
 
-<!-- 코디매칭 -->
-<bean id="matching" name="/shop/matching.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="shirtsbefore" name="/shop/shirtsbefore.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="shirtsnext" name="/shop/shirtsnext.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="pantsbefore" name="/shop/pantsbefore.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="pantsnext" name="/shop/pantsnext.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="shoesbefore" name="/shop/shoesbefore.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="shoesnext" name="/shop/shoesnext.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-
-
 <!-- 상품등록 -->
-<bean id="itemreserve" name="/shop/itemreserve.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
-<bean id="itemreserveform" name="/shop/itemreserveform.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />
+<!--<bean id="itemreserve" name="/shop/itemreserve.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />-->
+<!--<bean id="itemreserveform" name="/shop/itemreserveform.do" class="com.seocks.old.control.SeocksControl" p:seocksDao-ref="seocksDao" />-->
 
 	<!-- 컨트롤러 클래스 실행후 리턴할 jsp 선언  -->
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
@@ -46,12 +36,6 @@ http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
 	<tx:annotation-driven/>
 
 	<mvc:annotation-driven/>
-
-
-
-
-	<!-- 회원가입,수정,삭제,검색 할수 있는 클래스(빈)를 등록 (의존관계설정 DI) -->
-	<bean id="seocksDao" class="com.seocks.old.model.SeocksDAO"  p:dataSource-ref="dataSource"  />
 
 	<!-- 데이터 베이스 설정빈을 등록(오라클용으로 선언)연결  -->
 	<bean id="dataSource"

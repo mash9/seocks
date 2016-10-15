@@ -4,15 +4,15 @@
 
     <sql id="sqlShopping">
         SELECT PNO
-               ,PNAME
-               ,PPRICE
-               ,PINFO
-               ,PMAINIMG
-               ,PSUBIMG
-               ,POCUNT
-               ,PCATE
-               ,PTEMP
-          FROM SHOPPING
+              ,PNAME
+              ,PPRICE
+              ,PINFO
+              ,PMAINIMG
+              ,PSUBIMG
+              ,POCUNT
+              ,PCATE
+              ,PTEMP
+         FROM SHOPPING
     </sql>
 
     <select id="selectShopping" resultType="com.seocks.shopping.model.Shopping">
@@ -22,6 +22,7 @@
     <select id="selectShoppingByPcate" resultType="com.seocks.shopping.model.Shopping">
         <include refid="sqlShopping"/>
           WHERE PCATE = #{pcate}
+          ORDER BY PNO
     </select>
 
     <select id="info" resultType="com.seocks.shopping.model.Shopping">

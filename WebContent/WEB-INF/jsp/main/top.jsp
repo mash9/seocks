@@ -19,6 +19,6 @@
 		<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
 		<li><a href="/shop/list.do?pcate=19"><span>Accessory</span></a></li>
 		<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-		<li><a href="matching.do"><span>Coordination Matching</span></a></li>
+		<li><a href="/shop/match.do"><span>Coordination Matching</span></a></li>
 	</ul>
 </div>
