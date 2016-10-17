@@ -1,6 +1,7 @@
 package com.seocks.shopping.mapper;
 
 import com.seocks.shopping.model.Bought;
+import com.seocks.shopping.model.DealOrder;
 import com.seocks.shopping.model.Shopping;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
@@ -18,4 +19,10 @@ public interface ShoppingMapper {
     List<Shopping> selectShoppingByPcate(@Param(value = "pcate") String pcate);
 
     Shopping info(@Param(value = "pno") String pno);
+
+    int updateShopping(@Param(value = "item") Shopping shopping);
+
+    List<DealOrder> selectDealOrder();
+
+    int dealOrder(@Param(value = "item") DealOrder order);
 }

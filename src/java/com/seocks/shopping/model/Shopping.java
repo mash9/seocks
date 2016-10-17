@@ -15,7 +15,7 @@ public class Shopping {
     private String pinfo;
     private String pmainimg;
     private String psubimg;
-    private String pocunt;
+    private int pocunt;
     private String pcate;
     private String ptemp;
 
@@ -67,11 +67,11 @@ public class Shopping {
         this.psubimg = psubimg;
     }
 
-    public String getPocunt() {
+    public int getPocunt() {
         return pocunt;
     }
 
-    public void setPocunt(String pocunt) {
+    public void setPocunt(int pocunt) {
         this.pocunt = pocunt;
     }
 

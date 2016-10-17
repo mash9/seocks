@@ -29,4 +29,44 @@
         <include refid="sqlShopping"/>
          WHERE PNO = #{pno}
     </select>
+
+    <update id="updateShopping" parameterType="com.seocks.shopping.model.Shopping">
+        UPDATE SHOPPING
+        SET    PNAME    = #{item.pname}
+              ,PPRICE   = #{item.pprice}
+              ,PINFO    = #{item.pinfo}
+              ,PMAINIMG = #{item.pmainimg}
+              ,PSUBIMG  = #{item.psubimg}
+              ,POCUNT   = #{item.pocunt}
+              ,PCATE    = #{item.pcate}
+              ,PTEMP    = #{item.ptemp}
+         WHERE PNO      = #{item.pno}
+    </update>
+
+    <select id="selectDealOrder" resultType="com.seocks.shopping.model.DealOrder">
+        SELECT A.PNO
+              ,A.QTY
+              ,A.DEAL_DATE
+              ,B.PNAME
+              ,B.PPRICE PRICE
+          FROM DEAL_ORDER A , SHOPPING B
+         WHERE A.PNO = B.PNO
+         ORDER BY A.DEAL_DATE DESC
+    </select>
+
+    <insert id="dealOrder" parameterType="com.seocks.shopping.model.DealOrder">
+        INSERT INTO DEAL_ORDER
+        (
+            PNO
+           ,QTY
+           ,DEAL_DATE
+        )
+        VALUES
+        (
+            #{item.pno}
+           ,#{item.qty}
+           ,SYSDATE
+        )
+    </insert>
+
 </mapper>

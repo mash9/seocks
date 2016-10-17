@@ -2,7 +2,9 @@ package com.seocks.shopping.web;
 
 import com.seocks.shopping.common.ShopException;
 import com.seocks.shopping.model.Code;
+import com.seocks.shopping.model.DealOrder;
 import com.seocks.shopping.model.Jspmember;
+import com.seocks.shopping.model.Shopping;
 import com.seocks.shopping.service.CodeService;
 import com.seocks.shopping.service.JspmemberService;
 import com.seocks.shopping.service.PaymentService;
@@ -96,8 +98,25 @@ public class AdminController {
         model.addAttribute("title" , "거래처");
         model.addAttribute("codes" , codes);
         model.addAttribute("products" , shoppingService.list(codes.get(0).getCode()));
+        model.addAttribute("orders" , shoppingService.listDealOrder());
         model.addAttribute("page" , "/admin/order");
         return "/include/layout";
+    }
+
+    @RequestMapping(path = "/deal/order.do" , method = RequestMethod.POST)
+    public @ResponseBody boolean dealOrder(@RequestParam(value = "pno") String pno,
+                                           @RequestParam(value = "qty") Integer qty)
+    {
+        Shopping product = shoppingService.info(pno);
+
+        DealOrder dealOrder = new DealOrder();
+        dealOrder.setPno(pno);
+        dealOrder.setQty(qty);
+        shoppingService.dealOrder(dealOrder);
+
+        product.setPocunt(product.getPocunt() + qty);
+        shoppingService.updateShopping(product);
+        return true;
     }
 
 }

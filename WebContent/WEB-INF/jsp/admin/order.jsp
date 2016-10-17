@@ -1,6 +1,54 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<script type="text/javascript">
+
+	$(document).ready(function() {
+
+		$("#selectPcate").change(function(){
+			$.post("/shop/list.do" , {pcate:$(this).val()} , function(result){
+
+				$("#selectItem").empty();
+
+				$(result).each(function(index , item){
+
+					var option = $("<option></option>");
+					option.val(item.pno);
+					option.text(item.pname);
+
+					$("#selectItem").append(option);
+				});
+			});
+		});
+
+		$("#buttonOrder").click(function(){
+
+			var qty = parseInt($("#inputQty").val());
+
+			if(qty == 0 || isNaN(qty))
+			{
+				alert('수량을 입력하세요.');
+				return;
+			}
+
+			if(!confirm("주문하시겠습니까?"));
+
+			var arg = {
+				pno:$("#selectItem").val()
+			   ,qty:qty
+			}
+
+			$.post("/admin/deal/order.do" , arg , function(){
+				alert("주문되었습니다.");
+				window.location = "/admin/order.do";
+			});
+
+
+		});
+
+	});
+
+</script>
 
 
 
@@ -14,7 +62,7 @@
 		<tr>
 			<td>상품종류</td>
 			<td>
-				<select>
+				<select id="selectPcate">
 					<c:forEach var="code" items="${codes}">
 						<option value="${code.code}">${code.name}</option>
 					</c:forEach>
@@ -24,7 +72,7 @@
 		<tr>
 			<td>상품명</td>
 			<td>
-				<select>
+				<select id="selectItem">
 					<c:forEach var="item" items="${products}">
 						<option value="${item.pno}">${item.pname}</option>
 					</c:forEach>
@@ -35,13 +83,13 @@
 		<tr>
 			<td>수량</td>
 			<td>
-				<input type="number" style="width: 50px">
+				<input id="inputQty" type="number" style="width: 50px">
 			</td>
 		</tr>
 	</table>
 
 	<br>
-	<input type="button" value="주문하기" style="font-size: 15px">
+	<input id="buttonOrder" type="button" value="주문하기">
 	<br>
 	<br>
 	<br>
@@ -55,6 +103,25 @@
 			<td width="400" align="center" valign="middle">상품명</td>
 			<td width="200" align="center" valign="middle">수량</td>
 			<td width="200" align="center" valign="middle">상품가격</td>
+			<td width="200" align="center" valign="middle">구매가격</td>
+		</tr>
+
+		<c:set var="totalprice" value="0"/>
+		<c:forEach var="order" items="${orders}">
+			<tr height="30">
+				<td width="200" align="center" valign="middle"><fmt:formatDate value="${order.dealDate}" pattern="yyyy-MM-dd"/></td>
+				<td width="400" align="center" valign="middle">${order.pname}</td>
+				<td width="200" align="center" valign="middle">${order.qty}</td>
+				<td width="200" align="center" valign="middle"><fmt:formatNumber value="${order.price}" type="number"/></td>
+				<td width="200" align="center" valign="middle"><fmt:formatNumber value="${order.totalPrice}" type="number"/></td>
+			</tr>
+
+			<c:set var="totalprice" value="${totalprice + order.totalPrice}"/>
+		</c:forEach>
+
+		<tr height="100">
+			<td colspan="5" align="center" valign="middle"><font
+					color="red" size="5">총 금액 : <fmt:formatNumber value="${totalprice}" type="number"/>원</font></td>
 		</tr>
 	</table>
 </center>

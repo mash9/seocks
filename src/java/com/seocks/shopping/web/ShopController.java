@@ -10,6 +10,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
@@ -33,6 +34,12 @@ public class ShopController {
         model.addAttribute("title" , "안녕하세요.");
         model.addAttribute("page" , "/main/center");
         return "/include/layout";
+    }
+
+    @RequestMapping(path = "/list.do" , method = RequestMethod.POST)
+    public @ResponseBody List<Shopping> list(@RequestParam(value = "pcate") String pcate)
+    {
+        return shoppingService.list(pcate);
     }
 
     @RequestMapping(path = "/info.do" , method = RequestMethod.GET)
