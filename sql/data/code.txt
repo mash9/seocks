@@ -1,0 +1,38 @@
+SET DEFINE OFF;
+Insert into CODE
+   (TYPE, CODE, NAME, ORD)
+ Values
+   ('PROD', '11', 'Outer', 1);
+Insert into CODE
+   (TYPE, CODE, NAME, ORD)
+ Values
+   ('PROD', '12', 'T-shirt', 2);
+Insert into CODE
+   (TYPE, CODE, NAME, ORD)
+ Values
+   ('PROD', '13', 'Shirt', 3);
+Insert into CODE
+   (TYPE, CODE, NAME, ORD)
+ Values
+   ('PROD', '14', 'Men to Men', 4);
+Insert into CODE
+   (TYPE, CODE, NAME, ORD)
+ Values
+   ('PROD', '15', 'Pants', 5);
+Insert into CODE
+   (TYPE, CODE, NAME, ORD)
+ Values
+   ('PROD', '16', 'Training', 6);
+Insert into CODE
+   (TYPE, CODE, NAME, ORD)
+ Values
+   ('PROD', '17', 'Shoes', 7);
+Insert into CODE
+   (TYPE, CODE, NAME, ORD)
+ Values
+   ('PROD', '18', 'Bag', 8);
+Insert into CODE
+   (TYPE, CODE, NAME, ORD)
+ Values
+   ('PROD', '19', 'Accessory', 9);
+COMMIT;
