@@ -3,6 +3,7 @@ package com.seocks.shopping.web;
 import com.seocks.shopping.model.Shopping;
 import com.seocks.shopping.service.ShoppingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
@@ -17,12 +18,17 @@ import java.util.List;
 @Controller
 public class MainController {
 
+    @Value("#{config['test.hello']}")
+    private String hello;
+
     @Autowired
     private ShoppingService shoppingService;
 
     @RequestMapping(path = "/main.do" , method = RequestMethod.GET)
     public String main(Model model)
     {
+        System.out.println(hello);
+
         List<Shopping> results = shoppingService.list();
 
         model.addAttribute("v" , results);

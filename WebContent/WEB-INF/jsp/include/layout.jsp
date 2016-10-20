@@ -1,6 +1,6 @@
+<!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -20,11 +20,11 @@
 	<table width="1200">
 		<!-- topoftop -->
 		<tr height="60" align="center" valign="middle">
-			<td width="1200" align="center"><jsp:include page="/WEB-INF/jsp/include/top.jsp" /></td>
+			<td width="1200" align="center"><jsp:include page="/WEB-INF/jsp/include/topmenu.jsp" /></td>
 		</tr>
 		<!-- top -->
 		<tr height="90" align="center" valign="middle">
-			<td width="1200" align="center"><jsp:include page="/WEB-INF/jsp/main/top.jsp" /></td>
+			<td width="1200" align="center"><jsp:include page="/WEB-INF/jsp/main/menu.jsp" /></td>
 		</tr>
 		<!-- Center-->
 		<tr align="center" valign="middle">

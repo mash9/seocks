@@ -20,6 +20,7 @@ public class RuntimeExceptionHandler {
     {
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html");
+        response.setStatus(404);
 
         try(PrintWriter writer = response.getWriter())
         {

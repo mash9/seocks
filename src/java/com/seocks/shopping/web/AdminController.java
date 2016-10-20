@@ -9,12 +9,18 @@ import com.seocks.shopping.service.CodeService;
 import com.seocks.shopping.service.JspmemberService;
 import com.seocks.shopping.service.PaymentService;
 import com.seocks.shopping.service.ShoppingService;
+import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.nio.file.FileSystems;
 import java.util.List;
 
 /**
@@ -23,6 +29,9 @@ import java.util.List;
 @Controller
 @RequestMapping(path = "/admin")
 public class AdminController {
+
+    @Value("#{config['upload.image.path']}")
+    private String uploadPath;
 
     @Autowired
     private CodeService codeService;
@@ -116,6 +125,46 @@ public class AdminController {
 
         product.setPocunt(product.getPocunt() + qty);
         shoppingService.updateShopping(product);
+        return true;
+    }
+
+    @RequestMapping(path = "/product/add.do" , method = RequestMethod.GET)
+    public String productAdd(Model model)
+    {
+        List<Code> codes = codeService.getProductCodes();
+        model.addAttribute("title" , "상품등록");
+        model.addAttribute("codes" , codes);
+        model.addAttribute("page" , "/admin/productAdd");
+        return "/include/layout";
+    }
+
+    @RequestMapping(path = "/product/add.do" , method = RequestMethod.POST)
+    public @ResponseBody boolean productAdd(@RequestParam(value = "pno") String pno,
+                                            @RequestParam(value = "pname") String pname,
+                                            @RequestParam(value = "pprice") Integer pprice,
+                                            @RequestParam(value = "pmainimg" , required = false) MultipartFile pmainimg,
+                                            @RequestParam(value = "psubimg" , required = false) MultipartFile psubimg,
+                                            @RequestParam(value = "pinfo") String pinfo) throws Exception
+    {
+
+
+        if(pmainimg == null) throw new ShopException("상품 이미지를 선택하세요.");
+        if(psubimg == null) throw new ShopException("상세 이미지를 선택하세요.");
+
+        String pmainimgName = FilenameUtils.getName(pmainimg.getOriginalFilename());
+        String psubimgName = FilenameUtils.getName(psubimg.getOriginalFilename());
+
+        String extensions = "bmp|jpg|png|gif";
+        if(extensions.indexOf(FilenameUtils.getExtension(pmainimgName).toLowerCase()) < 0) throw new ShopException("상품 이미지 파일 오류");
+        if(extensions.indexOf(FilenameUtils.getExtension(psubimgName).toLowerCase()) < 0) throw new ShopException("상세 이미지 파일 오류");
+
+
+
+        String separator = FileSystems.getDefault().getSeparator();
+
+
+
+
         return true;
     }
 
