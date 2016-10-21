@@ -25,4 +25,8 @@ public interface ShoppingMapper {
     List<DealOrder> selectDealOrder();
 
     int dealOrder(@Param(value = "item") DealOrder order);
+
+    String getGeneratePno(@Param(value = "pcate") String pcate);
+
+    int createShopping(@Param(value = "item") Shopping shopping);
 }

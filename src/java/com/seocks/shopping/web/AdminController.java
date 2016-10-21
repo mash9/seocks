@@ -14,12 +14,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.io.ByteArrayInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.nio.file.FileSystems;
 import java.util.List;
 
@@ -139,12 +143,12 @@ public class AdminController {
     }
 
     @RequestMapping(path = "/product/add.do" , method = RequestMethod.POST)
-    public @ResponseBody boolean productAdd(@RequestParam(value = "pno") String pno,
+    public @ResponseBody boolean productAdd(@RequestParam(value = "pcate") String pcate,
                                             @RequestParam(value = "pname") String pname,
                                             @RequestParam(value = "pprice") Integer pprice,
                                             @RequestParam(value = "pmainimg" , required = false) MultipartFile pmainimg,
                                             @RequestParam(value = "psubimg" , required = false) MultipartFile psubimg,
-                                            @RequestParam(value = "pinfo") String pinfo) throws Exception
+                                            @RequestParam(value = "pinfo") String pinfo) throws ShopException
     {
 
 
@@ -158,13 +162,81 @@ public class AdminController {
         if(extensions.indexOf(FilenameUtils.getExtension(pmainimgName).toLowerCase()) < 0) throw new ShopException("상품 이미지 파일 오류");
         if(extensions.indexOf(FilenameUtils.getExtension(psubimgName).toLowerCase()) < 0) throw new ShopException("상세 이미지 파일 오류");
 
-
-
         String separator = FileSystems.getDefault().getSeparator();
 
+        String pno = shoppingService.generatePno(pcate);
 
 
 
+        String pmainimgPath = uploadPath + separator + pno + ".jpg";
+
+
+
+
+        /*
+        try(ByteArrayInputStream inputStream = new ByteArrayInputStream(pmainimg.getBytes());
+            FileOutputStream outputStream = new FileOutputStream(pmainimgPath)){
+            FileCopyUtils.copy(inputStream , outputStream);
+        }catch(IOException ex)
+        {
+            //상품 이미지 업로드
+        }
+        */
+
+        try {
+
+            ByteArrayInputStream inputStream = new ByteArrayInputStream(pmainimg.getBytes());
+            FileOutputStream outputStream = new FileOutputStream(pmainimgPath);
+            FileCopyUtils.copy(inputStream, outputStream);
+
+            inputStream.close();
+            outputStream.flush();
+        }
+        catch (Exception ex)
+        {
+
+        }
+
+        String psubimgPath = uploadPath + separator + pno + "SUB.jpg";
+
+        try {
+
+            ByteArrayInputStream inputStream = new ByteArrayInputStream(psubimg.getBytes());
+            FileOutputStream outputStream = new FileOutputStream(psubimgPath);
+            FileCopyUtils.copy(inputStream, outputStream);
+
+            inputStream.close();
+            outputStream.flush();
+        }
+        catch (Exception ex)
+        {
+
+        }
+
+        /*
+
+        try(ByteArrayInputStream inputStream = new ByteArrayInputStream(pmainimg.getBytes());
+            FileOutputStream outputStream = new FileOutputStream(psubimgPath)){
+            FileCopyUtils.copy(inputStream , outputStream);
+        }catch(IOException ex)
+        {
+            //상세 이미지 업로드
+        }
+
+        */
+
+        Shopping newOne = new Shopping();
+        newOne.setPno(pno);
+        newOne.setPname(pname);
+        newOne.setPprice(pprice);
+        newOne.setPinfo(pinfo);
+        newOne.setPmainimg(pno + ".jpg");
+        newOne.setPsubimg(pno + "SUB.jpg");
+        newOne.setPocunt(0);
+        newOne.setPcate(pcate);
+        newOne.setPtemp(pno.substring(0 , 1));
+
+        shoppingService.create(newOne);
         return true;
     }
 

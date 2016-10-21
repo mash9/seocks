@@ -46,4 +46,14 @@ public class ShoppingService {
     {
         return mapper.dealOrder(order);
     }
+
+    public String generatePno(String pcate)
+    {
+        return mapper.getGeneratePno(pcate);
+    }
+
+    public int create(Shopping newOne)
+    {
+        return mapper.createShopping(newOne);
+    }
 }

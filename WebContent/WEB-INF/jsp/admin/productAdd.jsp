@@ -8,7 +8,8 @@
 
         $("#formUpload").ajaxForm({
             success: function(){
-                alert("상품이 등록되었습니다.")
+                alert("상품이 등록되었습니다.");
+                window.location = "/";
             }
         });
 
@@ -31,7 +32,7 @@
         <tr>
             <td>상품종류</td>
             <td>
-                <select name="pno">
+                <select name="pcate">
                     <c:forEach var="code" items="${codes}">
                         <option value="${code.code}">${code.name}</option>
                     </c:forEach>
