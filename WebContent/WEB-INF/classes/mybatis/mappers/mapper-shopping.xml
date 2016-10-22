@@ -69,4 +69,37 @@
         )
     </insert>
 
+    <select id="getGeneratePno" resultType="String">
+        SELECT MAX( PTEMP || TRIM(TO_CHAR( REPLACE(PNO , PTEMP , '') + 1  , '00')) ) PNO
+          FROM SHOPPING
+         WHERE PCATE = #{pcate}
+    </select>
+
+    <insert id="createShopping" parameterType="com.seocks.shopping.model.Shopping">
+        INSERT INTO SHOPPING
+        (
+            PNO
+           ,PNAME
+           ,PPRICE
+           ,PINFO
+           ,PMAINIMG
+           ,PSUBIMG
+           ,POCUNT
+           ,PCATE
+           ,PTEMP
+        )
+        VALUES
+        (
+            #{item.pno}
+           ,#{item.pname}
+           ,#{item.pprice}
+           ,#{item.pinfo}
+           ,#{item.pmainimg}
+           ,#{item.psubimg}
+           ,#{item.pocunt}
+           ,#{item.pcate}
+           ,#{item.ptemp}
+        )
+    </insert>
+
 </mapper>

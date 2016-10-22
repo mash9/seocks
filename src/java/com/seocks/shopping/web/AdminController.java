@@ -22,6 +22,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.ByteArrayInputStream;
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.FileSystems;
@@ -144,14 +145,14 @@ public class AdminController {
 
     @RequestMapping(path = "/product/add.do" , method = RequestMethod.POST)
     public @ResponseBody boolean productAdd(@RequestParam(value = "pcate") String pcate,
-                                            @RequestParam(value = "pname") String pname,
-                                            @RequestParam(value = "pprice") Integer pprice,
+                                            @RequestParam(value = "pname" , required = false) String pname,
+                                            @RequestParam(value = "pprice" , required = false) Integer pprice,
                                             @RequestParam(value = "pmainimg" , required = false) MultipartFile pmainimg,
                                             @RequestParam(value = "psubimg" , required = false) MultipartFile psubimg,
                                             @RequestParam(value = "pinfo") String pinfo) throws ShopException
     {
-
-
+        if(pname == null) throw new ShopException("상품명을 입력하세요.");
+        if(pprice == null) throw new ShopException("가격을 입력하세요.");
         if(pmainimg == null) throw new ShopException("상품 이미지를 선택하세요.");
         if(psubimg == null) throw new ShopException("상세 이미지를 선택하세요.");
 
@@ -163,67 +164,36 @@ public class AdminController {
         if(extensions.indexOf(FilenameUtils.getExtension(psubimgName).toLowerCase()) < 0) throw new ShopException("상세 이미지 파일 오류");
 
         String separator = FileSystems.getDefault().getSeparator();
-
         String pno = shoppingService.generatePno(pcate);
-
-
 
         String pmainimgPath = uploadPath + separator + pno + ".jpg";
 
 
 
-
-        /*
         try(ByteArrayInputStream inputStream = new ByteArrayInputStream(pmainimg.getBytes());
             FileOutputStream outputStream = new FileOutputStream(pmainimgPath)){
+
+            File file = new File(pmainimgPath);
+            if(file.exists()) file.delete();
+
             FileCopyUtils.copy(inputStream , outputStream);
         }catch(IOException ex)
         {
-            //상품 이미지 업로드
-        }
-        */
-
-        try {
-
-            ByteArrayInputStream inputStream = new ByteArrayInputStream(pmainimg.getBytes());
-            FileOutputStream outputStream = new FileOutputStream(pmainimgPath);
-            FileCopyUtils.copy(inputStream, outputStream);
-
-            inputStream.close();
-            outputStream.flush();
-        }
-        catch (Exception ex)
-        {
-
+            throw new ShopException("시스템에러가 발생했습니다.");
         }
 
         String psubimgPath = uploadPath + separator + pno + "SUB.jpg";
-
-        try {
-
-            ByteArrayInputStream inputStream = new ByteArrayInputStream(psubimg.getBytes());
-            FileOutputStream outputStream = new FileOutputStream(psubimgPath);
-            FileCopyUtils.copy(inputStream, outputStream);
-
-            inputStream.close();
-            outputStream.flush();
-        }
-        catch (Exception ex)
-        {
-
-        }
-
-        /*
-
-        try(ByteArrayInputStream inputStream = new ByteArrayInputStream(pmainimg.getBytes());
+        try(ByteArrayInputStream inputStream = new ByteArrayInputStream(psubimg.getBytes());
             FileOutputStream outputStream = new FileOutputStream(psubimgPath)){
+
+            File file = new File(psubimgPath);
+            if(file.exists()) file.delete();
+
             FileCopyUtils.copy(inputStream , outputStream);
         }catch(IOException ex)
         {
-            //상세 이미지 업로드
+            throw new ShopException("시스템에러가 발생했습니다.");
         }
-
-        */
 
         Shopping newOne = new Shopping();
         newOne.setPno(pno);
