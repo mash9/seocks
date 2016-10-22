@@ -30,7 +30,7 @@ public class ShopController {
     {
         List<Shopping> results = shoppingService.list(pcate);
 
-        model.addAttribute("v" , results);
+        model.addAttribute("items" , results);
         model.addAttribute("title" , "안녕하세요.");
         model.addAttribute("page" , "/main/center");
         return "/include/layout";

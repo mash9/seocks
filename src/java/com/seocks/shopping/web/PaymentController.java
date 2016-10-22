@@ -1,5 +1,6 @@
 package com.seocks.shopping.web;
 
+import com.seocks.shopping.common.ShopException;
 import com.seocks.shopping.model.PaymentDelivery;
 import com.seocks.shopping.model.Shopping;
 import com.seocks.shopping.model.ShoppingItem;
@@ -75,7 +76,7 @@ public class PaymentController {
     }
 
     @RequestMapping(path = "/buy.do" , method = RequestMethod.POST)
-    public @ResponseBody boolean buy(@RequestBody PaymentDelivery payment, HttpSession session)
+    public @ResponseBody boolean buy(@RequestBody PaymentDelivery payment, HttpSession session) throws ShopException
     {
         payment.setUserId((String)session.getAttribute("userId"));
         paymentService.buy(payment);

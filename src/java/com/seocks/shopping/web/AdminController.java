@@ -179,7 +179,7 @@ public class AdminController {
             FileCopyUtils.copy(inputStream , outputStream);
         }catch(IOException ex)
         {
-            throw new ShopException("시스템에러가 발생했습니다.");
+            throw new ShopException("시스템 에러가 발생했습니다.");
         }
 
         String psubimgPath = uploadPath + separator + pno + "SUB.jpg";
@@ -192,7 +192,7 @@ public class AdminController {
             FileCopyUtils.copy(inputStream , outputStream);
         }catch(IOException ex)
         {
-            throw new ShopException("시스템에러가 발생했습니다.");
+            throw new ShopException("시스템 에러가 발생했습니다.");
         }
 
         Shopping newOne = new Shopping();

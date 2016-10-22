@@ -87,18 +87,17 @@
 		<table width="1200">
 			<c:set var="count" value="0" />
 			<!-- 조회순 높은 순서대로 데이터를 4개씩 화면에 보여줌 -->
-			<c:forEach var="bean" items="${v }">
+			<c:forEach var="item" items="${items}">
 				<c:if test="${count % 4 == 0 }">
 					<tr>
 				</c:if>
-
 				<td width="300" align="center" valign="middle">
-					<a href="/shop/info.do?pno=${bean.pno}" style="text-decoration: none" onfocus="this.blur();">
-						<img src="/img/${bean.pmainimg}" width="280" height="300"> <br>
+					<a href="/shop/info.do?pno=${item.pno}" style="text-decoration: none" onfocus="this.blur();">
+						<img src="/img/${item.pmainimg}" width="280" height="300"> <br>
 						<br><br><br>
-						<font color="gray">상품 이름 : ${bean.pname }</font><br>
-						<font color="gray">상품 설명 : ${bean.pinfo }</font><br>
-						<font color="gray">상품 가격 : ${bean.pprice }원</font><br>
+						<font color="gray">상품 이름 : ${item.pname }</font><br>
+						<font color="gray">상품 설명 : ${item.pinfo }</font><br>
+						<font color="gray">상품 가격 : ${item.pprice }원</font><br>
 						<br><br><br>
 				</a> <c:set var="count" value="${count + 1 }" /></td>
 			</c:forEach>

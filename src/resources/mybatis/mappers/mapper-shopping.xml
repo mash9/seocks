@@ -43,6 +43,12 @@
          WHERE PNO      = #{item.pno}
     </update>
 
+    <update id="decreaseShoppingQty">
+        UPDATE SHOPPING
+           SET POCUNT   = (SELECT POCUNT - ${qty} FROM SHOPPING WHERE PNO = #{pno})
+         WHERE PNO      = #{pno}
+    </update>
+
     <select id="selectDealOrder" resultType="com.seocks.shopping.model.DealOrder">
         SELECT A.PNO
               ,A.QTY

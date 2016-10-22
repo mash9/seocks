@@ -29,4 +29,6 @@ public interface ShoppingMapper {
     String getGeneratePno(@Param(value = "pcate") String pcate);
 
     int createShopping(@Param(value = "item") Shopping shopping);
+
+    int decreaseShoppingQty(@Param(value = "pno") String pno , @Param(value = "qty") Integer qty);
 }

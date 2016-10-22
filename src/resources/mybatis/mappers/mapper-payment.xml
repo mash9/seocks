@@ -4,7 +4,7 @@
 
     <insert id="createPaymentDelivery" parameterType="com.seocks.shopping.model.PaymentDelivery">
         <selectKey resultType="String" keyProperty="pay.payId" order="BEFORE">
-            SELECT NVL(MAX(PAY_ID) , 0) + 1 PAY_ID FROM PAYMENT_DELIVERY
+            SELECT NVL(MAX(TO_NUMBER(PAY_ID)) , 0) + 1 PAY_ID FROM PAYMENT_DELIVERY
         </selectKey>
         INSERT INTO PAYMENT_DELIVERY
         (
