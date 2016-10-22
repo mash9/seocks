@@ -37,9 +37,9 @@ public class ShoppingService {
         return mapper.updateShopping(shopping);
     }
 
-    public List<DealOrder> listDealOrder()
+    public List<DealOrder> listDealOrder(String startDate , String endDate)
     {
-        return mapper.selectDealOrder();
+        return mapper.selectDealOrder(startDate , endDate);
     }
 
     public int dealOrder(DealOrder order)

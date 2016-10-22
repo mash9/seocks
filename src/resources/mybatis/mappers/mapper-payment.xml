@@ -102,9 +102,13 @@
            <if test="userId != null and userId != ''">
               AND B.USER_ID = #{userId}
            </if>
-           <if test="startDate != null and startDate != '' and endDate != null and endDate != ''">
-              AND B.BUY_DATE BETWEEN TO_DATE(#{startDate} , 'YYYY-MM-DD') AND TO_DATE(#{endDate} , 'YYYY-MM-DD')
+           <if test="startDate != null and startDate != ''">
+              AND B.BUY_DATE <![CDATA[ >= ]]> TO_DATE(#{startDate} , 'YYYY-MM-DD')
            </if>
+           <if test="endDate != null and endDate != ''">
+              AND B.BUY_DATE <![CDATA[ <= ]]> TO_DATE(#{endDate} , 'YYYY-MM-DD')
+           </if>
+
          ORDER BY BUY_DATE DESC , USER_ID , PNAME , PSIZE
     </select>
 
