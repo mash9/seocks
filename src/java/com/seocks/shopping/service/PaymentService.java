@@ -44,13 +44,13 @@ public class PaymentService {
         }
     }
 
-    public List<Bought> boughtList(String userId)
+    public List<Bought> boughtList(String userId , String startDate , String endDate)
     {
-        return mapper.selectBought(userId);
+        return mapper.selectBought(userId , startDate , endDate);
     }
 
-    public List<Bought> boughtGroup(String userId)
+    public List<Bought> boughtGroup(String userId , String startDate , String endDate)
     {
-        return mapper.selectBoughtGroup(userId);
+        return mapper.selectBoughtGroup(userId , startDate , endDate);
     }
 }

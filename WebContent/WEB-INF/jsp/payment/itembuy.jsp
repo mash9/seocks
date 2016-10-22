@@ -1,10 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script type="text/javascript">
 
    $(document).ready(function() {
+
+
 
       $(".item-delete").click(function(){
          if(!confirm("삭제하시겠습니까?")) return;
@@ -81,7 +83,7 @@
 
    <center>
       <h2>
-         <font face="고딕체" color="gray"> 제품즉시 구매정보</font>
+         <font face="고딕체" color="gray">제품즉시 구매정보</font>
       </h2>
       <br>
 
@@ -117,7 +119,7 @@
                </td>
                <td width="200" align="center" valign="middle">${item.qty}</td>
                <td width="200" align="center" valign="middle">${item.psize}</td>
-               <td width="200" align="center" valign="middle">${item.pprice}</td>
+               <td width="200" align="center" valign="middle"><fmt:formatNumber value="${item.pprice}" type="number"/></td>
                <td width="200" align="center" valign="middle">
                   <input class="item-delete" type="button" value="삭제" pno="${item.pno}" psize="${item.psize}">
                </td>
@@ -129,7 +131,7 @@
          <tfoot>
             <tr>
                <td colspan="6" style="text-align: center"><font
-                       color="red" size="6">총 금액 : ${totalprice}원</font></td>
+                       color="red" size="6">총 금액 : <fmt:formatNumber value="${totalprice}" type="number"/>원</font></td>
             </tr>
          </tfoot>
       </table>
@@ -206,6 +208,5 @@
       </div>
       <br>
       <input id="buttonPay" type="button" value="결제하기">
-
 
    </center>

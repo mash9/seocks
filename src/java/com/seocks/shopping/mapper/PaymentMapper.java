@@ -18,7 +18,7 @@ public interface PaymentMapper {
 
     void createPayment(@Param(value = "pay") Payment payment);
 
-    List<Bought> selectBoughtGroup(@Param(value = "userId") String userId);
+    List<Bought> selectBoughtGroup(@Param(value = "userId") String userId , @Param(value = "startDate") String startDate , @Param(value = "endDate") String endDate);
 
-    List<Bought> selectBought(@Param(value = "userId") String userId);
+    List<Bought> selectBought(@Param(value = "userId") String userId , @Param(value = "startDate") String startDate , @Param(value = "endDate") String endDate);
 }

@@ -96,11 +96,15 @@ public class AdminController {
     }
 
     @RequestMapping(path = "/saleList.do" , method = RequestMethod.GET)
-    public String saleList(Model model)
+    public String saleList(@RequestParam(value = "startDate" , required = false) String startDate,
+                           @RequestParam(value = "endDate" , required = false) String endDate,
+                           Model model)
     {
         model.addAttribute("title" , "판매현황");
-        model.addAttribute("groups" , paymentService.boughtGroup(""));
-        model.addAttribute("items" , paymentService.boughtList(""));
+        model.addAttribute("startDate" , startDate);
+        model.addAttribute("endDate" , endDate);
+        model.addAttribute("groups" , paymentService.boughtGroup("" , startDate , endDate));
+        model.addAttribute("items" , paymentService.boughtList("" , startDate , endDate));
         model.addAttribute("page" , "/admin/saleList");
         return "/include/layout";
     }

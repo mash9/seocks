@@ -143,8 +143,8 @@ public class PaymentController {
         String userId = (String)session.getAttribute("userId");
 
         model.addAttribute("title" , "거래내역");
-        model.addAttribute("groups" , paymentService.boughtGroup(userId));
-        model.addAttribute("items" , paymentService.boughtList(userId));
+        model.addAttribute("groups" , paymentService.boughtGroup(userId , "" , ""));
+        model.addAttribute("items" , paymentService.boughtList(userId , "" , ""));
         model.addAttribute("page" , "/payment/boughtList");
         return "/include/layout";
     }
