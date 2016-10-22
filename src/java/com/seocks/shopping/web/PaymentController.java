@@ -41,6 +41,16 @@ public class PaymentController {
         return "/include/layout";
     }
 
+    @RequestMapping(path = "/addCart.do" , method = RequestMethod.POST)
+    public @ResponseBody boolean addCart(@RequestParam(value = "pno") String pno,
+                                         @RequestParam(value = "psize") String psize,
+                                         @RequestParam(value = "qty") Integer qty,
+                                         HttpSession session)
+    {
+        getCartList(session , pno , psize , qty);
+        return true;
+    }
+
     @RequestMapping(path = "/itembuy.do" , method = RequestMethod.GET)
     public String itembuy(@RequestParam(value = "pno" , required = false) String pno,
                           @RequestParam(value = "psize" , required = false) String psize,

@@ -22,11 +22,28 @@
 				return;
 			}
 
-			window.location = "/pay/itemCart.do?" + $.param(arg);
+			$.post("/pay/addCart.do" , arg , function(){
+				window.location = "/pay/itemCart.do";
+			});
 		});
 
 		$("#buttonBuy").click(function(){
-			window.location = "/pay/itembuy.do";
+
+			var arg = {
+				pno:pno,
+				psize:$("#psize").val(),
+				qty:$("#qty").val()
+			};
+
+			if(isNaN(parseInt(arg.qty)) || parseInt(arg.qty) == 0)
+			{
+				alert("구매수량을 입력하세요.");
+				return;
+			}
+
+			$.post("/pay/addCart.do" , arg , function(){
+				window.location = "/pay/itembuy.do";
+			});
 		});
 	});
 
@@ -87,7 +104,7 @@
 					<td width="200" align="center" colspan="2">
 						<input id="buttonCart" type="button" value="장바구니 담기" style="margin-right: 10px">
 						<c:if test="${sessionScope.user != null}">
-							<input id="buttonBuy"   type="button" value="구매하기">
+							<input id="buttonBuy" type="button" value="구매하기">
 						</c:if>
 					</td>
 					</c:if>

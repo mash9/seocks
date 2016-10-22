@@ -6,6 +6,20 @@
 
    $(document).ready(function() {
 
+      $(".item-delete").click(function(){
+         if(!confirm("삭제하시겠습니까?")) return;
+
+         var arg = {
+            pno: $(this).attr("pno"),
+            psize: $(this).attr("psize")
+         };
+
+         $.post("/pay/clearCart.do" , arg , function(){
+            alert("삭제되었습니다.");
+            window.location = "/pay/itembuy.do";
+         });
+      });
+
       //우편번호 검색
       $("#buttonPostCheck").click(function(){
          new daum.Postcode(
@@ -69,6 +83,7 @@
       <h2>
          <font face="고딕체" color="gray"> 제품즉시 구매정보</font>
       </h2>
+      <br>
 
       <h3>주문 내역</h3>
       <br>
@@ -142,53 +157,42 @@
             </tr>
          </tbody>
       </table>
-      <h3>배송지 정보</h3>
-      <br>
-      <table>
-         <tbody>
-            <tr>
-               <td>배송지 선택</td>
-               <td>
-                  <input type="text">
-               </td>
-            </tr>
-         </tbody>
-      </table>
+
       <h3>받으시는 분</h3>
       <br>
-      <table id="recvTable">
+      <table id="recvTable" class="form-table">
          <tbody>
             <tr>
                <td>이름</td>
                <td>
-                  <input type="text" name="name" value="${user.name}">
+                  <input type="text" name="name" style="padding-bottom: 10px" value="${user.name}">
                </td>
             </tr>
             <tr>
                <td>우편번호</td>
                <td>
-                  <input type="text" name="postNumber" value="${user.mtemp}">
+                  <input type="text" name="postNumber" style="padding-bottom: 10px" value="${user.mtemp}">
                   <input id="buttonPostCheck" type="button" value="검색">
                </td>
             </tr>
             <tr>
                <td>주소</td>
                <td>
-                  <input type="text" name="address1" value="${user.maddress1}">
+                  <input type="text" name="address1" style="width: 100%;padding-bottom: 10px" value="${user.maddress1}">
                   <br>
-                  <input type="text" name="address2" value="${user.maddress2}">
+                  <input type="text" name="address2" style="width: 100%;padding-bottom: 10px;margin-top: 5px" value="${user.maddress2}">
                </td>
             </tr>
             <tr>
                <td>휴대전화</td>
                <td>
-                  <input type="text" name="phone" value="${user.phone}">
+                  <input type="text" name="phone" style="padding-bottom: 10px" value="${user.phone}">
                </td>
             </tr>
             <tr>
                <td>배송메세지</td>
                <td>
-                  <textarea id="message"></textarea>
+                  <textarea id="message" style="height: 100px;width: 100%"></textarea>
                </td>
             </tr>
          </tbody>
@@ -197,8 +201,8 @@
       <br>
       <div>
          <label><input type="radio" value="DEPOSIT" name="payType" checked>무통장 입금</label>
-         <label><input type="radio" value="CARD" name="payType">카드결제</label>
-         <label><input type="radio" value="PHONE" name="payType">휴대폰 결제</label>
+         <label><input type="radio" value="CARD" name="payType" style="margin-left: 10px">카드결제</label>
+         <label><input type="radio" value="PHONE" name="payType" style="margin-left: 10px">휴대폰 결제</label>
       </div>
       <br>
       <input id="buttonPay" type="button" value="결제하기">
