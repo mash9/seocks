@@ -138,17 +138,13 @@ public class PaymentController {
     }
 
     @RequestMapping(path = "/boughtList.do" , method = RequestMethod.GET)
-    public String boughtList(@RequestParam(value = "startDate" , required = false) String startDate,
-                             @RequestParam(value = "endDate" , required = false) String endDate,
-                             HttpSession session, Model model)
+    public String boughtList(HttpSession session, Model model)
     {
         String userId = (String)session.getAttribute("userId");
 
         model.addAttribute("title" , "거래내역");
-        model.addAttribute("startDate" , startDate);
-        model.addAttribute("endDate" , endDate);
-        model.addAttribute("groups" , paymentService.boughtGroup(userId , startDate , endDate));
-        model.addAttribute("items" , paymentService.boughtList(userId , startDate , endDate));
+        model.addAttribute("groups" , paymentService.boughtGroup(userId , "" , ""));
+        model.addAttribute("items" , paymentService.boughtList(userId , "" , ""));
         model.addAttribute("page" , "/payment/boughtList");
         return "/include/layout";
     }

@@ -22,7 +22,7 @@ public interface ShoppingMapper {
 
     int updateShopping(@Param(value = "item") Shopping shopping);
 
-    List<DealOrder> selectDealOrder(@Param(value = "startDate") String startDate , @Param(value = "endDate") String endDate);
+    List<DealOrder> selectDealOrder();
 
     int dealOrder(@Param(value = "item") DealOrder order);
 

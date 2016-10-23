@@ -110,17 +110,13 @@ public class AdminController {
     }
 
     @RequestMapping(path = "/order.do" , method = RequestMethod.GET)
-    public String order(@RequestParam(value = "startDate" , required = false) String startDate,
-                        @RequestParam(value = "endDate" , required = false) String endDate,
-                        Model model)
+    public String order(Model model)
     {
         List<Code> codes = codeService.getProductCodes();
         model.addAttribute("title" , "거래처");
-        model.addAttribute("startDate" , startDate);
-        model.addAttribute("endDate" , endDate);
         model.addAttribute("codes" , codes);
         model.addAttribute("products" , shoppingService.list(codes.get(0).getCode()));
-        model.addAttribute("orders" , shoppingService.listDealOrder(startDate , endDate));
+        model.addAttribute("orders" , shoppingService.listDealOrder());
         model.addAttribute("page" , "/admin/order");
         return "/include/layout";
     }
