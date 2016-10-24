@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <script type="text/javascript" src="/js/jqueryui/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/js/jqueryui.config.js"></script>
 <link type="text/css" rel="stylesheet" href="/js/jqueryui/jquery-ui.min.css">
@@ -39,7 +40,7 @@
 
     <h2><span style="color: blue;font-family:고딕체">통계</span></h2>
 
-    <table class="form-table">
+    <table class="form-table" style="width: 400px">
 
         <tr>
             <td>판매기간</td>
@@ -51,16 +52,24 @@
 
         </tr>
         <tr>
+            <td>판매량</td>
+            <td style="text-align: right"><fmt:formatNumber value="${saleQty}" type="number"/>개</td>
+        </tr>
+        <tr>
             <td>판매금액</td>
-            <td>${salePrice}</td>
+            <td style="text-align: right"><span style="color: blue;font-size: 15px;font-weight: bold"><fmt:formatNumber value="${salePrice}" type="number"/>원</span></td>
+        </tr>
+        <tr>
+            <td>구매량</td>
+            <td style="text-align: right"><fmt:formatNumber value="${buyQty}" type="number"/>개</td>
         </tr>
         <tr>
             <td>구매금액</td>
-            <td>${buyPrice}</td>
+            <td style="text-align: right"><span style="color: red;font-size: 15px;font-weight: bold">-<fmt:formatNumber value="${buyPrice}" type="number"/>원</span></td>
         </tr>
         <tr>
             <td>이윤</td>
-            <td>${profitPrice}</td>
+            <td style="text-align: right"><span style="color: green;font-size: 15px;font-weight: bold"><fmt:formatNumber value="${profitPrice}" type="number"/>원</span></td>
         </tr>
     </table>
 

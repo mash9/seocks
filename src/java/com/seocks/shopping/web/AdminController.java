@@ -1,10 +1,7 @@
 package com.seocks.shopping.web;
 
 import com.seocks.shopping.common.ShopException;
-import com.seocks.shopping.model.Code;
-import com.seocks.shopping.model.DealOrder;
-import com.seocks.shopping.model.Jspmember;
-import com.seocks.shopping.model.Shopping;
+import com.seocks.shopping.model.*;
 import com.seocks.shopping.service.CodeService;
 import com.seocks.shopping.service.JspmemberService;
 import com.seocks.shopping.service.PaymentService;
@@ -147,19 +144,30 @@ public class AdminController {
                         Model model)
     {
 
+        int saleQty = 0;
         int salePrice = 0;
+        List<Bought> boughts = paymentService.boughtList("" , startDate , endDate);
+        for(Bought bought : boughts)
+        {
+            saleQty += Integer.parseInt(bought.getQty());
+            salePrice += Integer.parseInt(bought.getQty()) * Integer.parseInt(bought.getPrice());
+        }
 
-
+        int buyQty = 0;
         int buyPrice = 0;
         List<DealOrder> dealOrders = shoppingService.listDealOrder(startDate , endDate);
         for(DealOrder order : dealOrders)
-            buyPrice += order.getPrice();
-
+        {
+            buyQty += order.getQty();
+            buyPrice += order.getQty() * order.getPrice();
+        }
 
         model.addAttribute("title" , "통계");
         model.addAttribute("startDate" , startDate);
         model.addAttribute("endDate" , endDate);
-        model.addAttribute("salePrice" , 0);
+        model.addAttribute("saleQty" , saleQty);
+        model.addAttribute("salePrice" , salePrice);
+        model.addAttribute("buyQty" , buyQty);
         model.addAttribute("buyPrice" , buyPrice);
         model.addAttribute("profitPrice" , salePrice - buyPrice);
         model.addAttribute("page" , "/admin/chart");
