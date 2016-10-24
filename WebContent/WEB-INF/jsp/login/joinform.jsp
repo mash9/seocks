@@ -7,13 +7,21 @@
 	<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 	<script type="text/javascript">
 
+
+
 	$(document).ready(function() {
+
+		var needIdCheck = true;
 
 		$(".datePicker").datepicker({dateFormat: 'yy-mm-dd' });
 		$(".datePicker").on('focus', function (e) {
 			e.preventDefault();
 			$(this).datepicker('show');
 			$(this).datepicker('widget').css('z-index', 1051);
+		});
+
+		$("#inputId").change(function(){
+			needIdCheck = true;
 		});
 
 		//아이디 체크
@@ -26,7 +34,19 @@
 				return;
 			}
 
-			alert("사용가능 아이디 입니다.");
+			$.post("/login/duplicate.do" , {userId:inputId} , function(result){
+
+				if(result == true)
+				{
+					alert("사용중인 아이디 입니다.");
+					return;
+				}
+
+				alert("사용가능 아이디 입니다.");
+				needIdCheck = false;
+			});
+
+
 		});
 
 
@@ -47,6 +67,12 @@
 		$("#formRegist").submit(function(event){
 			event.preventDefault();
 			event.stopImmediatePropagation();
+
+			if(needIdCheck == true)
+			{
+				alert("ID 체크를 하세요.");
+				return;
+			}
 
 			var form = $("#formRegist");
 
