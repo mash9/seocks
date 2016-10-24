@@ -14,6 +14,7 @@
            ,GENDER
            ,BIRTHDAY
            ,INFO
+           ,PHONE
         )
         VALUES
         (
@@ -27,6 +28,7 @@
            ,#{user.gender}
            ,#{user.birthday}
            ,#{user.info}
+           ,#{user.phone}
         )
     </insert>
 
@@ -41,6 +43,7 @@
             ,GENDER
             ,BIRTHDAY
             ,INFO
+            ,PHONE
         FROM JSPMEMBER
        WHERE ID = #{id}
     </select>

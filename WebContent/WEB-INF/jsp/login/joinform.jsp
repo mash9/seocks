@@ -1,10 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<script type="text/javascript" src="/js/jqueryui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/js/jqueryui.config.js"></script>
+<link type="text/css" rel="stylesheet" href="/js/jqueryui/jquery-ui.min.css">
 
 	<!-- 다음우편번호 연동서비스 자바스크립트 설정 -->
 	<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 	<script type="text/javascript">
 
 	$(document).ready(function() {
+
+		$(".datePicker").datepicker({dateFormat: 'yy-mm-dd' });
+		$(".datePicker").on('focus', function (e) {
+			e.preventDefault();
+			$(this).datepicker('show');
+			$(this).datepicker('widget').css('z-index', 1051);
+		});
 
 		//아이디 체크
 		$("#buttonIdCheck").click(function(){
@@ -48,6 +58,7 @@
 				mtemp:$("input[name=mtemp]" , form).val(),
 				maddress1:$("input[name=maddress1]" , form).val(),
 				maddress2:$("input[name=maddress2]" , form).val(),
+				phone:$("input[name=phone]" , form).val(),
 				gender:$("input[name=gender]" , form).val(),
 				birthday:$("input[name=birthday]" , form).val(),
 				info:$("textarea[name=info]" , form).val()
@@ -77,7 +88,7 @@
 		<h1>회원 가입 양식</h1>
 
 		<form id="formRegist" action="/login/regist.do" method="post">
-			<table width="400" border="1">
+			<table width="400" border="1" class="form-table">
 				<tr height="40">
 					<td align="center" width="150">아이디</td>
 					<td>
@@ -104,9 +115,15 @@
 				</tr>
 				<tr height="40">
 					<td width="150" align="center">주소</td>
-					<td><input type="text" name="maddress1" size="30" id="m1">
-						&nbsp; <input type="text" name="maddress2" size="30" id="m2"
+					<td><input type="text" name="maddress1" size="30" id="m1"><br>
+						<input type="text" name="maddress2" size="30" id="m2"
 						placeholder="상세주소"></td>
+				</tr>
+
+				<tr height="40">
+					<td width="150" align="center">전화번호</td>
+					<td><input type="text" name="phone" size="30" id="phone">
+					</td>
 				</tr>
 
 				<tr height="40">
@@ -118,18 +135,18 @@
 
 				<tr height="40">
 					<td align="center" width="150">생년월일</td>
-					<td><input type="date" name="birthday" size="30"></td>
+					<td><input type="text" name="birthday" class="datePicker" size="30"></td>
 				</tr>
 				<tr height="40">
 					<td align="center" width="150">자기소개</td>
 					<td><textarea rows="5" cols="30" name="info"></textarea></td>
 				</tr>
-				<tr height="40">
-					<td align="center" colspan="2">
-						<input type="submit" value=" 회원가입 "> &nbsp;&nbsp;&nbsp;
-						<input type="reset" value=" 다시작성 "></td>
-				</tr>
 			</table>
+
+			<div>
+				<input type="submit" value=" 회원가입 ">
+				<input type="reset" value=" 다시작성 ">
+			</div>
 		</form>
 
 	</center>

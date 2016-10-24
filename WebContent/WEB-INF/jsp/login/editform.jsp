@@ -1,11 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<script type="text/javascript" src="/js/jqueryui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/js/jqueryui.config.js"></script>
+<link type="text/css" rel="stylesheet" href="/js/jqueryui/jquery-ui.min.css">
+
 	<!-- 다음우편번호 연동서비스 자바스크립트 설정 -->
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script type="text/javascript">
 
 	$(document).ready(function() {
+
+		$(".datePicker").datepicker({dateFormat: 'yy-mm-dd' });
+		$(".datePicker").on('focus', function (e) {
+			e.preventDefault();
+			$(this).datepicker('show');
+			$(this).datepicker('widget').css('z-index', 1051);
+		});
 
 		//우편번호 검색
 		$("#buttonPostCheck").click(function(){
@@ -31,6 +42,7 @@
 				mtemp:$("input[name=mtemp]" , form).val(),
 				maddress1:$("input[name=maddress1]" , form).val(),
 				maddress2:$("input[name=maddress2]" , form).val(),
+				phone:$("input[name=phone]" , form).val(),
 				gender:$("input[name=gender]:checked" , form).val(),
 				birthday:$("input[name=birthday]" , form).val(),
 				info:$("textarea[name=info]" , form).val()
@@ -58,7 +70,7 @@
 	<center>
 		<h1>${user.id} 의 정보수정</h1>
 
-		<table id="formEdit" width="400" border="1">
+		<table id="formEdit" width="400" border="1" class="form-table">
 			<tr height="40">
 				<td align="center" width="150">패스워드</td>
 				<td><input type="password" name="pass" size="30" value="${user.pass}"></td>
@@ -84,7 +96,10 @@
 					placeholder="상세주소" value="${user.maddress2}"></td>
 			</tr>
 
-
+			<tr height="40">
+				<td width="150" align="center">전화번호</td>
+				<td><input type="text" name="phone" size="30" id="phone" value="${user.phone}"></td>
+			</tr>
 
 			<tr height="40">
 				<td align="center" width="150">성별</td>
@@ -95,22 +110,22 @@
 
 			<tr height="40">
 				<td align="center" width="150">생년월일</td>
-				<td><input type="date" name="birthday" size="30" value="${user.birthday}"></td>
+				<td><input type="text" name="birthday" class="datePicker" size="30" value="${user.birthday}"></td>
 			</tr>
 			<tr height="40">
 				<td align="center" width="150">자기소개</td>
 				<td><textarea rows="5" cols="30" name="info">${user.info}</textarea></td>
 			</tr>
-			<tr height="40">
-				<td align="center" colspan="2">
-					<a href="#" style="text-decoration: none;color: black">
-						<input id="buttonSave" type="button" value="저장">
-					</a>
-					<a href="/" style="text-decoration: none;color: black">
-						<input id="buttonCancel" type="button" value="취소">
-					</a>
-				</td>
-			</tr>
 		</table>
+
+		<div style="margin-top: 10px">
+			<a href="#" style="text-decoration: none;color: black">
+				<input id="buttonSave" type="button" value="저장">
+			</a>
+			<a href="/" style="text-decoration: none;color: black">
+				<input id="buttonCancel" type="button" value="취소">
+			</a>
+
+		</div>
 
 	</center>
