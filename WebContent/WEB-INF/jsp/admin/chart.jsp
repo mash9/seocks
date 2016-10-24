@@ -15,6 +15,16 @@
             $(this).datepicker('widget').css('z-index', 1051);
         });
 
+        $("#buttonSearch").click(function(){
+
+            var arg = {
+                startDate:$("#startDate").val().replace("/-/g" , ""),
+                endDate:$("#endDate").val().replace("/-/g" , "")
+            }
+
+            window.location = "/admin/chart.do?" + $.param(arg);
+        });
+
 
 
     });

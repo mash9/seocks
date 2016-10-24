@@ -146,12 +146,22 @@ public class AdminController {
                         @RequestParam(value = "endDate" , required = false) String endDate,
                         Model model)
     {
+
+        int salePrice = 0;
+
+
+        int buyPrice = 0;
+        List<DealOrder> dealOrders = shoppingService.listDealOrder(startDate , endDate);
+        for(DealOrder order : dealOrders)
+            buyPrice += order.getPrice();
+
+
         model.addAttribute("title" , "통계");
         model.addAttribute("startDate" , startDate);
         model.addAttribute("endDate" , endDate);
         model.addAttribute("salePrice" , 0);
-        model.addAttribute("buyPrice" , 0);
-        model.addAttribute("profitPrice" , 0);
+        model.addAttribute("buyPrice" , buyPrice);
+        model.addAttribute("profitPrice" , salePrice - buyPrice);
         model.addAttribute("page" , "/admin/chart");
         return "/include/layout";
     }
