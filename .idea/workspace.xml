@@ -7,7 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="439a8dc8-1056-45ea-bdaf-b09a6dd8499f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/com/seocks/shopping/mapper/ShoppingMapper.class" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/com/seocks/shopping/mapper/ShoppingMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/com/seocks/shopping/service/ShoppingService.class" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/com/seocks/shopping/service/ShoppingService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/com/seocks/shopping/web/PaymentController.class" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/com/seocks/shopping/web/PaymentController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/mybatis/mappers/mapper-shopping.xml" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/mybatis/mappers/mapper-shopping.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/order.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/order.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/payment/boughtList.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/payment/boughtList.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/seocks/shopping/mapper/ShoppingMapper.java" afterPath="$PROJECT_DIR$/src/java/com/seocks/shopping/mapper/ShoppingMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/seocks/shopping/service/ShoppingService.java" afterPath="$PROJECT_DIR$/src/java/com/seocks/shopping/service/ShoppingService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/seocks/shopping/web/AdminController.java" afterPath="$PROJECT_DIR$/src/java/com/seocks/shopping/web/AdminController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/seocks/shopping/web/PaymentController.java" afterPath="$PROJECT_DIR$/src/java/com/seocks/shopping/web/PaymentController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/mybatis/mappers/mapper-payment.xml" afterPath="$PROJECT_DIR$/src/resources/mybatis/mappers/mapper-payment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/mybatis/mappers/mapper-shopping.xml" afterPath="$PROJECT_DIR$/src/resources/mybatis/mappers/mapper-shopping.xml" />
     </list>
     <ignored path="Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,24 +48,34 @@
     <favorites_list name="Project" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.30081856">
+    <splitter split-orientation="horizontal" split-proportion="0.5766074">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="PaymentController.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/java/com/seocks/shopping/web/PaymentController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2412">
-                  <caret line="147" column="52" selection-start-line="147" selection-start-column="52" selection-end-line="147" selection-end-column="52" />
+                <state relative-caret-position="2340">
+                  <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="order.jsp" pinned="false" current-in-tab="true">
+          <file leaf-file-name="order.jsp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/order.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="486">
-                  <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+                <state relative-caret-position="-78">
+                  <caret line="101" column="13" selection-start-line="101" selection-start-column="13" selection-end-line="101" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="saleList.jsp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/saleList.jsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="287">
+                  <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
                   <folding />
                 </state>
               </provider>
@@ -62,8 +84,18 @@
           <file leaf-file-name="boughtList.jsp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/payment/boughtList.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="324">
-                  <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="26" selection-end-column="11" />
+                <state relative-caret-position="252">
+                  <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
+            <entry file="vcs://C:/Users/com/IdeaProjects/seocks/.idea/workspace.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="198">
+                  <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
                   <folding />
                 </state>
               </provider>
@@ -76,15 +108,15 @@
           <file leaf-file-name="mapper-shopping.xml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/resources/mybatis/mappers/mapper-shopping.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1134">
-                  <caret line="63" column="43" selection-start-line="63" selection-start-column="27" selection-end-line="63" selection-end-column="43" />
+                <state relative-caret-position="1008">
+                  <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
                   <folding>
-                    <marker date="1477140977505" expanded="true" signature="247:455" ph="SELECT PNO ,... SHOPPING" />
-                    <marker date="1477140977505" expanded="true" signature="1046:1426" ph="UPDATE SHOPP... " />
-                    <marker date="1477140977505" expanded="true" signature="1488:1620" ph="UPDATE SHOPP... " />
-                    <marker date="1477140977505" expanded="true" signature="1531:1586" ph="SELECT POCUN... SHOPPING" />
-                    <marker date="1477140977505" expanded="true" signature="1727:2257" ph="SELECT A.PNO... DEAL_ORDER" />
-                    <marker date="1477140977505" expanded="true" signature="1727:2264" ph="SELECT A.PNO... DEAL_ORDER" />
+                    <marker date="1477226596617" expanded="true" signature="247:455" ph="SELECT PNO ,... SHOPPING" />
+                    <marker date="1477226596617" expanded="true" signature="1046:1426" ph="UPDATE SHOPP... " />
+                    <marker date="1477226596617" expanded="true" signature="1488:1620" ph="UPDATE SHOPP... " />
+                    <marker date="1477226596617" expanded="true" signature="1531:1586" ph="SELECT POCUN... SHOPPING" />
+                    <marker date="1477226596617" expanded="true" signature="1727:2257" ph="SELECT A.PNO... DEAL_ORDER" />
+                    <marker date="1477226596617" expanded="true" signature="1727:2264" ph="SELECT A.PNO... DEAL_ORDER" />
                   </folding>
                 </state>
               </provider>
@@ -96,10 +128,10 @@
                 <state relative-caret-position="782">
                   <caret line="114" column="9" selection-start-line="114" selection-start-column="9" selection-end-line="114" selection-end-column="9" />
                   <folding>
-                    <marker date="1477141041828" expanded="true" signature="1152:1434" ph="INSERT INTO PAYMENT... " />
-                    <marker date="1477141041828" expanded="true" signature="1540:2698" ph="SELECT A.PNO... SHOPPING" />
-                    <marker date="1477141041828" expanded="true" signature="1759:2630" ph="SELECT PNO ,... PAYMENT" />
-                    <marker date="1477141041828" expanded="true" signature="2799:3662" ph="SELECT A.PNO... PAYMENT" />
+                    <marker date="1477226573986" expanded="true" signature="1152:1434" ph="INSERT INTO PAYMENT... " />
+                    <marker date="1477226573986" expanded="true" signature="1540:2698" ph="SELECT A.PNO... SHOPPING" />
+                    <marker date="1477226573986" expanded="true" signature="1759:2630" ph="SELECT PNO ,... PAYMENT" />
+                    <marker date="1477226573986" expanded="true" signature="2799:3662" ph="SELECT A.PNO... PAYMENT" />
                   </folding>
                 </state>
               </provider>
@@ -176,14 +208,14 @@
         <option value="$PROJECT_DIR$/src/java/com/seocks/shopping/service/PaymentService.java" />
         <option value="$PROJECT_DIR$/src/java/com/seocks/shopping/mapper/PaymentMapper.java" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/saleList.jsp" />
-        <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/payment/boughtList.jsp" />
         <option value="$PROJECT_DIR$/src/java/com/seocks/shopping/web/PaymentController.java" />
-        <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/order.jsp" />
         <option value="$PROJECT_DIR$/src/java/com/seocks/shopping/service/ShoppingService.java" />
         <option value="$PROJECT_DIR$/src/java/com/seocks/shopping/mapper/ShoppingMapper.java" />
         <option value="$PROJECT_DIR$/src/java/com/seocks/shopping/web/AdminController.java" />
         <option value="$PROJECT_DIR$/src/resources/mybatis/mappers/mapper-shopping.xml" />
         <option value="$PROJECT_DIR$/src/resources/mybatis/mappers/mapper-payment.xml" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/order.jsp" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/payment/boughtList.jsp" />
       </list>
     </option>
   </component>
@@ -1240,7 +1272,7 @@
       <workItem from="1477139551009" duration="3343000" />
       <workItem from="1477139312464" duration="3754000" />
       <workItem from="1477139486232" duration="2078000" />
-      <workItem from="1477224433765" duration="669000" />
+      <workItem from="1477224433765" duration="2112000" />
     </task>
     <task id="LOCAL-00001" summary="회원정보 수정 추가">
       <created>1475669380767</created>
@@ -1417,11 +1449,18 @@
       <option name="project" value="LOCAL" />
       <updated>1477141132102</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="날짜별 구매내역 조회">
+      <created>1477225812112</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1477225812112</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136084000" />
+    <option name="totallyTimeSpent" value="137527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -1433,13 +1472,13 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46912244" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18851571" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.503792" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4926004" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22068231" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22068231" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1816,6 +1855,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
           <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1823,6 +1863,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1512">
           <caret line="97" column="38" selection-start-line="97" selection-start-column="27" selection-end-line="97" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1830,6 +1873,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="666">
           <caret line="48" column="53" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1840,26 +1886,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/saleList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="42" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/payment/boughtList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="26" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/com/seocks/shopping/web/PaymentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2412">
-          <caret line="147" column="52" selection-start-line="147" selection-start-column="52" selection-end-line="147" selection-end-column="52" />
+        <state relative-caret-position="2340">
+          <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1876,6 +1906,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1883,20 +1914,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="112" column="82" selection-start-line="112" selection-start-column="82" selection-end-line="112" selection-end-column="82" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/mybatis/mappers/mapper-shopping.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1134">
-          <caret line="63" column="43" selection-start-line="63" selection-start-column="27" selection-end-line="63" selection-end-column="43" />
+        <state relative-caret-position="1008">
+          <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
           <folding>
-            <marker date="1477140977505" expanded="true" signature="247:455" ph="SELECT PNO ,... SHOPPING" />
-            <marker date="1477140977505" expanded="true" signature="1046:1426" ph="UPDATE SHOPP... " />
-            <marker date="1477140977505" expanded="true" signature="1488:1620" ph="UPDATE SHOPP... " />
-            <marker date="1477140977505" expanded="true" signature="1531:1586" ph="SELECT POCUN... SHOPPING" />
-            <marker date="1477140977505" expanded="true" signature="1727:2257" ph="SELECT A.PNO... DEAL_ORDER" />
-            <marker date="1477140977505" expanded="true" signature="1727:2264" ph="SELECT A.PNO... DEAL_ORDER" />
+            <marker date="1477226596617" expanded="true" signature="247:455" ph="SELECT PNO ,... SHOPPING" />
+            <marker date="1477226596617" expanded="true" signature="1046:1426" ph="UPDATE SHOPP... " />
+            <marker date="1477226596617" expanded="true" signature="1488:1620" ph="UPDATE SHOPP... " />
+            <marker date="1477226596617" expanded="true" signature="1531:1586" ph="SELECT POCUN... SHOPPING" />
+            <marker date="1477226596617" expanded="true" signature="1727:2257" ph="SELECT A.PNO... DEAL_ORDER" />
+            <marker date="1477226596617" expanded="true" signature="1727:2264" ph="SELECT A.PNO... DEAL_ORDER" />
           </folding>
         </state>
       </provider>
@@ -1906,18 +1938,34 @@
         <state relative-caret-position="782">
           <caret line="114" column="9" selection-start-line="114" selection-start-column="9" selection-end-line="114" selection-end-column="9" />
           <folding>
-            <marker date="1477141041828" expanded="true" signature="1152:1434" ph="INSERT INTO PAYMENT... " />
-            <marker date="1477141041828" expanded="true" signature="1540:2698" ph="SELECT A.PNO... SHOPPING" />
-            <marker date="1477141041828" expanded="true" signature="1759:2630" ph="SELECT PNO ,... PAYMENT" />
-            <marker date="1477141041828" expanded="true" signature="2799:3662" ph="SELECT A.PNO... PAYMENT" />
+            <marker date="1477226573986" expanded="true" signature="1152:1434" ph="INSERT INTO PAYMENT... " />
+            <marker date="1477226573986" expanded="true" signature="1540:2698" ph="SELECT A.PNO... SHOPPING" />
+            <marker date="1477226573986" expanded="true" signature="1759:2630" ph="SELECT PNO ,... PAYMENT" />
+            <marker date="1477226573986" expanded="true" signature="2799:3662" ph="SELECT A.PNO... PAYMENT" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/order.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+        <state relative-caret-position="-78">
+          <caret line="101" column="13" selection-start-line="101" selection-start-column="13" selection-end-line="101" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/saleList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/payment/boughtList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
           <folding />
         </state>
       </provider>

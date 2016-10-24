@@ -1,9 +1,29 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<script type="text/javascript" src="/js/jqueryui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/js/jqueryui.config.js"></script>
+<link type="text/css" rel="stylesheet" href="/js/jqueryui/jquery-ui.min.css">
 <script type="text/javascript">
 
 	$(document).ready(function() {
+
+		$(".datePicker").datepicker({dateFormat: 'yy-mm-dd' });
+		$(".datePicker").on('focus', function (e) {
+			e.preventDefault();
+			$(this).datepicker('show');
+			$(this).datepicker('widget').css('z-index', 1051);
+		});
+
+		$("#buttonSearch").click(function(){
+
+			var arg = {
+				startDate:$("#startDate").val().replace("/-/g" , ""),
+				endDate:$("#endDate").val().replace("/-/g" , "")
+			}
+
+			window.location = "/admin/order.do?" + $.param(arg);
+		});
 
 		$("#selectPcate").change(function(){
 			$.post("/shop/list.do" , {pcate:$(this).val()} , function(result){
@@ -96,6 +116,12 @@
 	<h2>
 		<font face="고딕체" color="blue">주문내역</font>
 	</h2>
+	<br>
+	<div>
+		<input id="startDate" class="datePicker" type="text" style="margin-right: 10px;width: 100px;text-align: center" value="${startDate}">~
+		<input id="endDate" class="datePicker" type="text" style="margin-left: 10px;width: 100px;text-align: center" value="${endDate}">
+		<input id="buttonSearch" type="button" value="조회" style="padding: 0px;width: 50px;margin-left: 5px;top: -1px;position: relative">
+	</div>
 	<br>
 	<table width="1200">
 		<tr height="40">
