@@ -54,7 +54,7 @@
               ,A.QTY
               ,A.DEAL_DATE
               ,B.PNAME
-              ,B.PPRICE PRICE
+              ,B.ORIPRICE PRICE
           FROM DEAL_ORDER A , SHOPPING B
          WHERE A.PNO = B.PNO
            <if test="startDate != null and startDate != ''">
@@ -93,6 +93,7 @@
             PNO
            ,PNAME
            ,PPRICE
+           ,ORIPRICE
            ,PINFO
            ,PMAINIMG
            ,PSUBIMG
@@ -105,6 +106,7 @@
             #{item.pno}
            ,#{item.pname}
            ,#{item.pprice}
+           ,#{item.oriprice}
            ,#{item.pinfo}
            ,#{item.pmainimg}
            ,#{item.psubimg}

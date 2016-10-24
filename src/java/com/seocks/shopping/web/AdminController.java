@@ -155,12 +155,14 @@ public class AdminController {
     public @ResponseBody boolean productAdd(@RequestParam(value = "pcate") String pcate,
                                             @RequestParam(value = "pname" , required = false) String pname,
                                             @RequestParam(value = "pprice" , required = false) Integer pprice,
+                                            @RequestParam(value = "oriprice" , required = false) Integer oriprice,
                                             @RequestParam(value = "pmainimg" , required = false) MultipartFile pmainimg,
                                             @RequestParam(value = "psubimg" , required = false) MultipartFile psubimg,
                                             @RequestParam(value = "pinfo") String pinfo) throws ShopException
     {
         if(pname == null) throw new ShopException("상품명을 입력하세요.");
         if(pprice == null) throw new ShopException("가격을 입력하세요.");
+        if(oriprice == null) throw new ShopException("원가를 입력하세요.");
         if(pmainimg == null) throw new ShopException("상품 이미지를 선택하세요.");
         if(psubimg == null) throw new ShopException("상세 이미지를 선택하세요.");
 
@@ -207,6 +209,7 @@ public class AdminController {
         newOne.setPno(pno);
         newOne.setPname(pname);
         newOne.setPprice(pprice);
+        newOne.setOriprice(oriprice);
         newOne.setPinfo(pinfo);
         newOne.setPmainimg(pno + ".jpg");
         newOne.setPsubimg(pno + "SUB.jpg");

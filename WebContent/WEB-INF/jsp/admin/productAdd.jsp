@@ -53,6 +53,12 @@
             </td>
         </tr>
         <tr>
+            <td>원가</td>
+            <td>
+                <input type="number" name="oriprice">
+            </td>
+        </tr>
+        <tr>
             <td>상품 이미지</td>
             <td>
                 <input type="file" name="pmainimg">

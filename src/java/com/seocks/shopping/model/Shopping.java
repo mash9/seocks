@@ -12,6 +12,7 @@ public class Shopping {
     private String pno;
     private String pname;
     private int pprice;
+    private int oriprice;
     private String pinfo;
     private String pmainimg;
     private String psubimg;
@@ -41,6 +42,14 @@ public class Shopping {
 
     public void setPprice(int pprice) {
         this.pprice = pprice;
+    }
+
+    public int getOriprice() {
+        return oriprice;
+    }
+
+    public void setOriprice(int oriprice) {
+        this.oriprice = oriprice;
     }
 
     public String getPinfo() {
