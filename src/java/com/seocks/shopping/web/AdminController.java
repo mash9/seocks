@@ -141,6 +141,21 @@ public class AdminController {
         return true;
     }
 
+    @RequestMapping(path = "/chart.do" , method = RequestMethod.GET)
+    public String chart(@RequestParam(value = "startDate" , required = false) String startDate,
+                        @RequestParam(value = "endDate" , required = false) String endDate,
+                        Model model)
+    {
+        model.addAttribute("title" , "통계");
+        model.addAttribute("startDate" , startDate);
+        model.addAttribute("endDate" , endDate);
+        model.addAttribute("salePrice" , 0);
+        model.addAttribute("buyPrice" , 0);
+        model.addAttribute("profitPrice" , 0);
+        model.addAttribute("page" , "/admin/chart");
+        return "/include/layout";
+    }
+
     @RequestMapping(path = "/product/add.do" , method = RequestMethod.GET)
     public String productAdd(Model model)
     {
