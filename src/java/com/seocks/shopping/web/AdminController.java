@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
@@ -23,6 +24,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.FileSystems;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -234,6 +237,12 @@ public class AdminController {
                         @RequestParam(value = "endDate" , required = false) String endDate,
                         Model model)
     {
+
+        if(StringUtils.isEmpty(startDate))
+            startDate = new SimpleDateFormat("yyyy-01-01").format(new Date());
+
+        if(StringUtils.isEmpty(endDate))
+            endDate = new SimpleDateFormat("yyyy-12-31").format(new Date());
 
         int saleQty = 0;
         int salePrice = 0;
