@@ -43,7 +43,8 @@
 				<a href="/admin/product/add.do" style="text-decoration: none;color: #46b8da;margin-right: 5px">상품등록</a>
 				<a href="/admin/saleList.do" style="text-decoration: none;color: #46b8da;margin-right: 5px">판매현황</a>
 				<a href="/admin/order.do" style="text-decoration: none;color: #46b8da;margin-right: 5px">거래처</a>
-				<a href="/admin/chart.do" style="text-decoration: none;color: #46b8da">통계</a>
+				<a href="/admin/remain.do" style="text-decoration: none;color: #46b8da;margin-right: 5px">재고</a>
+				<a href="/admin/report.do" style="text-decoration: none;color: #46b8da">통계</a>
 			</c:if>
 		</c:if>
 	</div>

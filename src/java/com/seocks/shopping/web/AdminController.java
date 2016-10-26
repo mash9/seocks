@@ -138,41 +138,7 @@ public class AdminController {
         return true;
     }
 
-    @RequestMapping(path = "/chart.do" , method = RequestMethod.GET)
-    public String chart(@RequestParam(value = "startDate" , required = false) String startDate,
-                        @RequestParam(value = "endDate" , required = false) String endDate,
-                        Model model)
-    {
 
-        int saleQty = 0;
-        int salePrice = 0;
-        List<Bought> boughts = paymentService.boughtList("" , startDate , endDate);
-        for(Bought bought : boughts)
-        {
-            saleQty += Integer.parseInt(bought.getQty());
-            salePrice += Integer.parseInt(bought.getQty()) * Integer.parseInt(bought.getPrice());
-        }
-
-        int buyQty = 0;
-        int buyPrice = 0;
-        List<DealOrder> dealOrders = shoppingService.listDealOrder(startDate , endDate);
-        for(DealOrder order : dealOrders)
-        {
-            buyQty += order.getQty();
-            buyPrice += order.getQty() * order.getPrice();
-        }
-
-        model.addAttribute("title" , "통계");
-        model.addAttribute("startDate" , startDate);
-        model.addAttribute("endDate" , endDate);
-        model.addAttribute("saleQty" , saleQty);
-        model.addAttribute("salePrice" , salePrice);
-        model.addAttribute("buyQty" , buyQty);
-        model.addAttribute("buyPrice" , buyPrice);
-        model.addAttribute("profitPrice" , salePrice - buyPrice);
-        model.addAttribute("page" , "/admin/chart");
-        return "/include/layout";
-    }
 
     @RequestMapping(path = "/product/add.do" , method = RequestMethod.GET)
     public String productAdd(Model model)
@@ -252,6 +218,51 @@ public class AdminController {
 
         shoppingService.create(newOne);
         return true;
+    }
+
+    @RequestMapping(path = "/remain.do" , method = RequestMethod.GET)
+    public String remain(Model model)
+    {
+        model.addAttribute("title" , "재고");
+        model.addAttribute("products" , shoppingService.remains());
+        model.addAttribute("page" , "/admin/remain");
+        return "/include/layout";
+    }
+
+    @RequestMapping(path = "/report.do" , method = RequestMethod.GET)
+    public String chart(@RequestParam(value = "startDate" , required = false) String startDate,
+                        @RequestParam(value = "endDate" , required = false) String endDate,
+                        Model model)
+    {
+
+        int saleQty = 0;
+        int salePrice = 0;
+        List<Bought> boughts = paymentService.boughtList("" , startDate , endDate);
+        for(Bought bought : boughts)
+        {
+            saleQty += Integer.parseInt(bought.getQty());
+            salePrice += Integer.parseInt(bought.getQty()) * Integer.parseInt(bought.getPrice());
+        }
+
+        int buyQty = 0;
+        int buyPrice = 0;
+        List<DealOrder> dealOrders = shoppingService.listDealOrder(startDate , endDate);
+        for(DealOrder order : dealOrders)
+        {
+            buyQty += order.getQty();
+            buyPrice += order.getQty() * order.getPrice();
+        }
+
+        model.addAttribute("title" , "통계");
+        model.addAttribute("startDate" , startDate);
+        model.addAttribute("endDate" , endDate);
+        model.addAttribute("saleQty" , saleQty);
+        model.addAttribute("salePrice" , salePrice);
+        model.addAttribute("buyQty" , buyQty);
+        model.addAttribute("buyPrice" , buyPrice);
+        model.addAttribute("profitPrice" , salePrice - buyPrice);
+        model.addAttribute("page" , "/admin/report");
+        return "/include/layout";
     }
 
 }

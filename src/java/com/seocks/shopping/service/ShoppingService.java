@@ -27,6 +27,11 @@ public class ShoppingService {
         return mapper.selectShoppingByPcate(pcate);
     }
 
+    public List<Shopping> remains()
+    {
+        return mapper.selectRemainShopping();
+    }
+
     public Shopping info(String pno)
     {
         return mapper.info(pno);

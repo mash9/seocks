@@ -18,17 +18,12 @@ import java.util.List;
 @Controller
 public class MainController {
 
-    @Value("#{config['test.hello']}")
-    private String hello;
-
     @Autowired
     private ShoppingService shoppingService;
 
     @RequestMapping(path = "/main.do" , method = RequestMethod.GET)
     public String main(Model model)
     {
-        System.out.println(hello);
-
         List<Shopping> results = shoppingService.list();
 
         model.addAttribute("items" , results);

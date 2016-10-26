@@ -45,8 +45,13 @@ public class PaymentController {
     public @ResponseBody boolean addCart(@RequestParam(value = "pno") String pno,
                                          @RequestParam(value = "psize") String psize,
                                          @RequestParam(value = "qty") Integer qty,
-                                         HttpSession session)
+                                         HttpSession session) throws Exception
     {
+        Shopping shopping = shoppingService.info(pno);
+
+        if(shopping.getPocunt() < qty)
+            throw new ShopException("재고가 부족합니다.");
+
         getCartList(session , pno , psize , qty);
         return true;
     }

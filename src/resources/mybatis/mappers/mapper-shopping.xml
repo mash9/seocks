@@ -25,6 +25,13 @@
           ORDER BY PNO
     </select>
 
+    <select id="selectRemainShopping" resultType="com.seocks.shopping.model.Shopping">
+        <include refid="sqlShopping"/>
+        WHERE 1 = 1
+          AND POCUNT > 0
+        ORDER BY PCATE , PNAME
+    </select>
+
     <select id="info" resultType="com.seocks.shopping.model.Shopping">
         <include refid="sqlShopping"/>
          WHERE PNO = #{pno}

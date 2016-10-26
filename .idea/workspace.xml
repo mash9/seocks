@@ -6,11 +6,25 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="439a8dc8-1056-45ea-bdaf-b09a6dd8499f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/com/seocks/shopping/web/LoginController.class" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/com/seocks/shopping/web/LoginController.class" />
+    <list default="true" id="439a8dc8-1056-45ea-bdaf-b09a6dd8499f" name="Default" comment="아이디 중복체크">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/img/A131.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/img/A132.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/img/A13SUB1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/img/A13SUB2.jpg" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/chart.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/remain.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/com/seocks/shopping/mapper/ShoppingMapper.class" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/com/seocks/shopping/mapper/ShoppingMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/com/seocks/shopping/service/ShoppingService.class" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/com/seocks/shopping/service/ShoppingService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/com/seocks/shopping/web/MainController.class" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/com/seocks/shopping/web/MainController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/com/seocks/shopping/web/PaymentController.class" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/com/seocks/shopping/web/PaymentController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/login/joinform.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/login/joinform.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/seocks/shopping/web/LoginController.java" afterPath="$PROJECT_DIR$/src/java/com/seocks/shopping/web/LoginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/mybatis/mappers/mapper-shopping.xml" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/mybatis/mappers/mapper-shopping.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/include/topmenu.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/include/topmenu.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/seocks/shopping/mapper/ShoppingMapper.java" afterPath="$PROJECT_DIR$/src/java/com/seocks/shopping/mapper/ShoppingMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/seocks/shopping/service/ShoppingService.java" afterPath="$PROJECT_DIR$/src/java/com/seocks/shopping/service/ShoppingService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/seocks/shopping/web/AdminController.java" afterPath="$PROJECT_DIR$/src/java/com/seocks/shopping/web/AdminController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/seocks/shopping/web/MainController.java" afterPath="$PROJECT_DIR$/src/java/com/seocks/shopping/web/MainController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/seocks/shopping/web/PaymentController.java" afterPath="$PROJECT_DIR$/src/java/com/seocks/shopping/web/PaymentController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/mybatis/mappers/mapper-shopping.xml" afterPath="$PROJECT_DIR$/src/resources/mybatis/mappers/mapper-shopping.xml" />
     </list>
     <ignored path="Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,118 +53,56 @@
     <favorites_list name="Project" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="editform.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/login/editform.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="44" column="41" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="joinform.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/login/joinform.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2228">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/seocks/shopping/web/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="40" column="64" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="memberInfo.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/memberInfo.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="memberEdit.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/memberEdit.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JspmemberService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/seocks/shopping/service/JspmemberService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="25" column="38" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="38" />
-              <folding>
-                <element signature="e#570#571#0" expanded="true" />
-                <element signature="e#620#621#0" expanded="true" />
-                <element signature="e#768#769#0" expanded="true" />
-                <element signature="e#828#829#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JspmemberMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/seocks/shopping/mapper/JspmemberMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="16" column="21" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mapper-jspmember.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/mybatis/mappers/mapper-jspmember.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-              <folding>
-                <marker date="1477308922857" expanded="true" signature="301:873" ph="INSERT INTO JSPMEMBER... " />
-                <marker date="1477308922857" expanded="true" signature="970:1225" ph="SELECT ID ,P... JSPMEMBER" />
-                <marker date="1477308922857" expanded="true" signature="1325:1637" ph="SELECT ID ,P... JSPMEMBER" />
-                <marker date="1477308922857" expanded="true" signature="1742:2215" ph="UPDATE JSPME... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/seocks/shopping/web/AdminController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="62" column="62" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Jspmember.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/seocks/shopping/model/Jspmember.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5792079">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="ProductType.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/java/com/seocks/shopping/constans/ProductType.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="306">
+                  <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="remain.jsp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/remain.jsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="708">
+                  <caret line="65" column="75" selection-start-line="65" selection-start-column="75" selection-end-line="65" selection-end-column="75" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="core.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/WebContent/js/core.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="core.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/WebContent/js/core.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -176,8 +128,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/WebContent/css/styles.css" />
-        <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/main/topoftop.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/include/top.jsp" />
         <option value="$PROJECT_DIR$/src/java/com/seocks/shopping/model/Code.java" />
         <option value="$PROJECT_DIR$/src/java/com/seocks/shopping/service/CodeService.java" />
@@ -196,7 +146,6 @@
         <option value="$PROJECT_DIR$/src/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/java/com/seocks/shopping/common/RuntimeExceptionHandler.java" />
         <option value="$PROJECT_DIR$/src/java/com/seocks/shopping/web/ShopController.java" />
-        <option value="$PROJECT_DIR$/src/java/com/seocks/shopping/web/MainController.java" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/main/center.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/seocks-servlet.xml" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/include/layout.jsp" />
@@ -207,19 +156,13 @@
         <option value="$PROJECT_DIR$/src/java/com/seocks/shopping/service/PaymentService.java" />
         <option value="$PROJECT_DIR$/src/java/com/seocks/shopping/mapper/PaymentMapper.java" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/saleList.jsp" />
-        <option value="$PROJECT_DIR$/src/java/com/seocks/shopping/web/PaymentController.java" />
-        <option value="$PROJECT_DIR$/src/java/com/seocks/shopping/service/ShoppingService.java" />
-        <option value="$PROJECT_DIR$/src/java/com/seocks/shopping/mapper/ShoppingMapper.java" />
         <option value="$PROJECT_DIR$/src/resources/mybatis/mappers/mapper-payment.xml" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/payment/boughtList.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/productAdd.jsp" />
         <option value="$PROJECT_DIR$/src/java/com/seocks/shopping/model/Shopping.java" />
         <option value="$PROJECT_DIR$/sql/data/shopping.txt" />
         <option value="$PROJECT_DIR$/sql/shopping.txt" />
-        <option value="$PROJECT_DIR$/src/resources/mybatis/mappers/mapper-shopping.xml" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/order.jsp" />
-        <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/include/topmenu.jsp" />
-        <option value="$PROJECT_DIR$/src/java/com/seocks/shopping/web/AdminController.java" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/chart.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/memberInfo.jsp" />
         <option value="$PROJECT_DIR$/src/resources/mybatis/mappers/mapper-jspmember.xml" />
@@ -227,6 +170,15 @@
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/login/editform.jsp" />
         <option value="$PROJECT_DIR$/src/java/com/seocks/shopping/web/LoginController.java" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/login/joinform.jsp" />
+        <option value="$PROJECT_DIR$/src/java/com/seocks/shopping/web/MainController.java" />
+        <option value="$PROJECT_DIR$/src/java/com/seocks/shopping/web/PaymentController.java" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/include/topmenu.jsp" />
+        <option value="$PROJECT_DIR$/src/resources/mybatis/mappers/mapper-shopping.xml" />
+        <option value="$PROJECT_DIR$/src/java/com/seocks/shopping/mapper/ShoppingMapper.java" />
+        <option value="$PROJECT_DIR$/src/java/com/seocks/shopping/service/ShoppingService.java" />
+        <option value="$PROJECT_DIR$/src/java/com/seocks/shopping/web/AdminController.java" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/remain.jsp" />
+        <option value="$PROJECT_DIR$/WebContent/js/core.js" />
       </list>
     </option>
   </component>
@@ -244,10 +196,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -291,8 +241,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -509,6 +457,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="WebContent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -628,18 +594,8 @@
               <option name="myItemId" value="shopping" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="seocks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="seocks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sql" />
+              <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -653,16 +609,132 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sql" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shopping" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shopping" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shopping" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="constans" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shopping" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -674,19 +746,19 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15257531" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="b&#9;FILE&#9;file://C:/Users/com/IdeaProjects/seocks/src/java/com/seocks/shopping/model/Bought.java&#10;sh&#9;FILE&#9;file://C:/Users/com/IdeaProjects/seocks/src/java/com/seocks/shopping/model/ShoppingItem.java&#10;top&#9;FILE&#9;file://C:/Users/com/IdeaProjects/seocks/WebContent/WEB-INF/jsp/main/topoftop.jsp" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/com/IdeaProjects/seocks/WebContent/WEB-INF/jsp/admin/productAdd.jsp&#10;b&#9;FILE&#9;file://C:/Users/com/IdeaProjects/seocks/src/java/com/seocks/shopping/model/Bought.java&#10;sh&#9;FILE&#9;file://C:/Users/com/IdeaProjects/seocks/src/java/com/seocks/shopping/model/ShoppingItem.java&#10;top&#9;FILE&#9;file://C:/Users/com/IdeaProjects/seocks/WebContent/WEB-INF/jsp/main/topoftop.jsp" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\com\workspace\Project\WebContent\WEB-INF\WEB-INF\jsp" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\com\IdeaProjects\seocks\WebContent\WEB-INF\jsp\admin" />
       <recent name="C:\Users\com\IdeaProjects\seocks\WebContent\js" />
       <recent name="C:\Users\com\IdeaProjects\seocks\WebContent\js\jqueryui" />
       <recent name="C:\Users\com\IdeaProjects\seocks\WebContent\img" />
       <recent name="C:\Users\com\IdeaProjects\seocks\WebContent\WEB-INF\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\com\workspace\Project\WebContent\WEB-INF\WEB-INF\jsp" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.localhost">
@@ -1219,7 +1291,12 @@
       <workItem from="1477139486232" duration="2078000" />
       <workItem from="1477224433765" duration="3163000" />
       <workItem from="1477307929696" duration="3678000" />
-      <workItem from="1477308028611" duration="1854000" />
+      <workItem from="1477308028611" duration="2502000" />
+      <workItem from="1477322003561" duration="875000" />
+      <workItem from="1477322002789" duration="796000" />
+      <workItem from="1477489538020" duration="25000" />
+      <workItem from="1477489573350" duration="28000" />
+      <workItem from="1477489770015" duration="1708000" />
     </task>
     <task id="LOCAL-00001" summary="회원정보 수정 추가">
       <created>1475669380767</created>
@@ -1445,14 +1522,21 @@
       <option name="project" value="LOCAL" />
       <updated>1477309351065</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="아이디 중복체크">
+      <created>1477309896126</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1477309896126</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144110000" />
+    <option name="totallyTimeSpent" value="148190000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1467,14 +1551,14 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22228146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13965885" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3445287" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3437186" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16684724" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25074628" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1485,27 +1569,27 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46912244" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2483731" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16684724" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16143012" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.503792" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4926004" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.366613" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22391991" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49454907" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3445287" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1540,7 +1624,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
-    <MESSAGE value="회원수정 , 회원삭제 추가" />
     <MESSAGE value="결제정보 페이지 생성" />
     <MESSAGE value="결제정보 페이지 작업" />
     <MESSAGE value="결제 추가" />
@@ -1565,14 +1648,15 @@
     <MESSAGE value="1차 마무리" />
     <MESSAGE value="통계 추가" />
     <MESSAGE value="전화번호 저장" />
-    <option name="LAST_COMMIT_MESSAGE" value="전화번호 저장" />
+    <MESSAGE value="아이디 중복체크" />
+    <option name="LAST_COMMIT_MESSAGE" value="아이디 중복체크" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/java/com/seocks/shopping/service/ShoppingService.java</url>
-          <line>30</line>
+          <line>35</line>
           <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
@@ -1586,14 +1670,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/include/top.jsp" />
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/main/menu.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/js/jquery.form.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1633,9 +1709,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-          <folding>
-            <marker date="1476543537790" expanded="true" signature="294:416" ph="SELECT TYPE CODE" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1643,7 +1716,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
           <caret line="99" column="78" selection-start-line="99" selection-start-column="78" selection-end-line="101" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1666,22 +1738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="16" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/shop/info.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="44" column="50" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/payment/cartlist.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="69" column="63" selection-start-line="69" selection-start-column="63" selection-end-line="69" selection-end-column="119" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1710,14 +1766,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/js/core.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1725,7 +1773,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1734,15 +1781,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/seocks/shopping/web/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1781,19 +1819,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/include/topmenu.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="45" column="92" selection-start-line="45" selection-start-column="92" selection-end-line="45" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/com/seocks/shopping/web/ShopController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1512">
           <caret line="97" column="38" selection-start-line="97" selection-start-column="27" selection-end-line="97" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1801,12 +1830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
           <caret line="85" column="28" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="28" />
-          <folding>
-            <marker date="1477226573986" expanded="true" signature="1152:1434" ph="INSERT INTO PAYMENT... " />
-            <marker date="1477226573986" expanded="true" signature="1540:2698" ph="SELECT A.PNO... SHOPPING" />
-            <marker date="1477226573986" expanded="true" signature="1759:2630" ph="SELECT PNO ,... PAYMENT" />
-            <marker date="1477226573986" expanded="true" signature="2799:3662" ph="SELECT A.PNO... PAYMENT" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1814,49 +1837,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1296">
           <caret line="72" column="101" selection-start-line="72" selection-start-column="46" selection-end-line="72" selection-end-column="101" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/seocks/shopping/service/ShoppingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="41" column="37" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/seocks/shopping/mapper/ShoppingMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="24" column="35" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/mybatis/mappers/mapper-shopping.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="954">
-          <caret line="53" column="20" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="20" />
-          <folding>
-            <marker date="1477308148930" expanded="true" signature="247:455" ph="SELECT PNO ,... SHOPPING" />
-            <marker date="1477308148930" expanded="true" signature="1046:1426" ph="UPDATE SHOPP... " />
-            <marker date="1477308148930" expanded="true" signature="1488:1620" ph="UPDATE SHOPP... " />
-            <marker date="1477308148930" expanded="true" signature="1531:1586" ph="SELECT POCUN... SHOPPING" />
-            <marker date="1477308148930" expanded="true" signature="1727:2259" ph="SELECT A.PNO... DEAL_ORDER" />
-            <marker date="1477308148930" expanded="true" signature="1727:2266" ph="SELECT A.PNO... DEAL_ORDER" />
-            <marker date="1477308148930" expanded="true" signature="2363:2562" ph="INSERT INTO DEAL_ORDER... " />
-            <marker date="1477308148930" expanded="true" signature="2639:2775" ph="SELECT MAX( SHOPPING" />
-            <marker date="1477308148930" expanded="true" signature="2883:3414" ph="INSERT INTO SHOPPING... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/seocks/shopping/web/PaymentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2412">
-          <caret line="147" column="52" selection-start-line="147" selection-start-column="52" selection-end-line="147" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1864,31 +1844,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="5" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/saleList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-926">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/order.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1077">
-          <caret line="130" column="63" selection-start-line="130" selection-start-column="59" selection-end-line="130" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/productAdd.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1896,7 +1851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1904,23 +1858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/memberInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/seocks/shopping/web/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="62" column="62" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1928,12 +1865,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="25" column="38" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="38" />
-          <folding>
-            <element signature="e#570#571#0" expanded="true" />
-            <element signature="e#620#621#0" expanded="true" />
-            <element signature="e#768#769#0" expanded="true" />
-            <element signature="e#828#829#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1941,51 +1872,373 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="16" column="21" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/mybatis/mappers/mapper-jspmember.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="252">
           <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-          <folding>
-            <marker date="1477308922857" expanded="true" signature="301:873" ph="INSERT INTO JSPMEMBER... " />
-            <marker date="1477308922857" expanded="true" signature="970:1225" ph="SELECT ID ,P... JSPMEMBER" />
-            <marker date="1477308922857" expanded="true" signature="1325:1637" ph="SELECT ID ,P... JSPMEMBER" />
-            <marker date="1477308922857" expanded="true" signature="1742:2215" ph="UPDATE JSPME... " />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/memberEdit.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="1908">
           <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/login/editform.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
+        <state relative-caret-position="792">
           <caret line="44" column="41" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/com/seocks/shopping/web/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
+        <state relative-caret-position="576">
           <caret line="40" column="64" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/login/joinform.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2228">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="360">
+          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/memberInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/productAdd.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/seocks/shopping/web/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding>
+            <marker date="1477489583528" expanded="false" signature="41:533" ph="..." />
+            <marker date="1477489583528" expanded="true" signature="535:575" ph="/**...*/" />
+            <marker date="1477489583528" expanded="true" signature="788:1034" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/payment/cartlist.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="69" column="63" selection-start-line="69" selection-start-column="63" selection-end-line="69" selection-end-column="119" />
+          <folding>
+            <marker date="1477142473286" expanded="true" signature="248:877" ph="..." />
+            <marker date="1477142473286" expanded="true" signature="280:866" ph="{...}" />
+            <marker date="1477142473286" expanded="true" signature="320:571" ph="{...}" />
+            <marker date="1477142473286" expanded="true" signature="374:443" ph="{...}" />
+            <marker date="1477142473286" expanded="true" signature="494:565" ph="{...}" />
+            <marker date="1477142473286" expanded="true" signature="613:777" ph="{...}" />
+            <marker date="1477142473286" expanded="true" signature="700:771" ph="{...}" />
+            <marker date="1477142473286" expanded="true" signature="815:860" ph="{...}" />
+            <marker date="1477142473286" expanded="true" signature="888:2754" ph="..." />
+            <marker date="1477142473286" expanded="true" signature="895:948" ph="..." />
+            <marker date="1477142473286" expanded="true" signature="977:2744" ph="..." />
+            <marker date="1477142473286" expanded="true" signature="996:1355" ph="..." />
+            <marker date="1477142473286" expanded="true" signature="1438:2282" ph="..." />
+            <marker date="1477142473286" expanded="true" signature="1459:2197" ph="..." />
+            <marker date="1477142473286" expanded="true" signature="1511:1652" ph="..." />
+            <marker date="1477142473286" expanded="true" signature="1557:1642" ph="..." />
+            <marker date="1477142473286" expanded="true" signature="1704:1777" ph="..." />
+            <marker date="1477142473286" expanded="true" signature="2080:2188" ph="..." />
+            <marker date="1477142473286" expanded="true" signature="2302:2467" ph="..." />
+            <marker date="1477142473286" expanded="true" signature="2353:2459" ph="..." />
+            <marker date="1477142473286" expanded="true" signature="2359:2454" ph="..." />
+            <marker date="1477142473286" expanded="true" signature="2487:2733" ph="..." />
+            <marker date="1477142473286" expanded="true" signature="2538:2725" ph="..." />
+            <marker date="1477142473286" expanded="true" signature="2645:2716" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/shop/info.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="35" />
+          <folding>
+            <marker date="1477142528751" expanded="true" signature="183:938" ph="..." />
+            <marker date="1477142528751" expanded="true" signature="217:926" ph="{...}" />
+            <marker date="1477142528751" expanded="true" signature="286:585" ph="{...}" />
+            <marker date="1477142528751" expanded="true" signature="302:374" ph="{&quot;pno&quot;: pno...}" />
+            <marker date="1477142528751" expanded="true" signature="438:483" ph="{...}" />
+            <marker date="1477142528751" expanded="true" signature="531:579" ph="{...}" />
+            <marker date="1477142528751" expanded="true" signature="623:921" ph="{...}" />
+            <marker date="1477142528751" expanded="true" signature="639:711" ph="{&quot;pno&quot;: pno...}" />
+            <marker date="1477142528751" expanded="true" signature="775:820" ph="{...}" />
+            <marker date="1477142528751" expanded="true" signature="868:915" ph="{...}" />
+            <marker date="1477142528751" expanded="true" signature="949:2882" ph="..." />
+            <marker date="1477142528751" expanded="true" signature="1035:2688" ph="..." />
+            <marker date="1477142528751" expanded="true" signature="1044:1287" ph="..." />
+            <marker date="1477142528751" expanded="true" signature="1109:1188" ph="..." />
+            <marker date="1477142528751" expanded="true" signature="1114:1183" ph="..." />
+            <marker date="1477142528751" expanded="true" signature="1296:1396" ph="..." />
+            <marker date="1477142528751" expanded="true" signature="1405:1505" ph="..." />
+            <marker date="1477142528751" expanded="true" signature="1515:1790" ph="..." />
+            <marker date="1477142528751" expanded="true" signature="1604:1681" ph="..." />
+            <marker date="1477142528751" expanded="true" signature="1722:1780" ph="..." />
+            <marker date="1477142528751" expanded="true" signature="1800:2079" ph="..." />
+            <marker date="1477142528751" expanded="true" signature="1869:2069" ph="..." />
+            <marker date="1477142528751" expanded="true" signature="1908:2058" ph="..." />
+            <marker date="1477142528751" expanded="true" signature="2089:2236" ph="..." />
+            <marker date="1477142528751" expanded="true" signature="2157:2226" ph="..." />
+            <marker date="1477142528751" expanded="true" signature="2245:2336" ph="..." />
+            <marker date="1477142528751" expanded="true" signature="2283:2289" ph="&amp;nbsp;" />
+            <marker date="1477142528751" expanded="true" signature="2316:2322" ph="&amp;nbsp;" />
+            <marker date="1477142528751" expanded="true" signature="2345:2676" ph="..." />
+            <marker date="1477142528751" expanded="true" signature="2386:2666" ph="..." />
+            <marker date="1477142528751" expanded="true" signature="2435:2653" ph="..." />
+            <marker date="1477142528751" expanded="true" signature="2571:2642" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/seocks/shopping/web/PaymentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+          <folding>
+            <marker date="1477489992075" expanded="false" signature="41:630" ph="..." />
+            <marker date="1477489992075" expanded="true" signature="632:672" ph="/**...*/" />
+            <marker date="1477489992075" expanded="true" signature="673:715" ph="@{...}" />
+            <marker date="1477489992075" expanded="true" signature="1300:1528" ph="{...}" />
+            <marker date="1477489992075" expanded="true" signature="1936:2161" ph="{...}" />
+            <marker date="1477489992075" expanded="true" signature="2587:2881" ph="{...}" />
+            <marker date="1477489992075" expanded="true" signature="3235:3603" ph="{...}" />
+            <marker date="1477489992075" expanded="true" signature="3794:3971" ph="{...}" />
+            <marker date="1477489992075" expanded="true" signature="4089:5484" ph="{...}" />
+            <marker date="1477489992075" expanded="true" signature="5825:6331" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/include/topmenu.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="45" column="32" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="38" />
+          <folding>
+            <marker date="1477490269890" expanded="true" signature="183:591" ph="..." />
+            <marker date="1477490269890" expanded="true" signature="216:579" ph="{...}" />
+            <marker date="1477490269890" expanded="true" signature="262:572" ph="{...}" />
+            <marker date="1477490269890" expanded="true" signature="342:565" ph="{&quot;url&quot;: &quot;/login/logout.do&quot;...}" />
+            <marker date="1477490269890" expanded="true" signature="495:559" ph="{...}" />
+            <marker date="1477490269890" expanded="true" signature="672:2307" ph="..." />
+            <marker date="1477490269890" expanded="true" signature="718:1006" ph="..." />
+            <marker date="1477490269890" expanded="true" signature="1053:2299" ph="..." />
+            <marker date="1477490269890" expanded="true" signature="1578:2289" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/saleList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-639">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="64" />
+          <folding>
+            <marker date="1477139728261" expanded="true" signature="472:1029" ph="..." />
+            <marker date="1477139728261" expanded="true" signature="508:1018" ph="{...}" />
+            <marker date="1477139728261" expanded="true" signature="625:771" ph="{...}" />
+            <marker date="1477139728261" expanded="true" signature="812:1009" ph="{...}" />
+            <marker date="1477139728261" expanded="true" signature="828:945" ph="{...}" />
+            <marker date="1477139728261" expanded="true" signature="1039:4289" ph="..." />
+            <marker date="1477139728261" expanded="true" signature="1052:1108" ph="..." />
+            <marker date="1477139728261" expanded="true" signature="1124:1553" ph="..." />
+            <marker date="1477139728261" expanded="true" signature="1581:2856" ph="..." />
+            <marker date="1477139728261" expanded="true" signature="1600:1901" ph="..." />
+            <marker date="1477139728261" expanded="true" signature="1982:2658" ph="..." />
+            <marker date="1477139728261" expanded="true" signature="2002:2578" ph="..." />
+            <marker date="1477139728261" expanded="true" signature="2054:2194" ph="..." />
+            <marker date="1477139728261" expanded="true" signature="2100:2184" ph="..." />
+            <marker date="1477139728261" expanded="true" signature="2246:2319" ph="..." />
+            <marker date="1477139728261" expanded="true" signature="2678:2845" ph="..." />
+            <marker date="1477139728261" expanded="true" signature="2729:2837" ph="..." />
+            <marker date="1477139728261" expanded="true" signature="2735:2832" ph="..." />
+            <marker date="1477139728261" expanded="true" signature="2868:2923" ph="..." />
+            <marker date="1477139728261" expanded="true" signature="2951:4279" ph="..." />
+            <marker date="1477139728261" expanded="true" signature="2970:3329" ph="..." />
+            <marker date="1477139728261" expanded="true" signature="3409:4080" ph="..." />
+            <marker date="1477139728261" expanded="true" signature="3429:3987" ph="..." />
+            <marker date="1477139728261" expanded="true" signature="3655:3728" ph="..." />
+            <marker date="1477139728261" expanded="true" signature="4100:4268" ph="..." />
+            <marker date="1477139728261" expanded="true" signature="4151:4260" ph="..." />
+            <marker date="1477139728261" expanded="true" signature="4157:4255" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/order.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="130" column="63" selection-start-line="130" selection-start-column="59" selection-end-line="130" selection-end-column="63" />
+          <folding>
+            <marker date="1477308265441" expanded="true" signature="471:1714" ph="..." />
+            <marker date="1477308265441" expanded="true" signature="504:1702" ph="{...}" />
+            <marker date="1477308265441" expanded="true" signature="609:722" ph="{...}" />
+            <marker date="1477308265441" expanded="true" signature="763:957" ph="{...}" />
+            <marker date="1477308265441" expanded="true" signature="779:896" ph="{...}" />
+            <marker date="1477308265441" expanded="true" signature="998:1302" ph="{...}" />
+            <marker date="1477308265441" expanded="true" signature="1068:1296" ph="{...}" />
+            <marker date="1477308265441" expanded="true" signature="1143:1289" ph="{...}" />
+            <marker date="1477308265441" expanded="true" signature="1342:1696" ph="{...}" />
+            <marker date="1477308265441" expanded="true" signature="1424:1467" ph="{...}" />
+            <marker date="1477308265441" expanded="true" signature="1513:1565" ph="{&quot;qty&quot;: qty...}" />
+            <marker date="1477308265441" expanded="true" signature="1618:1688" ph="{...}" />
+            <marker date="1477308265441" expanded="true" signature="1726:4173" ph="..." />
+            <marker date="1477308265441" expanded="true" signature="1825:2370" ph="..." />
+            <marker date="1477308265441" expanded="true" signature="1832:2038" ph="..." />
+            <marker date="1477308265441" expanded="true" signature="1857:2030" ph="..." />
+            <marker date="1477308265441" expanded="true" signature="1887:2021" ph="..." />
+            <marker date="1477308265441" expanded="true" signature="1932:2007" ph="..." />
+            <marker date="1477308265441" expanded="true" signature="2045:2253" ph="..." />
+            <marker date="1477308265441" expanded="true" signature="2069:2244" ph="..." />
+            <marker date="1477308265441" expanded="true" signature="2098:2235" ph="..." />
+            <marker date="1477308265441" expanded="true" signature="2146:2221" ph="..." />
+            <marker date="1477308265441" expanded="true" signature="2260:2360" ph="..." />
+            <marker date="1477308265441" expanded="true" signature="2283:2352" ph="..." />
+            <marker date="1477308265441" expanded="true" signature="2454:2505" ph="..." />
+            <marker date="1477308265441" expanded="true" signature="2518:2926" ph="..." />
+            <marker date="1477308265441" expanded="true" signature="2954:4163" ph="..." />
+            <marker date="1477308265441" expanded="true" signature="2973:3276" ph="..." />
+            <marker date="1477308265441" expanded="true" signature="3359:3966" ph="..." />
+            <marker date="1477308265441" expanded="true" signature="3379:3880" ph="..." />
+            <marker date="1477308265441" expanded="true" signature="3987:4153" ph="..." />
+            <marker date="1477308265441" expanded="true" signature="4038:4145" ph="..." />
+            <marker date="1477308265441" expanded="true" signature="4044:4140" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/seocks/shopping/mapper/ShoppingMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="20" column="39" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="39" />
+          <folding>
+            <marker date="1477490558439" expanded="false" signature="44:282" ph="..." />
+            <marker date="1477490558439" expanded="true" signature="284:324" ph="/**...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/seocks/shopping/service/ShoppingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+          <folding>
+            <marker date="1477490612303" expanded="false" signature="45:308" ph="..." />
+            <marker date="1477490612303" expanded="true" signature="310:350" ph="/**...*/" />
+            <marker date="1477490612303" expanded="false" signature="475:490" ph=" { " />
+            <marker date="1477490612303" expanded="false" signature="521:527" ph=" }" />
+            <marker date="1477490612303" expanded="false" signature="573:588" ph=" { " />
+            <marker date="1477490612303" expanded="false" signature="631:637" ph=" }" />
+            <marker date="1477490612303" expanded="true" signature="674:689" ph=" { " />
+            <marker date="1477490612303" expanded="true" signature="726:732" ph=" }" />
+            <marker date="1477490612303" expanded="false" signature="770:785" ph=" { " />
+            <marker date="1477490612303" expanded="false" signature="809:815" ph=" }" />
+            <marker date="1477490612303" expanded="false" signature="865:880" ph=" { " />
+            <marker date="1477490612303" expanded="false" signature="919:925" ph=" }" />
+            <marker date="1477490612303" expanded="true" signature="1007:1074" ph="{...}" />
+            <marker date="1477490612303" expanded="false" signature="1117:1132" ph=" { " />
+            <marker date="1477490612303" expanded="false" signature="1163:1169" ph=" }" />
+            <marker date="1477490612303" expanded="false" signature="1214:1229" ph=" { " />
+            <marker date="1477490612303" expanded="false" signature="1265:1271" ph=" }" />
+            <marker date="1477490612303" expanded="false" signature="1311:1326" ph=" { " />
+            <marker date="1477490612303" expanded="false" signature="1363:1369" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/seocks/shopping/web/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="226" column="36" selection-start-line="226" selection-start-column="28" selection-end-line="226" selection-end-column="36" />
+          <folding>
+            <marker date="1477490618902" expanded="false" signature="41:1060" ph="..." />
+            <marker date="1477490618902" expanded="true" signature="1062:1102" ph="/**...*/" />
+            <marker date="1477490618902" expanded="true" signature="1103:1147" ph="@{...}" />
+            <marker date="1477490618902" expanded="true" signature="1613:1827" ph="{...}" />
+            <marker date="1477490618902" expanded="true" signature="2017:2231" ph="{...}" />
+            <marker date="1477490618902" expanded="true" signature="2421:2638" ph="{...}" />
+            <marker date="1477490618902" expanded="true" signature="2794:2867" ph="{...}" />
+            <marker date="1477490618902" expanded="true" signature="3044:3191" ph="{...}" />
+            <marker date="1477490618902" expanded="true" signature="3503:3932" ph="{...}" />
+            <marker date="1477490618902" expanded="true" signature="4232:4754" ph="{...}" />
+            <marker date="1477490618902" expanded="true" signature="5004:5346" ph="{...}" />
+            <marker date="1477490618902" expanded="true" signature="5471:5719" ph="{...}" />
+            <marker date="1477490618902" expanded="true" signature="6574:9009" ph="{...}" />
+            <marker date="1477490618902" expanded="true" signature="9123:9330" ph="{...}" />
+            <marker date="1477490618902" expanded="true" signature="9631:10788" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/mybatis/mappers/mapper-shopping.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="27" column="36" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="36" />
+          <folding>
+            <marker date="1477490533891" expanded="true" signature="209:3655" ph="..." />
+            <marker date="1477490533891" expanded="true" signature="237:465" ph="..." />
+            <marker date="1477490533891" expanded="true" signature="247:455" ph="SELECT PNO ,... SHOPPING" />
+            <marker date="1477490533891" expanded="true" signature="547:600" ph="..." />
+            <marker date="1477490533891" expanded="true" signature="689:798" ph="..." />
+            <marker date="1477490533891" expanded="true" signature="886:1015" ph="..." />
+            <marker date="1477490533891" expanded="true" signature="1087:1168" ph="..." />
+            <marker date="1477490533891" expanded="true" signature="1253:1656" ph="..." />
+            <marker date="1477490533891" expanded="true" signature="1263:1643" ph="UPDATE SHOPP... " />
+            <marker date="1477490533891" expanded="true" signature="1695:1850" ph="..." />
+            <marker date="1477490533891" expanded="true" signature="1705:1837" ph="UPDATE SHOPP... " />
+            <marker date="1477490533891" expanded="true" signature="1748:1803" ph="SELECT POCUN... SHOPPING" />
+            <marker date="1477490533891" expanded="true" signature="1934:2489" ph="..." />
+            <marker date="1477490533891" expanded="true" signature="1944:2476" ph="SELECT A.PNO... DEAL_ORDER" />
+            <marker date="1477490533891" expanded="true" signature="2189:2287" ph="..." />
+            <marker date="1477490533891" expanded="true" signature="2344:2440" ph="..." />
+            <marker date="1477490533891" expanded="true" signature="2570:2792" ph="..." />
+            <marker date="1477490533891" expanded="true" signature="2580:2779" ph="INSERT INTO DEAL_ORDER... " />
+            <marker date="1477490533891" expanded="true" signature="2846:3005" ph="..." />
+            <marker date="1477490533891" expanded="true" signature="2856:2992" ph="SELECT MAX( SHOPPING" />
+            <marker date="1477490533891" expanded="true" signature="3090:3644" ph="..." />
+            <marker date="1477490533891" expanded="true" signature="3100:3631" ph="INSERT INTO SHOPPING... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/seocks/shopping/constans/ProductType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/admin/remain.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="65" column="75" selection-start-line="65" selection-start-column="75" selection-end-line="65" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/js/core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
           <folding />
         </state>
       </provider>

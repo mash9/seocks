@@ -18,6 +18,8 @@ public interface ShoppingMapper {
 
     List<Shopping> selectShoppingByPcate(@Param(value = "pcate") String pcate);
 
+    List<Shopping> selectRemainShopping();
+
     Shopping info(@Param(value = "pno") String pno);
 
     int updateShopping(@Param(value = "item") Shopping shopping);
