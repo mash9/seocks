@@ -233,9 +233,9 @@ public class AdminController {
     }
 
     @RequestMapping(path = "/report.do" , method = RequestMethod.GET)
-    public String chart(@RequestParam(value = "startDate" , required = false) String startDate,
-                        @RequestParam(value = "endDate" , required = false) String endDate,
-                        Model model)
+    public String report(@RequestParam(value = "startDate" , required = false) String startDate,
+                         @RequestParam(value = "endDate" , required = false) String endDate,
+                         Model model)
     {
 
         if(StringUtils.isEmpty(startDate))

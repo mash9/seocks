@@ -3,6 +3,7 @@ package com.seocks.shopping.service;
 import com.seocks.shopping.mapper.ShoppingMapper;
 import com.seocks.shopping.model.DealOrder;
 import com.seocks.shopping.model.Shopping;
+import com.seocks.shopping.model.chart.ChartElement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -61,4 +62,5 @@ public class ShoppingService {
     {
         return mapper.createShopping(newOne);
     }
+
 }

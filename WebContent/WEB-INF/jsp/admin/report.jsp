@@ -28,6 +28,60 @@
             window.location = "/admin/report.do?" + $.param(arg);
         });
 
+        function legendsText(chart)
+        {
+            return "11";
+        }
+
+
+        function showChart()
+        {
+            var arg = {
+                startDate:$("#startDate").val(),
+                endDate:$("#endDate").val()
+            }
+
+            $.post("/chart/data.do" , arg , function(result){
+
+                var ctx = document.getElementById("chart");
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: result,
+                    options: {
+                        legend : {
+                            display:true,
+                            labels:{
+                                generateLabels:function(data){
+                                    return [{
+                                        text:"판매금액",
+                                        fillStyle:"#0000FF",
+                                        index:0
+                                    },{
+                                        text:"구매금액",
+                                        fillStyle:"#FF0000",
+                                        index:1
+                                    }];
+                                }
+                            }
+                        },
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero:true
+                                }
+                            }]
+                        }
+                    }
+                });
+
+            });
+
+
+
+        }
+
+        showChart();
+
 
 
     });
@@ -52,67 +106,7 @@
     <canvas id="chart" style="width: 100%;height: 100%">
         <script>
 
-            var ctx = document.getElementById("chart");
-            var myChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange","Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-                    datasets: [{
-                        type:'bar',
-                        data: [120, 190, 30, 50, 20, 30 , 120, 190, 30, 50, 20, 30],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255,99,132,1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                    },
-                        {
-                            type:'bar',
-                            data: [120, 190, 30, 50, 20, 30 , 120, 190, 30, 50, 20, 30],
-                            backgroundColor: [
-                                'rgba(255, 99, 132, 0.2)',
-                                'rgba(54, 162, 235, 0.2)',
-                                'rgba(255, 206, 86, 0.2)',
-                                'rgba(75, 192, 192, 0.2)',
-                                'rgba(153, 102, 255, 0.2)',
-                                'rgba(255, 159, 64, 0.2)'
-                            ],
-                            borderColor: [
-                                'rgba(255,99,132,1)',
-                                'rgba(54, 162, 235, 1)',
-                                'rgba(255, 206, 86, 1)',
-                                'rgba(75, 192, 192, 1)',
-                                'rgba(153, 102, 255, 1)',
-                                'rgba(255, 159, 64, 1)'
-                            ],
-                            borderWidth: 1
-                        }]
-                },
-                options: {
-                    legend : {
-                        display:false
-                    },
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero:true
-                            }
-                        }]
-                    }
-                }
-            });
+
 
         </script>
     </canvas>

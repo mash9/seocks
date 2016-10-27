@@ -3,6 +3,7 @@ package com.seocks.shopping.mapper;
 import com.seocks.shopping.model.Bought;
 import com.seocks.shopping.model.Payment;
 import com.seocks.shopping.model.PaymentDelivery;
+import com.seocks.shopping.model.chart.ChartElement;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -21,4 +22,8 @@ public interface PaymentMapper {
     List<Bought> selectBoughtGroup(@Param(value = "userId") String userId , @Param(value = "startDate") String startDate , @Param(value = "endDate") String endDate);
 
     List<Bought> selectBought(@Param(value = "userId") String userId , @Param(value = "startDate") String startDate , @Param(value = "endDate") String endDate);
+
+    List<ChartElement> selectSalesChart(@Param(value = "startDate") String startDate , @Param(value = "endDate") String endDate);
+
+    List<ChartElement> selectDealChart(@Param(value = "startDate") String startDate , @Param(value = "endDate") String endDate);
 }

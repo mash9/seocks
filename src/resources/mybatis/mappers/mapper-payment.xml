@@ -112,4 +112,41 @@
          ORDER BY BUY_DATE DESC , USER_ID , PNAME , PSIZE
     </select>
 
+    <select id="selectSalesChart" resultType="com.seocks.shopping.model.chart.ChartElement">
+        SELECT BUY_DATE
+              ,SUM(PRICE) PRICE
+          FROM ( SELECT A.PAY_ID
+                       ,TO_CHAR(A.BUY_DATE , 'YYYY.MM') BUY_DATE
+                       ,B.PRICE * B.QTY PRICE
+                   FROM PAYMENT_DELIVERY A , PAYMENT B
+                  WHERE A.PAY_ID = B.PAY_ID
+                  <if test="startDate != null and startDate != ''">
+                    AND A.BUY_DATE <![CDATA[ >= ]]> TO_DATE(#{startDate} , 'YYYY-MM-DD')
+                  </if>
+                  <if test="endDate != null and endDate != ''">
+                    AND A.BUY_DATE <![CDATA[ <= ]]> TO_DATE(#{endDate} , 'YYYY-MM-DD')
+                  </if>
+               )
+         GROUP BY BUY_DATE
+    </select>
+
+    <select id="selectDealChart" resultType="com.seocks.shopping.model.chart.ChartElement">
+        SELECT BUY_DATE
+              ,SUM(PRICE) PRICE
+          FROM ( SELECT A.PNO
+                       ,TO_CHAR(A.DEAL_DATE , 'YYYY.MM') BUY_DATE
+                       ,A.QTY * B.ORIPRICE PRICE
+                   FROM DEAL_ORDER A , SHOPPING B
+                  WHERE A.PNO = B.PNO
+                  <if test="startDate != null and startDate != ''">
+                    AND A.DEAL_DATE <![CDATA[ >= ]]> TO_DATE(#{startDate} , 'YYYY-MM-DD')
+                  </if>
+                  <if test="endDate != null and endDate != ''">
+                    AND A.DEAL_DATE <![CDATA[ <= ]]> TO_DATE(#{endDate} , 'YYYY-MM-DD')
+                  </if>
+
+                   )
+         GROUP BY BUY_DATE
+    </select>
+
 </mapper>

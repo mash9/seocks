@@ -7,6 +7,7 @@ import com.seocks.shopping.model.Bought;
 import com.seocks.shopping.model.Payment;
 import com.seocks.shopping.model.PaymentDelivery;
 import com.seocks.shopping.model.Shopping;
+import com.seocks.shopping.model.chart.ChartElement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -52,5 +53,15 @@ public class PaymentService {
     public List<Bought> boughtGroup(String userId , String startDate , String endDate)
     {
         return mapper.selectBoughtGroup(userId , startDate , endDate);
+    }
+
+    public List<ChartElement> selectSalesChart(String startDate , String endDate)
+    {
+        return mapper.selectSalesChart(startDate , endDate);
+    }
+
+    public List<ChartElement> selectDealChart(String startDate , String endDate)
+    {
+        return mapper.selectDealChart(startDate , endDate);
     }
 }
