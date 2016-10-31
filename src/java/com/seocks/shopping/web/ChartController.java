@@ -5,7 +5,7 @@ import com.seocks.shopping.model.chart.ChartData;
 import com.seocks.shopping.model.chart.ChartElement;
 import com.seocks.shopping.model.chart.DataSet;
 import com.seocks.shopping.service.PaymentService;
-import com.seocks.shopping.service.ShoppingService;
+import com.seocks.shopping.utils.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
@@ -41,13 +41,10 @@ public class ChartController {
 
         try
         {
-            Date sDate = new SimpleDateFormat("yyyy-MM-dd").parse(startDate);
-            Date eDate = new SimpleDateFormat("yyyy-MM-dd").parse(endDate);
+            DateUtil.validateDates(startDate , endDate);
 
-            if(sDate.getTime() > eDate.getTime()) throw new ShopException("종료일이 시작일보다 빠릅니다.");
-
-            sDate = new SimpleDateFormat("yyyy-MM-dd").parse(startDate.substring(0 , 7) + "-01");
-            eDate = new SimpleDateFormat("yyyy-MM-dd").parse(endDate.substring(0 , 7) + "-01");
+            Date sDate = new SimpleDateFormat("yyyy-MM-dd").parse(startDate.substring(0 , 7) + "-01");
+            Date eDate = new SimpleDateFormat("yyyy-MM-dd").parse(endDate.substring(0 , 7) + "-01");
 
 
             Calendar startCalendar = Calendar.getInstance();

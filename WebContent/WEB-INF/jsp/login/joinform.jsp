@@ -28,6 +28,12 @@
 		$("#buttonIdCheck").click(function(){
 			var inputId = $("#inputId").val();
 
+			if(inputId == "")
+			{
+				alert("아이디를 입력하세요.");
+				return;
+			}
+
 			if(inputId.match(/[^a-zA-Z0-9]/g))
 			{
 				alert("사용할수 없는 아이디 입니다.");
@@ -85,7 +91,7 @@
 				maddress1:$("input[name=maddress1]" , form).val(),
 				maddress2:$("input[name=maddress2]" , form).val(),
 				phone:$("input[name=phone]" , form).val(),
-				gender:$("input[name=gender]" , form).val(),
+				gender:$("input[name=gender]:checked" , form).val(),
 				birthday:$("input[name=birthday]" , form).val(),
 				info:$("textarea[name=info]" , form).val()
 			};
@@ -116,18 +122,18 @@
 		<form id="formRegist" action="/login/regist.do" method="post">
 			<table width="400" border="1" class="form-table">
 				<tr height="40">
-					<td align="center" width="150">아이디</td>
+					<td align="center" width="150"><span style="color:red;margin-right: 5px">*</span>아이디</td>
 					<td>
 						<input id="inputId" type="text" name="id" size="20" id="id">
 						<input id="buttonIdCheck" type="button" value="ID체크">
 					</td>
 				</tr>
 				<tr height="40">
-					<td align="center" width="150">패스워드</td>
+					<td align="center" width="150"><span style="color:red;margin-right: 5px">*</span>패스워드</td>
 					<td><input type="password" name="pass" size="30"></td>
 				</tr>
 				<tr height="40">
-					<td align="center" width="150">이름</td>
+					<td align="center" width="150"><span style="color:red;margin-right: 5px">*</span>이름</td>
 					<td><input type="text" name="name" size="30"></td>
 				</tr>
 				<tr height="40">
@@ -140,27 +146,26 @@
 						&nbsp;&nbsp;&nbsp;<input id="buttonPostCheck" type="button" value="검색"></td>
 				</tr>
 				<tr height="40">
-					<td width="150" align="center">주소</td>
+					<td width="150" align="center"><span style="color:red;margin-right: 5px">*</span>주소</td>
 					<td><input type="text" name="maddress1" size="30" id="m1"><br>
-						<input type="text" name="maddress2" size="30" id="m2"
-						placeholder="상세주소"></td>
+						<input type="text" name="maddress2" size="30" id="m2" placeholder="상세주소"></td>
 				</tr>
 
 				<tr height="40">
-					<td width="150" align="center">전화번호</td>
+					<td width="150" align="center"><span style="color:red;margin-right: 5px">*</span>전화번호</td>
 					<td><input type="text" name="phone" size="30" id="phone">
 					</td>
 				</tr>
 
 				<tr height="40">
 					<td align="center" width="150">성별</td>
-					<td><input type="radio" name="gender" value="남">남
+					<td><input type="radio" name="gender" value="남" checked>남
 						&nbsp;&nbsp; <input type="radio" name="gender" value="여">여
 					</td>
 				</tr>
 
 				<tr height="40">
-					<td align="center" width="150">생년월일</td>
+					<td align="center" width="150"><span style="color:red;margin-right: 5px">*</span>생년월일</td>
 					<td><input type="text" name="birthday" class="datePicker" size="30"></td>
 				</tr>
 				<tr height="40">

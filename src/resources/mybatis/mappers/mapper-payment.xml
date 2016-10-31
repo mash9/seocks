@@ -74,8 +74,11 @@
                                     <if test="userId != null and userId != ''">
                                       AND USER_ID = #{userId}
                                     </if>
-                                    <if test="startDate != null and startDate != '' and endDate != null and endDate != ''">
-                                      AND BUY_DATE BETWEEN TO_DATE(#{startDate} , 'YYYY-MM-DD') AND TO_DATE(#{endDate} , 'YYYY-MM-DD')
+                                    <if test="startDate != null and startDate != ''">
+                                        AND TO_DATE(TO_CHAR(BUY_DATE , 'YYYYMMDD') , 'YYYYMMDD') <![CDATA[ >= ]]> TO_DATE(#{startDate} , 'YYYY-MM-DD')
+                                    </if>
+                                    <if test="endDate != null and endDate != ''">
+                                        AND TO_DATE(TO_CHAR(BUY_DATE , 'YYYYMMDD') , 'YYYYMMDD') <![CDATA[ <= ]]> TO_DATE(#{endDate} , 'YYYY-MM-DD')
                                     </if>
                                  )
                  GROUP BY PNO , PSIZE) B
@@ -103,10 +106,10 @@
               AND B.USER_ID = #{userId}
            </if>
            <if test="startDate != null and startDate != ''">
-              AND B.BUY_DATE <![CDATA[ >= ]]> TO_DATE(#{startDate} , 'YYYY-MM-DD')
+              AND TO_DATE(TO_CHAR(B.BUY_DATE , 'YYYYMMDD') , 'YYYYMMDD') <![CDATA[ >= ]]> TO_DATE(#{startDate} , 'YYYY-MM-DD')
            </if>
            <if test="endDate != null and endDate != ''">
-              AND B.BUY_DATE <![CDATA[ <= ]]> TO_DATE(#{endDate} , 'YYYY-MM-DD')
+              AND TO_DATE(TO_CHAR(B.BUY_DATE , 'YYYYMMDD') , 'YYYYMMDD') <![CDATA[ <= ]]> TO_DATE(#{endDate} , 'YYYY-MM-DD')
            </if>
 
          ORDER BY BUY_DATE DESC , USER_ID , PNAME , PSIZE
@@ -121,10 +124,10 @@
                    FROM PAYMENT_DELIVERY A , PAYMENT B
                   WHERE A.PAY_ID = B.PAY_ID
                   <if test="startDate != null and startDate != ''">
-                    AND A.BUY_DATE <![CDATA[ >= ]]> TO_DATE(#{startDate} , 'YYYY-MM-DD')
+                    AND TO_DATE(TO_CHAR(A.BUY_DATE , 'YYYYMMDD') , 'YYYYMMDD') <![CDATA[ >= ]]> TO_DATE(#{startDate} , 'YYYY-MM-DD')
                   </if>
                   <if test="endDate != null and endDate != ''">
-                    AND A.BUY_DATE <![CDATA[ <= ]]> TO_DATE(#{endDate} , 'YYYY-MM-DD')
+                    AND TO_DATE(TO_CHAR(A.BUY_DATE , 'YYYYMMDD') , 'YYYYMMDD') <![CDATA[ <= ]]> TO_DATE(#{endDate} , 'YYYY-MM-DD')
                   </if>
                )
          GROUP BY BUY_DATE
@@ -139,10 +142,10 @@
                    FROM DEAL_ORDER A , SHOPPING B
                   WHERE A.PNO = B.PNO
                   <if test="startDate != null and startDate != ''">
-                    AND A.DEAL_DATE <![CDATA[ >= ]]> TO_DATE(#{startDate} , 'YYYY-MM-DD')
+                    AND TO_DATE(TO_CHAR(A.DEAL_DATE , 'YYYYMMDD') , 'YYYYMMDD') <![CDATA[ >= ]]> TO_DATE(#{startDate} , 'YYYY-MM-DD')
                   </if>
                   <if test="endDate != null and endDate != ''">
-                    AND A.DEAL_DATE <![CDATA[ <= ]]> TO_DATE(#{endDate} , 'YYYY-MM-DD')
+                    AND TO_DATE(TO_CHAR(A.DEAL_DATE , 'YYYYMMDD') , 'YYYYMMDD') <![CDATA[ <= ]]> TO_DATE(#{endDate} , 'YYYY-MM-DD')
                   </if>
 
                    )

@@ -6,6 +6,7 @@ import com.seocks.shopping.model.Shopping;
 import com.seocks.shopping.model.ShoppingItem;
 import com.seocks.shopping.service.PaymentService;
 import com.seocks.shopping.service.ShoppingService;
+import com.seocks.shopping.utils.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -148,6 +149,15 @@ public class PaymentController {
                              HttpSession session, Model model)
     {
         String userId = (String)session.getAttribute("userId");
+
+        try
+        {
+            DateUtil.validateDates(startDate , endDate);
+        }
+        catch (ShopException ex)
+        {
+            endDate = startDate;
+        }
 
         model.addAttribute("title" , "거래내역");
         model.addAttribute("startDate" , startDate);

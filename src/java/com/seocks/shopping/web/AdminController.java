@@ -6,6 +6,7 @@ import com.seocks.shopping.service.CodeService;
 import com.seocks.shopping.service.JspmemberService;
 import com.seocks.shopping.service.PaymentService;
 import com.seocks.shopping.service.ShoppingService;
+import com.seocks.shopping.utils.DateUtil;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -80,8 +81,26 @@ public class AdminController {
     }
 
     @RequestMapping(path = "/memberEdit.do" , method = RequestMethod.POST)
-    public @ResponseBody boolean memberEdit(@RequestBody Jspmember member)
+    public @ResponseBody boolean memberEdit(@RequestBody Jspmember member) throws Exception
     {
+        if(StringUtils.isEmpty(member.getPass()))
+            throw new ShopException("비밀번호를 입력하세요.");
+
+        if(StringUtils.isEmpty(member.getName()))
+            throw new ShopException("이름을 입력하세요.");
+
+        if(StringUtils.isEmpty(member.getMaddress1()))
+            throw new ShopException("주소를 입력하세요.");
+
+        if(StringUtils.isEmpty(member.getMaddress2()))
+            throw new ShopException("상세주소를 입력하세요.");
+
+        if(StringUtils.isEmpty(member.getPhone()))
+            throw new ShopException("전화번호를 입력하세요.");
+
+        if(StringUtils.isEmpty(member.getBirthday()))
+            throw new ShopException("생년월일을 입력하세요.");
+
         jspmemberService.updateUser(member);
         return true;
     }
@@ -98,8 +117,17 @@ public class AdminController {
     @RequestMapping(path = "/saleList.do" , method = RequestMethod.GET)
     public String saleList(@RequestParam(value = "startDate" , required = false) String startDate,
                            @RequestParam(value = "endDate" , required = false) String endDate,
-                           Model model)
+                           Model model) throws ShopException
     {
+        try
+        {
+            DateUtil.validateDates(startDate , endDate);
+        }
+        catch (ShopException ex)
+        {
+            endDate = startDate;
+        }
+
         model.addAttribute("title" , "판매현황");
         model.addAttribute("startDate" , startDate);
         model.addAttribute("endDate" , endDate);
@@ -112,8 +140,17 @@ public class AdminController {
     @RequestMapping(path = "/order.do" , method = RequestMethod.GET)
     public String order(@RequestParam(value = "startDate" , required = false) String startDate,
                         @RequestParam(value = "endDate" , required = false) String endDate,
-                        Model model)
+                        Model model) throws ShopException
     {
+        try
+        {
+            DateUtil.validateDates(startDate , endDate);
+        }
+        catch (ShopException ex)
+        {
+            endDate = startDate;
+        }
+
         List<Code> codes = codeService.getProductCodes();
         model.addAttribute("title" , "거래처");
         model.addAttribute("startDate" , startDate);

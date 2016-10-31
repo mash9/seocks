@@ -6,6 +6,7 @@ import com.seocks.shopping.service.JspmemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
@@ -31,8 +32,26 @@ public class LoginController
     @RequestMapping(path = "/regist.do" , method = RequestMethod.POST)
     public @ResponseBody int regist(@RequestBody Jspmember member) throws Exception
     {
-        if(member.getId() == null || "".equals(member.getId()))
+        if(StringUtils.isEmpty(member.getId()))
             throw new ShopException("아이디를 입력하세요.");
+
+        if(StringUtils.isEmpty(member.getPass()))
+            throw new ShopException("비밀번호를 입력하세요.");
+
+        if(StringUtils.isEmpty(member.getName()))
+            throw new ShopException("이름을 입력하세요.");
+
+        if(StringUtils.isEmpty(member.getMaddress1()))
+            throw new ShopException("주소를 입력하세요.");
+
+        if(StringUtils.isEmpty(member.getMaddress2()))
+            throw new ShopException("상세주소를 입력하세요.");
+
+        if(StringUtils.isEmpty(member.getPhone()))
+            throw new ShopException("전화번호를 입력하세요.");
+
+        if(StringUtils.isEmpty(member.getBirthday()))
+            throw new ShopException("생년월일을 입력하세요.");
 
         return jspmemberService.createUser(member);
     }
@@ -87,7 +106,23 @@ public class LoginController
     @RequestMapping(path = "/edit.do" , method = RequestMethod.POST)
     public @ResponseBody boolean edit(@RequestBody Jspmember member , HttpSession session) throws Exception
     {
-        if(member.getPass() == null || "".equals(member.getPass())) throw new ShopException("비밀번호를 입력하세요.");
+        if(StringUtils.isEmpty(member.getPass()))
+            throw new ShopException("비밀번호를 입력하세요.");
+
+        if(StringUtils.isEmpty(member.getName()))
+            throw new ShopException("이름을 입력하세요.");
+
+        if(StringUtils.isEmpty(member.getMaddress1()))
+            throw new ShopException("주소를 입력하세요.");
+
+        if(StringUtils.isEmpty(member.getMaddress2()))
+            throw new ShopException("상세주소를 입력하세요.");
+
+        if(StringUtils.isEmpty(member.getPhone()))
+            throw new ShopException("전화번호를 입력하세요.");
+
+        if(StringUtils.isEmpty(member.getBirthday()))
+            throw new ShopException("생년월일을 입력하세요.");
 
         member.setId((String)session.getAttribute("userId"));
         jspmemberService.updateUser(member);

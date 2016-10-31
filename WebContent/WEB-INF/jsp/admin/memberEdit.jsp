@@ -73,14 +73,14 @@
 
 			<table id="formEdit" width="400" border="1" class="form-table">
 				<tr height="40">
-					<td align="center" width="150">패스워드</td>
+					<td align="center" width="150"><span style="color:red;margin-right: 5px">*</span>패스워드</td>
 					<td>
 						<input type="hidden" name="id" value="${member.id}">
 						<input type="password" name="pass" size="30" value="${member.pass}">
 					</td>
 				</tr>
 				<tr height="40">
-					<td align="center" width="150">이름</td>
+					<td align="center" width="150"><span style="color:red;margin-right: 5px">*</span>이름</td>
 					<td><input type="text" name="name" size="30" value="${member.name}"></td>
 				</tr>
 				<tr height="40">
@@ -93,7 +93,7 @@
 						&nbsp;&nbsp;&nbsp;<input id="buttonPostCheck" type="button" value="검색"></td>
 				</tr>
 				<tr height="40">
-					<td width="150" align="center">주소</td>
+					<td width="150" align="center"><span style="color:red;margin-right: 5px">*</span>주소</td>
 					<td><input type="text" name="maddress1" size="30" id="m1" value="${member.maddress1}">
 						<br>
 						<input type="text" name="maddress2" size="30" id="m2"
@@ -101,7 +101,7 @@
 				</tr>
 
 				<tr height="40">
-					<td width="150" align="center">전화번호</td>
+					<td width="150" align="center"><span style="color:red;margin-right: 5px">*</span>전화번호</td>
 					<td><input type="text" name="phone" size="30" id="phone" value="${member.phone}"></td>
 				</tr>
 
@@ -115,7 +115,7 @@
 				</tr>
 
 				<tr height="40">
-					<td align="center" width="150">생년월일</td>
+					<td align="center" width="150"><span style="color:red;margin-right: 5px">*</span>생년월일</td>
 					<td><input type="text" name="birthday" class="datePicker" size="30" value="${member.birthday}"></td>
 				</tr>
 				<tr height="40">
